@@ -1,4 +1,4 @@
-public class TripInventory extends Truck{
+public class TripInventory extends Trip{
 	public void search(){
 		
 	}
