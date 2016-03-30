@@ -25,7 +25,7 @@ public class TripInventory extends Trip{
 	
 	
 	public void search(){
-		
+
 	}
 	
 	//Before and after are meant to be empty so nothing to do here
