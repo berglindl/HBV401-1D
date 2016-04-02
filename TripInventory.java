@@ -25,9 +25,43 @@ public class TripInventory extends Trip{
 	
 	
 	public void search(){
+		//Svona vector er góður þegar við vitum ekki hve mörgum stökum
+		//við viljum bæta við í fylki
+		//notar searchpositives.add(nafn objects)
+		//ef við viljum skila af okkur honum sem fylki searchpositives.toArray();
+		Vector<String> searchpositives = new Vector<String>();
+
+		
+
 
 	}
+
+
+	public boolean compare(String a, String b){
+		if(a.equals(b)){
+			return true;
+		}
+		return false;
+	}
 	
+	public boolean compare(String a, String[] b){
+		for(i=0; i!=b.length ; i++){
+			if(a.equals(b[i])){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean compare(int a, int b){
+		if (a==b) return true;
+		return false;
+	}
+
+	public boolean compare(boolean a,boolean b){
+		return !(a^b);
+	}
+
 	//Before and after are meant to be empty so nothing to do here
 	
 	@Before
