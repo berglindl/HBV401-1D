@@ -73,13 +73,41 @@ public class TripInventory extends Trip{
 	public void tearDown(){
 		//...
 	}
+
 	
-	//Just a general case to have *something* there
-	//Might need some tweaking to get this to work.. agh
+	//Might be interesting to have a searching failure due to not having any trips
 	
 	@Test
-	public void searchFor(){
+	public void testSearchingFailiure(){
 		assertTrue(Inventory.isEmpty());
 	}
+
+	//basic starts of these classes that can be implemented once the search
+	//has been properly implemented 
+	@Test
+	public void testSearchingForWestTrips(){
+		Trip = new Trip();
+		//assertTrue that there are trips in the west
+	}
 	
+	@Test
+	public void testSearchingForAvailableSeat(){
+		Trip = new Trip();
+		//assertTrue that there's an available seat in a certain trip
+		//This has the possibility of failing due to the nature of the seat class
+	}
+
+	@Test
+	public void testSearchingForADate(){
+		Trip = new Trip();
+		//assertTrue that there's an available trip on a certain date
+	}
+
+	//Maybe implement this as well?
+	@Test
+	public void testSearchingForLowPrices(){
+		Trip = new Trip();
+		//assertTrue that there's trips available for less than ~20.000kr. 
+		//This has a possibility of failing due to the nature of the price class
+	}
 }
