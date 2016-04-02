@@ -80,7 +80,7 @@ public class TripProperties extends Trip{
 			case 1: addInfoString = "We start by hiking on Falljökull glacier tongue and from there we explore the cave and a nearby ice tunnel. The tour is highly dependent on the cave's condition, so it must be treated with the utmost care and respect. " + "Clothing suggestion: Warm and waterproof jacket and pants, hiking boots, headwear and gloves.";
 					break;
 			//Trip Skíðaferð á Hrútafjallstinda
-			case 2: addInfoString = "We start at Hafrefell nearby Svínafellsjökull and head up to the top of Hrútafjallstind where we put on our skiis and head down. This is a great sport that has been practiced since the country was settled. " + "Clothing suggestions: Warm and waterproof clothing.";
+			case 2: addInfoString = "We start at Hafrafell nearby Svínafellsjökull and head up to the top of Hrútafjallstind where we put on our skiis and head down. This is a great sport that has been practiced since the country was settled. " + "Clothing suggestions: Warm and waterproof clothing.";
 					break;
 			//Trip Whale Watching in Húsavík
 			case 3: addInfoString = "Join us on a day trip and meet the friendly giants of the sea in the breathtaking surroundings of Skálfjandflói Bay. Included is a three hour boat tour. " + "Clothing suggestions: Warm and waterproof clothing.";
