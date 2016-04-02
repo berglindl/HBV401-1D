@@ -8,6 +8,7 @@ public class TripProperties extends Trip{
 	//example of mock object? 
 	public int dangerReview(int mockReview){
 		mockReview = 2;
+		return mockReview;
 	}
 
 	//cardDir decides which of those cardinal directions are chosen
@@ -24,6 +25,7 @@ public class TripProperties extends Trip{
 			case 4: cardDirString = "Vestur";
 					break;
 		}
+		return cardDirString;
 	}
 
 	//Mögulega hafa þetta sett upp svona líka?
@@ -38,6 +40,7 @@ public class TripProperties extends Trip{
 					break;
 			//má bæta við fleiri af vild
 		}
+		return selectLanguageString;
 	}
 
 	//Mock object því þetta tengist booking, right?
@@ -52,6 +55,7 @@ public class TripProperties extends Trip{
 		else{
 			System.out.println("Booking successful, enjoy your trip!");
 		}
+		return seat;
 	}
 
 	//The length of the trip - length determines what case is used
@@ -66,6 +70,7 @@ public class TripProperties extends Trip{
 			case 3: num = 10;
 					break;
 		}
+		return num;
 	}
 
 	//Gæti verið að við þurfum að breyta þessum klasa því hann er frekar ljótur 
@@ -89,6 +94,7 @@ public class TripProperties extends Trip{
 			case 5: addInfoString = "A super jeep tour where we leave the lights of the city behind and head into the darkness for an adventure. On the search for the Northern Lights, we might travel through some of Iceland's most spectacular sights without knowing, but the guide will be sure to let you know! " + "Clothing suggestions: Warm outwear.";
 					break;
 		}
+		return addInfoString;
 	}
 
 	//Mock object ?? 
@@ -103,6 +109,7 @@ public class TripProperties extends Trip{
 			case 3: dateString = "03.05";
 					break;
 		}
+		return dateString;
 	}
 
 	//Potential mock object? Just returns a random number between min and max
@@ -111,16 +118,17 @@ public class TripProperties extends Trip{
 		int max = 25000;
 		//returns a random number between 5000 and 25000
 		price = (Math.random() * (max - min) + min);
+		return price;
 	}
 
-	//setja override? 
 	public void getInfo(){
 		//pseudocode um hvernig ég hef hugsað að hægt sé að útfæra þetta:
 		//ef x-ferð
 		//þá er animals = true
 		//...
-		//þá er cardDir == 2 og skila cardDirString
+		//þá er cardDir == 2
 		//...
+		//basically að segja hvað á við hvaða ferð
 
 	}
 }
