@@ -5,7 +5,8 @@ public class TripProperties extends Trip{
 	private boolean pickUp;
 	private boolean accessibility;
 
-	//example of mock object? 
+	//Mock object
+	//For now all trips have a danger review of 2
 	public int dangerReview(int mockReview){
 		mockReview = 2;
 		return mockReview;
@@ -43,7 +44,7 @@ public class TripProperties extends Trip{
 		return selectLanguageString;
 	}
 
-	//Mock object því þetta tengist booking, right?
+	//Mock object
 	//For now returns a random number between 1 and 50
 	public int numSeats(int seat){
 		int min = 0;
@@ -97,7 +98,7 @@ public class TripProperties extends Trip{
 		return addInfoString;
 	}
 
-	//Mock object ?? 
+	//Mock object
 	//For now only shows three dates, first, second and third of may. 
 	public String tripDate(String dateString){
 		int date;
@@ -112,7 +113,8 @@ public class TripProperties extends Trip{
 		return dateString;
 	}
 
-	//Potential mock object? Just returns a random number between min and max
+	//Mock object
+	//Just returns a random number between min and max
 	public int tripPrice(int price){
 		int min = 5000;
 		int max = 25000;
