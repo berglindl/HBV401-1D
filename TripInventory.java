@@ -76,37 +76,50 @@ public class TripInventory extends Trip{
 
 	
 	//Might be interesting to have a searching failure due to not having any trips
-	
 	@Test
 	public void testSearchingFailiure(){
 		assertTrue(Inventory.isEmpty());
+		System.out.println("@Test inventory is not empty");
 	}
 
-	//basic starts of these classes that can be implemented once the search
+	//basic starts of these classes that can be implemented properly once the search
 	//has been properly implemented 
+	//Which kind of needs to happen in order to be able to properly do this
+	//Otherwise it's just an estimation.
+
+	//This one will only work similarly to this if and only if we set cardDir = 4
 	@Test
 	public void testSearchingForWestTrips(){
-		Trip = new Trip();
-		//assertTrue that there are trips in the west
+		String west = TripProperties.location();
+		assertEquals("Vestur" + west);
+		System.out.println("@Test there are available west trips");
+		//assertEquals that there are trips in the west
 	}
 	
 	@Test
 	public void testSearchingForAvailableSeat(){
-		Trip = new Trip();
+		int seats = TripProperties.numSeats();
+		assertTrue(seats >= 1);
+		System.out.println("@Test there is an available seat");
 		//assertTrue that there's an available seat in a certain trip
 		//This has the possibility of failing due to the nature of the seat class
+		//numSeats could give us a 0, meaning this has a (small) chance of failing
 	}
-
+	
+	//This will only work similarly to this if and only if we set date = 1
 	@Test
 	public void testSearchingForADate(){
-		Trip = new Trip();
-		//assertTrue that there's an available trip on a certain date
+		String date = TripProperties.tripDate();
+		assertEquals("01.05" + date);
+		System.out.println("@Test there is an available trip on this date")
+		//assertEquals that there's an available trip on a certain date
 	}
 
-	//Maybe implement this as well?
 	@Test
 	public void testSearchingForLowPrices(){
-		Trip = new Trip();
+		int lowPrice = TripProperties.tripPrice();
+		assertTrue(lowPrice <= 20000);
+		System.out.println("@Test there is an available trip for less than 20.000kr.");
 		//assertTrue that there's trips available for less than ~20.000kr. 
 		//This has a possibility of failing due to the nature of the price class
 	}
