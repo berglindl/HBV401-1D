@@ -2,6 +2,7 @@ public class TripInventory extends Trip{
 	
 	import org.junit.*;
 	import static org.junit.Assert.*;
+	import java.util.Vector;
 	
 	//Vænanlega geymum við ferðirnar inn í fylki
 	private Object[] Inventory;
@@ -24,43 +25,34 @@ public class TripInventory extends Trip{
 	
 	
 	
-	public void search(){
+	public Object[] search(String tripName, String tripType, Object[] propinfo){
 		//Svona vector er góður þegar við vitum ekki hve mörgum stökum
 		//við viljum bæta við í fylki
 		//notar searchpositives.add(nafn objects)
 		//ef við viljum skila af okkur honum sem fylki searchpositives.toArray();
 		Vector<String> searchpositives = new Vector<String>();
-
 		
-
-
-	}
-
-
-	public boolean compare(String a, String b){
-		if(a.equals(b)){
-			return true;
+		for(int i= 0; i!=Inventory.length; i++){
+			boolean match == false;
+			boolean fail == false; 
+			
+			if(tripName == NULL || tripName.equals(Inventory[i].getName())) match == true;
+			else fail == true;
+			
+			if(tripType== NULL || tripType.equals(Inventory[i].getType())) match == true;
+			else fail == true;
+			
+			if( propinfo == NULL || Inventory[i].getPropinfo(propinfo) == true ) match == true;
+			else fail == true;
+			
+			if(match && !fail) searchpositives.add(Inventory[i]);
 		}
-		return false;
-	}
-	
-	public boolean compare(String a, String[] b){
-		for(i=0; i!=b.length ; i++){
-			if(a.equals(b[i])){
-				return true;
-			}
-		}
-		return false;
+			
+		return searchpositives.toArray();
 	}
 
-	public boolean compare(int a, int b){
-		if (a==b) return true;
-		return false;
-	}
 
-	public boolean compare(boolean a,boolean b){
-		return !(a^b);
-	}
+
 
 	//Before and after are meant to be empty so nothing to do here
 	
