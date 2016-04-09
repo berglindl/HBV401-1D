@@ -1,5 +1,9 @@
 public class BookingInventory extends Booking{
 import java.util.Scanner;
+
+//Spurning um að hafa hér líka valmöguleikann á að panta hópferð
+//Þ.e ef það er valið, þá er öllin ferðin frátekin fyrir sá hóp
+//Getum haft það að min 5 þurfi þá að mæta
 class Reserve
 {
 		// Þarf að tengja hérna við listanna 
