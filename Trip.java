@@ -55,8 +55,5 @@ public class Trip{
 		//trips from 0 - 14
 		//segja hvaða ferð er hvað?
 		//tengist við tripProperties/getInfo.TripProperties
-
-		//EÐA hafa þetta millivegarklasa sem TripInventory sækjir upplýsingar í
-	
 	}
 }

@@ -83,17 +83,17 @@ public class TripProperties extends Trip{
 			//Spurning að setja þetta svona upp?
 			case 1: num = 2 + " hours";
 					break;
-			case 2: num = 4;
+			case 2: num = 4 + " hours";
 					break;
-			case 3: num = 7;
+			case 3: num = 7 + " hours";
 					break;
-			case 4: num = 8;
+			case 4: num = 8 + " hours";
 					break;
-			case 5: num = 9;
+			case 5: num = 9 + " hours";
 					break;
-			case 6: num = 10;
+			case 6: num = 10 + " hours";
 					break;
-			case 7: num = 12;
+			case 7: num = 12 + " hours";
 					break;
 		}
 		return num;
@@ -162,9 +162,7 @@ public class TripProperties extends Trip{
 
 	public void getInfo(){
 		//gefa switch hlutunum gildi hér?
-		//svo að maður geti sent það yfir í Trip sem sér um að segja hvað á við hvaða ferð
-		//eða klára allt hér og segja hvað á við hvaða ferð
-		//og hafa initializeTrip klasann þá bara lítinn millivegar klasa 
-		//bara upp á tengingarnar
+		//initializeTrip ætti að sækja upplýsingar hér
+		//og search ætti að sækja upplýsingar í initializeTrip
 	}
 }
