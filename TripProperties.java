@@ -27,24 +27,24 @@ public class TripProperties extends Trip{
 
 	//cardDir decides which of those cardinal directions are chosen
 	//cardDir = 1 means North, cardDir = 2 means East, ...
-	public String location(String cardDirString){
-		int cardDir;
+	public String location(int cardDir){
+		String cardDirString;
 		switch(cardDir){
-			case 1: cardDirString = "Norður";
+			case 1: cardDirString = "Norðurland";
 					break;
-			case 2: cardDirString = "Austur";
+			case 2: cardDirString = "Austurland";
 					break;
-			case 3: cardDirString = "Suður";
+			case 3: cardDirString = "Suðurland";
 					break;
-			case 4: cardDirString = "Vestur";
+			case 4: cardDirString = "Vesturland";
 					break;
 		}
 		return cardDirString;
 	}
 
 	//Mögulega hafa þetta sett upp svona líka?
-	public String language(String selectLanguageString){
-		int selectLanguage;
+	public String language(int selectLanguage){
+		String selectLanguageString;
 		switch(selectLanguage){
 			case 1: selectLanguageString = "ISL";
 					break;
@@ -77,9 +77,9 @@ public class TripProperties extends Trip{
 
 	//The length of the trip - length determines what case is used
 	//while the value of num determines the outcome
-	public int tripLength(int length){
+	public int tripLength(int tLength){
 		int num = 0;
-		switch(length){
+		switch(tLength){
 			//Spurning að setja þetta svona upp?
 			case 1: num = 2 + " hours";
 					break;
@@ -105,8 +105,8 @@ public class TripProperties extends Trip{
 	//Ásamt öllum öðrum upplýsingum
 	//Nema það sé ekkert mál að tengja upplýsingarnar yfir, þá er mögulega betra að gera það þannig
 	//But for now... 
-	public String additionalInfo(String addInfoString){
-		int addInfo;
+	public String additionalInfo(int addInfo){
+		String addInfoString;
 		switch(addInfo){
 			//Trip Into the Glacier
 			case 1: addInfoString = "We start by hiking on Falljökull glacier tongue and from there we explore the cave and a nearby ice tunnel. 
@@ -132,20 +132,64 @@ public class TripProperties extends Trip{
 									On the search for the Northern Lights, we might travel through some of Iceland's most spectacular sights without knowing, 
 									but the guide will be sure to let you know! " + "Clothing suggestions: Warm outwear.";
 					break;
+			//Trip the Golden Circle and Snorkeling
+			case 6: addInfoString = "First stop is at Þingvellir National Park, where diving will take place in the Silfra Fissure. 
+									From there, we head to the Geysir hot spring, and then finally to the golden waterfall, Gullfoss. "
+									+ "Clothing suggestions: Warm and waterproof outdoor clothing, and a change of clothing. Good hiking shoes are recommended. ";
+					break;
+			//Trip Glacier Walking and Waterfalls
+		    case 7: addInfoString = "An exciting tour along the south coast visiting all the major sites of the area and hiking on a glacier. 
+		    						First stop is at Seljalandfoss waterfall, then to Sólheimajökull glacier, to Reynisfjara's black sand beach, to Skógafoss waterfall, 
+		    						and with a view to Eyjafjallajökull Glacier/Volcano, and the Hekla volcano. "
+		    						+ "Clothing suggestions: Warm outdoor clothing and good hiking shoes.";
+		    		break;
+		    //Trip Game of Thrones - Mývatn Mystery Magic
+		    case 8: addInfoString = "Join us on a tour to magical Lake Mývatn and the filming sites of the latest Game of Thrones series, with a pitstop to the Mývatn Nature Baths. "
+		    						+ "Clothing suggestions: Warm outdoor clothing.";
+		    		break;
+		    //Trip Papeyjarferðir
+		    case 9: addInfoString = "A day trip from Djúpivogur to Papey. We sail around the area and watch the birds and the seals in the area. 
+		    						After that, we stop by on the island where we walk along with a guide. "
+		    						+ "Clothing suggestions: Warm and waterproof clothing.";
+		    		break;
+		    //Trip Hellaferð við Ingólfsfjall
+		    case 10: addInfoString = "Join us on a search for the ancient treasure in the caves of the mountain Ingólfsfjall. This trip is perfect for adventurers! "
+		    						+ "Clothing suggestions: Warm outdoor clothing";
+		    		break;
+		    //Trip Spennuganga um Viðey
+		    case 11: addInfoString = "Meet us on the island Viðey where we go on an exciting walk through the island where we try to solve the mystery of the lost elves
+		    						and the hidden people who are said to be the islands former residents. "
+		    						+ "Clothing suggestions: Warm and waterproof outdoor clothing. ";
+		    		break;
+		    //Trip Á Gönguskíðum við Langanes
+		    case 12: addInfoString = "Join us on a skiing trip at Langanes where you will be educated about the secrets of Langanes and the exciting facts about its capital, Þórshöfn.
+		    						The participants must have all equipment beforehand, but will be picked up by super jeeps and driven to Langanes. "
+		    						+ "Clothing suggestions: Warm and waterproof outdoor clothing. ";
+		    		break;
+		    //Trip Grásleppur, Hvalir og Kynjaverur
+		    case 13: addInfoString = "The boat Nói will take up to Breiðafjörður where we will look at various dwellers of the sea. If we're lucky, participants might have the chance
+		    						to feast upon whale meat from a freshly hunted whale. "
+		    						+ "Clothing suggestions: Warm and waterproof outdoor clothing. ";
+		    		break;
+		    //Trip Vestfirsk dansferð
+		    case 14: addInfoString = "A bus will drive the participants to Ísafjörður where the participants have the option to dance with one another. 
+		    						This trip is perfect for those who wish to meet new people and to show off their dancing skills! "
+		    						+ "Clothing suggestions: Comfortable clothing that allow you to bust a move!";
+		    		break;
 		}
 		return addInfoString;
 	}
 
 	//Spurning hvernig maður setur þetta upp...
 	//Því ef við gerum þetta á þennan máta... holy hell þetta á eftir að vera langur klasi. 
-	public String tripDate(String dateString){
-		int date;
+	public String tripDate(int date){
+		String dateString;
 		switch(date){
-			case 1: dateString = "01.05";
+			case 1: dateString = "01.05.2015";
 					break;
-			case 2: dateString = "02.05";
+			case 2: dateString = "02.05.2015";
 					break;
-			case 3: dateString = "03.05";
+			case 3: dateString = "03.05.2015";
 					break;
 		}
 		return dateString;
@@ -164,5 +208,28 @@ public class TripProperties extends Trip{
 		//gefa switch hlutunum gildi hér?
 		//initializeTrip ætti að sækja upplýsingar hér
 		//og search ætti að sækja upplýsingar í initializeTrip
+
+		//if(ferðin Into the Glacier){
+			//this.cardDir = 3;
+			//this.selectLanguage = 1;
+			//this.review = 2;
+			//this.animals = false;
+			//this.insurence = true;
+			//this.pickUp = false;
+			//this.tLength = 2;
+			//this.addInfo = 1;
+			//this.accessibility = false;
+			//this.seat;
+			//this.price;
+			//this.date;
+		//}
+
+		//mögulega hægt að setja þetta upp þannig að við erum með ferðir a - o
+		//þ.a a = into the glacier, b = northern lights explorer, etc. 
+		//og síðan sækir initializeTrip þessar upplýsingar og setur það inn í array/lista
+		//svo að ef við erum að leita af ferðum með review = 2
+		//þá tjékkar initializeTrip á þessu og skilar lista af þeim ferðum?
+		//eða myndi það vera í compare?? 
+		//pælingar.. 
 	}
 }
