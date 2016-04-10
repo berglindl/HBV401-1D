@@ -23,26 +23,26 @@ public class Trip{
 	
 	public boolean getPropinfo( Object [] propquest){
 		
-		boolean match == true;
-			
-		if(!(propquest[0] == NULL || tripProperties.getLoc() == (int)(propquest[0])) ) match==false;
+		//Ef við miðum við það sem ég setti í TripProperties 
+		//þá gætum við sótt allt í fylki og borið saman við fylkið sem var
+		//sent inn
+		Object[] properties = tripProperties.getInfo;
 		
+		//Þá breytum við lítillega því sem er fyrir neðan
+		if(!(propquest[0] == NULL || tripProperties.getLoc() == (int)(propquest[0])) ) return false;
 		
-		if(!(propquest[1] == NULL || (tripProperties.getlanguage()).equals((String)(propquest[1])) )) match == false;
-		else return false;
+		if(!(propquest[1] == NULL || (tripProperties.getlanguage()).equals((String)(propquest[1])))) return false;
 		
-		if(!(propquest[2] == NULL || tripProperties.getDanger() == (int)(propquest[2]) ) match == false;
-		else return false;
-		
-		if(!(propquest[3] == NULL || propquest[3] !^ tripProperties.getAnimal() )) match == false;
-		else return false;
-		
+		if(!(propquest[2] == NULL || tripProperties.getDanger() == (int)(propquest[2]) ) return false;
+				
+		if(!(propquest[3] == NULL || propquest[3] !^ tripProperties.getAnimal() )) return false;
+				
 		//*Hérna vantar á milli*//
 		
-		if(!(tripProperties.getSearchprop((Object[])(propquest[14])))) match == false;
-		else return false;
+		if(!(tripProperties.getSearchprop((Object[])(propquest[14])))) return false;
 		
-		return match;
+		
+		return true;
 		
 	}
 	

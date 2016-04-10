@@ -231,5 +231,10 @@ public class TripProperties extends Trip{
 		//þá tjékkar initializeTrip á þessu og skilar lista af þeim ferðum?
 		//eða myndi það vera í compare?? 
 		//pælingar.. 
+		
+		//Dæmi sem gæti virkað sýnist mér fyrir getPropinfo í trip
+		//Þá skilar þetta hreinlega upplýsingum úr hlutnum sem trip getur svo unnið úr 
+		return Object[] a={animals,insurence,pickUp,accessibility};
+		
 	}
 }
