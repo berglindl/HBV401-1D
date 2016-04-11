@@ -1,0 +1,27 @@
+Það sem þarf að útfæra:
+
+Dagsetningar fyrir ferðir - spurning hvernig ætti að útfæra þetta. Það er öruglega best að sjá um dagssetningarnar í Booking
+			    og annaðhvort hafa ferðir lausar á öllum dögum og leyfa þá fólki að skrifa inn dagsetningarnar sjálft
+			    sem er öruglega einfaldast en öruglega ekkert rosalega flott, eða við getum reynt að setja inn dagatal
+			    sem lítur út fyrir að vera mikið vesen. Mögulega að gera þetta einfalt og sjá svo hvað hinir hóparnir
+   			    gerðu?
+
+Klára getInfo klasann í TripProperties - Pétur var byrjaður á einhverju þar, spurning að hann klári það sem hann var að hugsa
+					 og svo initialize-um við allar ferðirnar sem ætti að vera frekar straight forward
+
+Gera test cases - Þurfum að útfæra þetta og tjékka virkilega á því hvort að kóðinn okkar virkar ekki alveg öruglega
+
+compare í Trip - mögulega óþarfi?
+
+initializeTrip í Trip - tengist getInfo, mögulega þar sem við segjum að ferð 0 er þessi og hefur þessa eiginleika
+
+SearchProperties klasinn - mögulega óþarfi, það eina sem ég hafði hugsað að hafa hér er að geta sýnt ferðir frá lægsta verði og upp/vice versa
+			   er öruglega hægt að útfæra það í TripProperties, en áður en hægt er að útfæra það þurfum við að vera komin
+			   með lista af ferðum til að vita hvernig við eigum að útfæra það
+
+ReviewInventory - gera þannig að hægt sé að skrifa ummæli um ferðir, ef við ætlum að hafa það. Tengja við database
+
+Review - tengja við database
+
+Booking - tengja við ferðirnar
+

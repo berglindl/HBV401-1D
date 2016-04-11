@@ -8,17 +8,16 @@ class Reserve
 {
 		// Þarf að tengja hérna við listanna 
  		// til að sækja upplýsingar um ferðirnar
-
 	private static int numSeats = 20;
 
 	public static void main(String [] args)
  	{
-  		// Setti þennan fjölda bara inn sem prufuskilyrði þar sem þetta er ekki tengt við neitt ennþá
-  		// og vildi sjá hvernig það virkaði, á eftir að setja inn dagsetningarnar þ.e. hvernig þær fara inn í kóðann
-  		// var ekki viss með það en ætluðum við ekki að hafa fyrirfram ákveðnar dagsetningar en ekki hvað sem er?
-  		System.out.println("Enter number of tickets needed:");
-  		Scanner userInput = new Scanner(System.in);
-  		int tickets = userInput.nextInt();
+  	// Setti þennan fjölda bara inn sem prufuskilyrði þar sem þetta er ekki tengt við neitt ennþá
+  	// og vildi sjá hvernig það virkaði, á eftir að setja inn dagsetningarnar þ.e. hvernig þær fara inn í kóðann
+  	// var ekki viss með það en ætluðum við ekki að hafa fyrirfram ákveðnar dagsetningar en ekki hvað sem er?
+  	System.out.println("Enter number of tickets needed:");
+  	Scanner userInput = new Scanner(System.in);
+  	int tickets = userInput.nextInt();
  		if (tickets <= numSeats)
   		{
    			System.out.println("Enter full name:" );
@@ -35,7 +34,7 @@ class Reserve
     			//og fannst sniðugt að það sé hægt að leita eftir nöfnum, ekkert mál
     			//að breyta þessu en vildi hafa eitthvað inni á meðan við ynnum þetta svo það gleymdist ekki
     			numSeats--;
-  			 }
+  			}
   		}
   		else
   		{
