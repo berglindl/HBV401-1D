@@ -54,14 +54,21 @@ public class TripProperties extends Trip{
 					break;
 			case 4: selectLanguageString = "ESP";
 					break;
+			//Getum leyst vandann um að velja tvö tungumál svona
+			case 5: selectLanguageString = "ISL" + " ENG";
+					break;
+			case 6: selectLanguageString = "ENG" + " CHI";
+					break;
 			//má bæta við fleiri af vild
 		}
 		return selectLanguageString;
 	}
 
-	//Mock object
-	//For now returns a random number between 1 and 50
-	//Mun breytast yfir í að tengjast Booking klasanum
+	//Ég legg til að við annað hvort tökum út þennan klasa og sjáum um sætin bara í BookingInventory
+	//Þ.e tengjum ferðirnar þar við
+	//Eða sjáum um það hér
+	//Það er eflaust betra að sjá bara um þetta í BookingInventory. 
+	/*
 	public int numSeats(int seat){
 		int min = 0;
 		int max = 50;
@@ -74,6 +81,7 @@ public class TripProperties extends Trip{
 		}
 		return seat;
 	}
+	*/
 
 	//The length of the trip - length determines what case is used
 	//while the value of num determines the outcome
@@ -196,12 +204,32 @@ public class TripProperties extends Trip{
 	}
 
 	//Hafa þetta eins sett upp og hitt?
+	//Bara svona general case, má velja það sem manni finnst eiga við við hvaða ferð
 	public int tripPrice(int price){
-		int min = 5000;
-		int max = 25000;
-		//returns a random number between 5000 and 25000
-		price = (Math.random() * (max - min) + min);
-		return price;
+		int priceAmount = 0;
+		switch(price){
+			case 1: priceAmount = 9900 + " ISK";
+					break;
+			case 2: priceAmount = 11900 + " ISK";
+					break;
+			case 3: priceAmount = 13900 + " ISK";
+					break;
+			case 4: priceAmount = 15900 + " ISK";
+					break;
+			case 5: priceAmount = 18900 + " ISK";
+					break;
+			case 6: priceAmount = 22900 + " ISK";
+					break;
+			case 7: priceAmount = 29900 + " ISK";
+					break;
+			case 8: priceAmount = 39900 + " ISK";
+					break;
+			case 9: priceAmount = 49900 + " ISK";
+					break;
+			case 10: priceAmount = 59900 + " ISK";
+					break;
+		}
+		return priceAmount;
 	}
 
 	public void getInfo(){
@@ -220,7 +248,7 @@ public class TripProperties extends Trip{
 			//this.addInfo = 1;
 			//this.accessibility = false;
 			//this.seat;
-			//this.price;
+			//this.price = 5;
 			//this.date;
 		//}
 

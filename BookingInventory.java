@@ -8,10 +8,11 @@ class Reserve
 {
 		// Þarf að tengja hérna við listanna 
  		// til að sækja upplýsingar um ferðirnar
+
+	private static int numSeats = 20;
+
 	public static void main(String [] args)
  	{
- 		//Held að það gæti verið betra upp á að tengja þetta við TripProperties að hafa þetta ekki í void main klasanum
-  		int numSeats = 20;
   		// Setti þennan fjölda bara inn sem prufuskilyrði þar sem þetta er ekki tengt við neitt ennþá
   		// og vildi sjá hvernig það virkaði, á eftir að setja inn dagsetningarnar þ.e. hvernig þær fara inn í kóðann
   		// var ekki viss með það en ætluðum við ekki að hafa fyrirfram ákveðnar dagsetningar en ekki hvað sem er?
