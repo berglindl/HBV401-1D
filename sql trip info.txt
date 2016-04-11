@@ -1,0 +1,15 @@
+CREATE TABLE tripInfo(
+	id INT PRIMARY KEY,
+	name VARCHAR(50),
+	location VARCHAR(25),
+	language VARCHAR(10),
+	additionalInformation VARCHAR(500),
+	length INT,
+	dangerReview INT,
+	animals INT,
+	insurence INT,
+	pickUp INT,
+	accessibility INT
+);
+
+t.d SELECT name FROM tripInfo gefur okkur öll heitin :)
