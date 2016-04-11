@@ -6,14 +6,14 @@ class review
 {
     // Hér þyrfti að vera einhver tenging við ferðirnar en var ekki viss hvernig við vildum gera þetta
     // þannig tengdi ekki við tripNames eða neitt svoleiðis ennþá
- public static void main(String [] args)
+public static void main(String [] args)
     {
-     int vote;
-     int votesCount = 0;
-     // Núlstillti bara til að byrja með þar sem það er enging tengin við neitt komin
-     // breytum þessu á endanum
-     Scanner userInput = new Scanner(System.in);
-     {
+    int vote;
+    int votesCount = 0;
+    // Núlstillti bara til að byrja með þar sem það er enging tenging við neitt komin
+    // breytum þessu á endanum
+    Scanner userInput = new Scanner(System.in);
+    {
         System.out.println("Rate this trip on a scale from 0-5");
         vote = userInput.nextInt();
         votesCount++;
@@ -23,24 +23,23 @@ class review
         {
          vote = 0;
         }
-        if (vote > 5)
+        else if (vote > 5)
         {
          vote = 5;
         }
         // Megið fegra þetta ef þið getið
-     }
-  int votesTotal;
+    }
+    int votesTotal;
     {
        votesTotal = vote;
        votesTotal = votesTotal + vote;
-     }
-   if (votesCount > 0)
+    }
     // Tilgangslaust að telja ef það eru engin atkvæði
-    {
+    if (votesCount > 0){
         double average = votesTotal / votesCount;
         System.out.println("Average for this trip is:" + average );
     }
-   userInput.close();
-   // átti eftir að bæta inn svo þetta færi allt í sama lista
- }
+    userInput.close();
+    // átti eftir að bæta inn svo þetta færi allt í sama lista
+    }
 }
