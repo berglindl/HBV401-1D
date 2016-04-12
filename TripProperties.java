@@ -268,7 +268,11 @@ public class TripProperties extends Trip{
 		
 		
 		//Best væri að fá inn í fylkið prímitiv gildi eins og int boolean, strengi o.s.frv.
-		
+
+		//þannig sem switch virkar er að þetta er í raun þæginlegri leið til að gera fullt af if setningum
+		//t.d switch(price) case 1 case 2 etc etc er það sama og segja if(price == 1) then priceAmount = 9900 + " ISK", if(price == 2) then priceAmount = 11900 + " ISK"
+		//það sem þarf að gera til að fá rétta útkomu er að gefa price gildi sem samræmist case-inu.
+		//þannig að ef price = 2, þá skilum við priceAmount og fáum út 11900 + " ISK"
 
 		//ef þetta er gert þannig að við erum bara með trip1 til trip14 þá ætti að vera hægt að skila þeim gildum
 		//og svo festa þá niður í initializeTrip?
