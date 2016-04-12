@@ -59,6 +59,8 @@ public class TripProperties extends Trip{
 					break;
 			case 6: selectLanguageString = "ENG" + " CHI";
 					break;
+			case 7: selectLanguageString = "ENG" + "SWE" + "FRE";
+					break;
 			//má bæta við fleiri af vild
 		}
 		return selectLanguageString;
@@ -248,9 +250,185 @@ public class TripProperties extends Trip{
 			this.accessibility = false;
 			this.price = 5;
 		}
+		//Setti restina af ferðunum inn, kannski ekki það fallegasta en virkar :)
 
+		// Skíðaferð á Hrútafjallstinda
 		if(trip2){
+			this.cardDir = 2;
+			this.selectLanguage = 5;
+			this.review = 5;
+			this.animals = false;
+			this.insurence = true;
+			this.pickUp = false;
+			this.tLength = 3;
+			this.addInfo = 2;
+			this.accessibility = false;
+			this.price = 3;
+		}
+		//Whale Watching í Húsavík
+			if(trip3){
+			this.cardDir = 1;
+			this.selectLanguage = 5;
+			this.review = 1;
+			this.animals = false;
+			this.insurence = false;
+			this.pickUp = false;
+			this.tLength = 7;
+			this.addInfo = 3;
+			this.accessibility = false;
+			this.price = 7;
+		}
+					
+			//Trip Söguferð um Miðbæinn
+			//History Walk Through Downtown
+			if(trip4){
+			this.cardDir = 4;
+			this.selectLanguage = 2;
+			this.review = 1;
+			this.animals = true;
+			this.insurence = false;
+			this.pickUp = true;
+			this.tLength = 2;
+			this.addInfo = 4;
+			this.accessibility = false;
+			this.price = 1;
+		}
 			
+			//Trip the Golden Circle and Snorkeling
+			if(trip5){
+			this.cardDir = 3;
+			this.selectLanguage = 5;
+			this.review = 2;
+			this.animals = false;
+			this.insurence = false;
+			this.pickUp = true;
+			this.tLength = 6;
+			this.addInfo = 5;
+			this.accessibility = false;
+			this.price = 9;
+		}
+			//Trip Glacier Walking and Waterfalls
+		    if(trip6){
+			this.cardDir = 3;
+			this.selectLanguage = 5;
+			this.review = 1;
+			this.animals = false;
+			this.insurence = false;
+			this.pickUp = true;
+			this.tLength = 8;
+			this.addInfo = 6;
+			this.accessibility = false;
+			this.price = 3;
+		}
+		    //Trip Northern Lights Explorer	
+			if(trip7){
+			this.cardDir = 3;
+			this.selectLanguage = 5;
+			this.review = 1;
+			this.animals = false;
+			this.insurence = false;
+			this.pickUp = true;
+			this.tLength = 2;
+			this.addInfo = 7;
+			this.accessibility = false;
+			this.price = 1;
+		}
+		    //Trip Game of Thrones - Mývatn Mystery Magic
+		    if(trip8){
+			this.cardDir = 1;
+			this.selectLanguage = 5;
+			this.review = 1;
+			this.animals = false;
+			this.insurence = false;
+			this.pickUp = true;
+			this.tLength = 4;
+			this.addInfo = 8;
+			this.accessibility = false;
+			this.price = 4;
+		}
+		    //Trip Papeyjarferðir
+		    //A Trip to Papey Islands
+		    if(trip9){
+			this.cardDir = 2;
+			this.selectLanguage = 1;
+			this.review = 1;
+			this.animals = true;
+			this.insurence = false;
+			this.pickUp = false;
+			this.tLength = 2;
+			this.addInfo = 9;
+			this.accessibility = false;
+			this.price = 5;
+		}
+		    //Trip Hellaferð við Ingólfsfjall
+		    //The Caves in Ingólfsfjall
+		    if(trip10){
+			this.cardDir = 1;
+			this.selectLanguage = 5;
+			this.review = 2;
+			this.animals = false;
+			this.insurence = true;
+			this.pickUp = true;
+			this.tLength = 2;
+			this.addInfo = 10;
+			this.accessibility = false;
+			this.price = 2;
+		}
+		    //Trip Á Gönguskíðum við Langanes
+		    //Skiing through Langanes
+		    if(trip11){
+			this.cardDir = 2;
+			this.selectLanguage = 2;
+			this.review = 2;
+			this.animals = true;
+			this.insurence = true;
+			this.pickUp = true;
+			this.tLength = 4;
+			this.addInfo = 11;
+			this.accessibility = false;
+			this.price = 6;
+		}
+		    //Trip Grásleppur, Hvalir og Kynjaverur
+		    //Whale Watching in Breiðafjörður
+		    if(trip12){
+			this.cardDir = 4;
+			this.selectLanguage = 7;
+			this.review = 3;
+			this.animals = true;
+			this.insurence = true;
+			this.pickUp = false;
+			this.tLength = 5;
+			this.addInfo = 12;
+			this.accessibility = false;
+			this.price = 8;
+		}
+		    //Trip Vestfirsk dansferð
+		    //Western Dancing Trip
+		    if(trip13){
+			this.cardDir = 4;
+			this.selectLanguage = 5;
+			this.review = 1;
+			this.animals = true;
+			this.insurence = true;
+			this.pickUp = true;
+			this.tLength = 3;
+			this.addInfo = 13;
+			this.accessibility = false;
+			this.price = 3;
+		}
+		    //Trip Spennuganga um Viðey
+		    //A Walk Through Viðey
+		    if(trip14){
+			this.cardDir = 4;
+			this.selectLanguage = 5;
+			this.review = 1;
+			this.animals = false;
+			this.insurence = true;
+			this.pickUp = false;
+			this.tLength = 2;
+			this.addInfo = 14;
+			this.accessibility = false;
+			this.price = 1;
 		}
 
 		//mögulega hægt að setja þetta upp þannig að við erum með ferðir trip1 - trip14
