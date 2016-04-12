@@ -79,7 +79,7 @@ class Cancellation
 // fannst þetta samt ágætis leið til að hafa allar dagsetningar inni
 import java.util.Scanner;
 // ég importa allaf java scanner en megið breyta því :)
-class tripDate
+class TripDate
 // ykkur er velkomið að breyta class fyrir ofan og public static dæminu hér að neðan 
 {
   public static void main(String args[])

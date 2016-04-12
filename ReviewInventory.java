@@ -1,6 +1,6 @@
 public class ReviewInventory extends Review{
 import java.util.Scanner;
-class update
+class Update
 {
  //Setti bara inn mjög basic review til að hafa eitthvað inni. Endlega breytið og bætið eins og þið viljið
  //Hér þyrfti tengingu við ferðirnar
@@ -15,12 +15,10 @@ class update
    ReviewList.add(reviewText);
    // Gætum þá séð lista af reviews, á að bæta við username í listann eða viljum við hafa  
    // þetta naflaust? 
+
+   //Ég held að user name gæti verið fínt, en er ReviewList fylki eða eitthvað þannig?
    userInput.close();
- }
+   }
 }
 
-	}
-	public void delete(){
-	
-	}
-}
+//Tók út delete því ég held að það sé algjör óþarfi eins og verkefnið stendur núna
