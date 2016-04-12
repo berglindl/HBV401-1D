@@ -1,61 +1,67 @@
-public class BookingInventory extends Booking{
 import java.util.Scanner;
 
-//Spurning um að hafa hér líka valmöguleikann á að panta hópferð
-//Þ.e ef það er valið, þá er öllin ferðin frátekin fyrir sá hóp
-//Getum haft það að min 5 þurfi þá að mæta
 class Reserve
 {
-		// Þarf að tengja hérna við listanna 
- 		// til að sækja upplýsingar um ferðirnar
-	private static int numSeats = 20;
-
-	public static void main(String [] args)
- 	{
-  	// Setti þennan fjölda bara inn sem prufuskilyrði þar sem þetta er ekki tengt við neitt ennþá
-  	// og vildi sjá hvernig það virkaði, á eftir að setja inn dagsetningarnar þ.e. hvernig þær fara inn í kóðann
-  	// var ekki viss með það en ætluðum við ekki að hafa fyrirfram ákveðnar dagsetningar en ekki hvað sem er?
-  	System.out.println("Enter number of tickets needed:");
-  	Scanner userInput = new Scanner(System.in);
-  	int tickets = userInput.nextInt();
- 		if (tickets <= numSeats)
-  		{
-        if (tickets >= 5)
-          // Setti þetta inn sem "hóppöntun", má endilega laga og breyta en var ekki viss hvernig öðruvísi þið vilduð gera þetta?
-          // þ.e. var ekki alveg viss þegar þú talar um að taka alla ferðina frá fyrir 1 hóp þegar fjöldi er 5-20 manns
-          // hvort þú vildir bjóða þeim hóp uppá að vera einir þá gegn gjaldi eða bara frítt og hver pælingin væri
-          // En var að pæla hvort við þyrftum ekki að breyta cancel þá líka og hvernig þar sem við höfum tekið út nöfnin með pöntunum 
-          // úr listanum en núna eru t.d. 5 sæti á einni pöntun. Spurning hvort það sé ekki hægt að afpanta eitt sæti úr hópaferð eða hvort ég sé að
-          // ofhugsa þetta?
-        {
-          System.out.println("You have chosen a trip for 5 or more persons, please enter one name for the whole group:");
-          Scanner name = new Scanner(System.in);
-          String names = name.nextLine();       
-          BookingsList.add(names);
-        }
-        else
-        {
-   			System.out.println("Enter full name:" );
-   			//Hugsaði að það væri gott að hafa fullt nafn til að geta rakið pöntun ef 
-   			//einhver cancellar pöntun, yrði vandræðanlegt að cancella vitlausa pöntun
-   			for(int i=0; i<tickets; i++)
-   			{
-    			System.out.println("Enter full name:");
-    			Scanner name = new Scanner(System.in);
-    			String names = name.nextLine();
-    			//Ef það á að cancella bara fyrir 1 af 10 t.d í pöntun þá gæti verið gott að rekja til nafns? Getum breytt
-    			BookingsList.add(names);
-    			//Setti þetta inn því ég gerði ráð fyrir að við myndum hafa lista sem héldi skrá yfir pantanir
-    			//og fannst sniðugt að það sé hægt að leita eftir nöfnum, ekkert mál
-    			//að breyta þessu en vildi hafa eitthvað inni á meðan við ynnum þetta svo það gleymdist ekki
-    			numSeats--;
-  			}
-  		}
+  //Smá lagfæringar í gangi
+ private static int numSeats = 20;
+ public static void main(String [] args)
+  {
+   System.out.println("Enter number of tickets needed:");
+   Scanner userInput = new Scanner(System.in);
+   int tickets = userInput.nextInt();
+   if (tickets <= numSeats)
+    {
+     if (tickets >= 5)
+       // ef 5 eða fleiri þá er hægt að kaupa sem hópaferð, þá er bara eitt nafn gefið upp en ekki mörg
+       // og þð er hægt að kaupa frekar private ferð þar sem þetta er hópur.
+       // Er það ekki það sem við vorum að tala um að vilja getað gert?
+     {
+      System.out.println("You have chosen a trip for 5 or more persons, press 1 for a private trip for your group and 2 for public:");
+          Scanner answ = new Scanner(System.in);
+          String input = answ.next();
+          if(input.equals("1"))
+          {
+           System.out.println("Please enter one name for the whole group");
+              Scanner name = new Scanner(System.in);
+              String names = name.nextLine();       
+              BookingsList.add(names);
+              // eina við booking list er að við erum bara að setja inn nöfn þeirra sem panta en ekki
+              // hve mikið það er verið að panta. En þar sem við erum búin að breyta þannig það þarf ekki alltaf
+              // að gefa upp nafn fyrir hvern farþega, hvort viljið þið hafa annan lista með magni ferðaplássa pantað
+              // láta nafn þess sem pantar fyrir 5 koma 5sinnum eða bæði?
+              int numSeats = 0;
+             }
+          else if(input.equals("2"))
+          {
+              System.out.println("Please enter one name for the whole group");
+              Scanner name = new Scanner(System.in);
+             String names = name.nextLine();       
+             BookingsList.add(names);
+             int numSeats = numSeats - tickets;
+          }
+          else
+          {
+           System.out.println("invalid input");
+          }
+          answ.close();
+         }
+         else
+         {
+      System.out.println("Enter full name:" );
+      for(int i=0; i<tickets; i++)
+      {
+       System.out.println("Enter full name:");
+       Scanner name = new Scanner(System.in);
+       String names = name.nextLine();
+       BookingsList.add(names);
+       numSeats--;
+     }
+    }
     }
     else
     {
-   			System.out.println("Number of tickets unavailable");
- 		 }
+      System.out.println("Number of tickets unavailable");
+     }
      // bætti hérna við mjög einföldu borgunarekrfi, má breyta
     System.out.println("Press 1 to pay now and 2 to pay upon arrival:");
     Scanner answer = new Scanner(System.in);
