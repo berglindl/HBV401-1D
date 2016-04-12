@@ -5,10 +5,17 @@ public class TripProperties extends Trip{
 	private boolean pickUp;
 	private boolean accessibility;
 
+	private int review;
+	private int cardDir;
+	private int selectLanguage;
+	private int length;
+	private int addInfo;
+	private int price;
+
 
 	//Þetta er bara í rauninni bara öðruvísi leið til að nota if-statements
 	//er basically það sama og gera if(review = 1){dangerNum == 1}
-	public int dangerReview(int review){
+	public int dangerReview(){
 		int dangerNum;
 		switch(review){
 			case 1: dangerNum = 1;
@@ -27,7 +34,7 @@ public class TripProperties extends Trip{
 
 	//cardDir decides which of those cardinal directions are chosen
 	//cardDir = 1 means North, cardDir = 2 means East, ...
-	public String location(int cardDir){
+	public String location(){
 		String cardDirString;
 		switch(cardDir){
 			case 1: cardDirString = "Norðurland";
@@ -43,7 +50,7 @@ public class TripProperties extends Trip{
 	}
 
 	//Mögulega hafa þetta sett upp svona líka?
-	public String language(int selectLanguage){
+	public String language(){
 		String selectLanguageString;
 		switch(selectLanguage){
 			case 1: selectLanguageString = "ISL";
@@ -87,9 +94,9 @@ public class TripProperties extends Trip{
 
 	//The length of the trip - length determines what case is used
 	//while the value of num determines the outcome
-	public int tripLength(int tLength){
+	public int tripLength(){
 		int num = 0;
-		switch(tLength){
+		switch(length){
 			//Spurning að setja þetta svona upp?
 			case 1: num = 2 + " hours";
 					break;
@@ -117,7 +124,7 @@ public class TripProperties extends Trip{
 	//Ásamt öllum öðrum upplýsingum
 	//Nema það sé ekkert mál að tengja upplýsingarnar yfir, þá er mögulega betra að gera það þannig
 	//But for now... 
-	public String additionalInfo(int addInfo){
+	public String additionalInfo(){
 		String addInfoString;
 		switch(addInfo){
 			//Trip Into the Glacier
@@ -205,7 +212,7 @@ public class TripProperties extends Trip{
 	
 	//Hafa þetta eins sett upp og hitt?
 	//Bara svona general case, má velja það sem manni finnst eiga við við hvaða ferð
-	public int tripPrice(int price){
+	public int tripPrice(){
 		int priceAmount;
 		switch(price){
 			case 1: priceAmount = 9900 + " ISK";
@@ -245,7 +252,7 @@ public class TripProperties extends Trip{
 			this.animals = false;
 			this.insurence = true;
 			this.pickUp = false;
-			this.tLength = 2;
+			this.length = 2;
 			this.addInfo = 1;
 			this.accessibility = false;
 			this.price = 5;
@@ -260,172 +267,181 @@ public class TripProperties extends Trip{
 			this.animals = false;
 			this.insurence = true;
 			this.pickUp = false;
-			this.tLength = 3;
+			this.length = 3;
 			this.addInfo = 2;
 			this.accessibility = false;
 			this.price = 3;
 		}
 		//Whale Watching í Húsavík
-			if(trip3){
+		if(trip3){
 			this.cardDir = 1;
 			this.selectLanguage = 5;
 			this.review = 1;
 			this.animals = false;
 			this.insurence = false;
 			this.pickUp = false;
-			this.tLength = 7;
+			this.length = 7;
 			this.addInfo = 3;
 			this.accessibility = false;
 			this.price = 7;
 		}
 					
-			//Trip Söguferð um Miðbæinn
-			//History Walk Through Downtown
-			if(trip4){
+		//Trip Söguferð um Miðbæinn
+		//History Walk Through Downtown
+		if(trip4){
 			this.cardDir = 4;
 			this.selectLanguage = 2;
 			this.review = 1;
 			this.animals = true;
 			this.insurence = false;
 			this.pickUp = true;
-			this.tLength = 2;
+			this.length = 2;
 			this.addInfo = 4;
 			this.accessibility = false;
 			this.price = 1;
 		}
 			
-			//Trip the Golden Circle and Snorkeling
-			if(trip5){
+		//Trip the Golden Circle and Snorkeling
+		if(trip5){
 			this.cardDir = 3;
 			this.selectLanguage = 5;
 			this.review = 2;
 			this.animals = false;
 			this.insurence = false;
 			this.pickUp = true;
-			this.tLength = 6;
+			this.length = 6;
 			this.addInfo = 5;
 			this.accessibility = false;
 			this.price = 9;
 		}
-			//Trip Glacier Walking and Waterfalls
-		    if(trip6){
+		
+		//Trip Glacier Walking and Waterfalls
+		if(trip6){
 			this.cardDir = 3;
 			this.selectLanguage = 5;
 			this.review = 1;
 			this.animals = false;
 			this.insurence = false;
 			this.pickUp = true;
-			this.tLength = 8;
+			this.length = 8;
 			this.addInfo = 6;
 			this.accessibility = false;
 			this.price = 3;
 		}
-		    //Trip Northern Lights Explorer	
-			if(trip7){
+		
+		//Trip Northern Lights Explorer	
+		if(trip7){
 			this.cardDir = 3;
 			this.selectLanguage = 5;
 			this.review = 1;
 			this.animals = false;
 			this.insurence = false;
 			this.pickUp = true;
-			this.tLength = 2;
+			this.length = 2;
 			this.addInfo = 7;
 			this.accessibility = false;
 			this.price = 1;
 		}
-		    //Trip Game of Thrones - Mývatn Mystery Magic
-		    if(trip8){
+		
+		//Trip Game of Thrones - Mývatn Mystery Magic
+		if(trip8){
 			this.cardDir = 1;
 			this.selectLanguage = 5;
 			this.review = 1;
 			this.animals = false;
 			this.insurence = false;
 			this.pickUp = true;
-			this.tLength = 4;
+			this.length = 4;
 			this.addInfo = 8;
 			this.accessibility = false;
 			this.price = 4;
 		}
-		    //Trip Papeyjarferðir
-		    //A Trip to Papey Islands
-		    if(trip9){
+		    
+		//Trip Papeyjarferðir
+		//A Trip to Papey Islands
+		if(trip9){
 			this.cardDir = 2;
 			this.selectLanguage = 1;
 			this.review = 1;
 			this.animals = true;
 			this.insurence = false;
 			this.pickUp = false;
-			this.tLength = 2;
+			this.length = 2;
 			this.addInfo = 9;
 			this.accessibility = false;
 			this.price = 5;
 		}
-		    //Trip Hellaferð við Ingólfsfjall
-		    //The Caves in Ingólfsfjall
-		    if(trip10){
+		    
+		//Trip Hellaferð við Ingólfsfjall
+		//The Caves in Ingólfsfjall
+	    if(trip10){
 			this.cardDir = 1;
 			this.selectLanguage = 5;
 			this.review = 2;
 			this.animals = false;
 			this.insurence = true;
 			this.pickUp = true;
-			this.tLength = 2;
+			this.length = 2;
 			this.addInfo = 10;
 			this.accessibility = false;
 			this.price = 2;
 		}
-		    //Trip Á Gönguskíðum við Langanes
-		    //Skiing through Langanes
-		    if(trip11){
+		    
+		//Trip Á Gönguskíðum við Langanes
+	    //Skiing through Langanes
+	    if(trip11){
 			this.cardDir = 2;
 			this.selectLanguage = 2;
 			this.review = 2;
 			this.animals = true;
 			this.insurence = true;
 			this.pickUp = true;
-			this.tLength = 4;
+			this.length = 4;
 			this.addInfo = 11;
 			this.accessibility = false;
 			this.price = 6;
 		}
-		    //Trip Grásleppur, Hvalir og Kynjaverur
-		    //Whale Watching in Breiðafjörður
-		    if(trip12){
+		    
+		//Trip Grásleppur, Hvalir og Kynjaverur
+	    //Whale Watching in Breiðafjörður
+	    if(trip12){
 			this.cardDir = 4;
 			this.selectLanguage = 7;
 			this.review = 3;
 			this.animals = true;
 			this.insurence = true;
 			this.pickUp = false;
-			this.tLength = 5;
+			this.length = 5;
 			this.addInfo = 12;
 			this.accessibility = false;
 			this.price = 8;
 		}
-		    //Trip Vestfirsk dansferð
-		    //Western Dancing Trip
-		    if(trip13){
+		
+	    //Trip Vestfirsk dansferð
+	    //Western Dancing Trip
+	    if(trip13){
 			this.cardDir = 4;
 			this.selectLanguage = 5;
 			this.review = 1;
 			this.animals = true;
 			this.insurence = true;
 			this.pickUp = true;
-			this.tLength = 3;
+			this.length = 3;
 			this.addInfo = 13;
 			this.accessibility = false;
 			this.price = 3;
 		}
-		    //Trip Spennuganga um Viðey
-		    //A Walk Through Viðey
-		    if(trip14){
+		    
+		//Trip Spennuganga um Viðey
+	    //A Walk Through Viðey
+	    if(trip14){
 			this.cardDir = 4;
 			this.selectLanguage = 5;
 			this.review = 1;
 			this.animals = false;
 			this.insurence = true;
 			this.pickUp = false;
-			this.tLength = 2;
+			this.length = 2;
 			this.addInfo = 14;
 			this.accessibility = false;
 			this.price = 1;
@@ -441,6 +457,9 @@ public class TripProperties extends Trip{
 		//Dæmi sem gæti virkað sýnist mér fyrir getPropinfo í trip
 		//Þá skilar þetta hreinlega upplýsingum úr hlutnum sem trip getur svo unnið úr 
 		return Object[] a={animals,insurence,pickUp,accessibility};
+
+		//Með breytingunum þannig að int breyturnar séu núna private int breytur, er þá hægt að útfæra þetta svona?
+
 
 		//hvernig væri hægt að skila hinum hlutunum yfir? 
 		//þ.e þeim hlutum sem eru ekki boolean gildi?
