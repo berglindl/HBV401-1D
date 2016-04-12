@@ -17,7 +17,7 @@ public static void main( String[] args){
 }
 }
 
-public static void search(){
+public static void Search(){
 	Scanner ssc = new Scanner(System.in);
 	System.out.println("Searching for daytrips");
 	System.out.println("Do you have a trip name to search for?");
@@ -39,7 +39,7 @@ public static void search(){
 
 }
 
-public static Object[] trippropsearch(){
+public static Object[] TripPropSearch(){
 	Scanner trsc = new Scanner(System.in);
 	System.out.println("Please enter which part of Iceland you wish to go");
 	System.out.println("1:, 2, 3 or 4.");
@@ -61,12 +61,12 @@ public static Object[] trippropsearch(){
 	
 	//Hérna vantar restina á milli eins
 
-	Object[] searchprop=searchpropsearch();
+	Object[] SearchProp = SearchPropSearch();
 
-	return Object[] a={location,language,danger,animals,...,searchprop};
+	return Object[] a={location,language,danger,animals,...,SearchProp};
 }
 
-public static Object[] searchpropsearch();{
+public static Object[] SearchPropSearch();{
 
 
 

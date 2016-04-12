@@ -73,25 +73,6 @@ public class TripProperties extends Trip{
 		return selectLanguageString;
 	}
 
-	//Ég legg til að við annað hvort tökum út þennan klasa og sjáum um sætin bara í BookingInventory
-	//Þ.e tengjum ferðirnar þar við
-	//Eða sjáum um það hér
-	//Það er eflaust betra að sjá bara um þetta í BookingInventory. 
-	/*
-	public int numSeats(int seat){
-		int min = 0;
-		int max = 50;
-		seat = Math.random() * (max - min) + min;
-		if(seat == 0){
-			System.out.println("Booking is full! Try another date.");
-		}
-		else{
-			System.out.println("Booking successful, enjoy your trip!");
-		}
-		return seat;
-	}
-	*/
-
 	//The length of the trip - length determines what case is used
 	//while the value of num determines the outcome
 	public int tripLength(){
