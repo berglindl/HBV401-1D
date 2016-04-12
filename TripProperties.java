@@ -198,21 +198,7 @@ public class TripProperties extends Trip{
 		return addInfoString;
 	}
 
-	//Spurning hvernig maður setur þetta upp...
-	//Því ef við gerum þetta á þennan máta... holy hell þetta á eftir að vera langur klasi. 
-	/*public String tripDate(int date){
-		String dateString;
-		switch(date){
-			case 1: dateString = "01.05.2015";
-					break;
-			case 2: dateString = "02.05.2015";
-					break;
-			case 3: dateString = "03.05.2015";
-					break;
-		}
-		return dateString;
-	}
-	*/
+
 
 	//Hafa þetta eins sett upp og hitt?
 	//Bara svona general case, má velja það sem manni finnst eiga við við hvaða ferð

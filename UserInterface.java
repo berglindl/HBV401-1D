@@ -1,19 +1,20 @@
 import java.util.Scanner;
 
 public class UserInterface
-
+{
 
 public static void main( String[] args){
 	Scanner sc = new Scanner(System.in);
 	System.out.println("Please choose desired operation");
-	System.out.println("1.Search for daytrip")
-	System.out.println("2.Reserve a daytrip")
-	System.out.println("3.Look at reviews")
+	System.out.println("1.Search for daytrip");
+	System.out.println("2.Reserve a daytrip");
+	System.out.println("3.Look at reviews");
 	System.out.println("Please enter 1,2 or 3.");
 	int operation = sc.nextInt();
 	if(operation==1)search();
 	if(operation==2)reserve();
 	if(operation==3)reviewlook();
+}
 }
 
 public static void search(){
@@ -32,8 +33,8 @@ public static void search(){
 
 	Object[] results = TripInventory.search(tripname,tripname,propinf);
 
-	if(results.length<1) System.out.println("No day trips were matched to your search criteria.")
-	else System.out.println("Following day trips matched your criteria")
+	if(results.length<1) System.out.println("No day trips were matched to your search criteria.");
+	else System.out.println("Following day trips matched your criteria");
 	for(int i = 0;i!=results.length;i++)System.out.println(results[i].getName());
 
 }
