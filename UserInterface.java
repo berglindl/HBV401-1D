@@ -57,6 +57,7 @@ public static Object[] trippropsearch(){
 	boolean animals = new boolean;
 	if(anima.equals("True"))animals==true;
 	if(anima.equals("False"))animals==false;
+	
 	//Hérna vantar restina á milli eins
 
 	Object[] searchprop=searchpropsearch();

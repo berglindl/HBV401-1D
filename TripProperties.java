@@ -279,6 +279,10 @@ public class TripProperties extends Trip{
 
 		//hvernig væri hægt að skila hinum hlutunum yfir? 
 		//þ.e þeim hlutum sem eru ekki boolean gildi?
+		
+		
+		//Best væri að fá inn í fylkið prímitiv gildi eins og int boolean, strengi o.s.frv.
+		
 
 		//ef þetta er gert þannig að við erum bara með trip1 til trip14 þá ætti að vera hægt að skila þeim gildum
 		//og svo festa þá niður í initializeTrip?
