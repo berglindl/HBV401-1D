@@ -11,20 +11,6 @@ public class TripInventory extends Trip{
 	//fylkinu og í hvaða sæti næsta ferð fer.
 	int count;
 	
-	
-	//Til bráðabirgða allavega þá hugsa ég sniðugt að hafa
-	//svona fall til að búa til Trip hlutina  
-	//spurning hvernig þetta tengist við sql seinna
-	public void makeTrip(String name, String type, Object[] information){
-		Trip a = new Trip;
-		a.setname(name);
-		a.settype(type);
-		a.maketripproperties(information);
-		Inventory[count++]=a;
-	}
-	
-	
-	
 	public Object[] search(String tripName, String tripType, Object[] propinfo){
 		//Svona vector er góður þegar við vitum ekki hve mörgum stökum
 		//við viljum bæta við í fylki

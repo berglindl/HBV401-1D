@@ -217,7 +217,7 @@ public class TripProperties extends Trip{
 	//Hafa þetta eins sett upp og hitt?
 	//Bara svona general case, má velja það sem manni finnst eiga við við hvaða ferð
 	public int tripPrice(int price){
-		int priceAmount = 0;
+		int priceAmount;
 		switch(price){
 			case 1: priceAmount = 9900 + " ISK";
 					break;
@@ -248,7 +248,8 @@ public class TripProperties extends Trip{
 		//initializeTrip ætti að sækja upplýsingar hér
 		//og search ætti að sækja upplýsingar í initializeTrip
 
-		//if(ferðin Into the Glacier){
+		//Into the Glacier
+		//if(trip1){
 			//this.cardDir = 3;
 			//this.selectLanguage = 1;
 			//this.review = 2;
@@ -258,13 +259,10 @@ public class TripProperties extends Trip{
 			//this.tLength = 2;
 			//this.addInfo = 1;
 			//this.accessibility = false;
-			//this.seat;
 			//this.price = 5;
-			//this.date;
 		//}
 
-		//mögulega hægt að setja þetta upp þannig að við erum með ferðir a - o
-		//þ.a a = into the glacier, b = northern lights explorer, etc. 
+		//mögulega hægt að setja þetta upp þannig að við erum með ferðir trip1 - trip14
 		//og síðan sækir initializeTrip þessar upplýsingar og setur það inn í array/lista
 		//svo að ef við erum að leita af ferðum með review = 2
 		//þá tjékkar initializeTrip á þessu og skilar lista af þeim ferðum?
@@ -274,6 +272,11 @@ public class TripProperties extends Trip{
 		//Dæmi sem gæti virkað sýnist mér fyrir getPropinfo í trip
 		//Þá skilar þetta hreinlega upplýsingum úr hlutnum sem trip getur svo unnið úr 
 		return Object[] a={animals,insurence,pickUp,accessibility};
-		
+
+		//hvernig væri hægt að skila hinum hlutunum yfir? 
+		//þ.e þeim hlutum sem eru ekki boolean gildi?
+
+		//ef þetta er gert þannig að við erum bara með trip1 til trip14 þá ætti að vera hægt að skila þeim gildum
+		//og svo festa þá niður í initializeTrip?
 	}
 }
