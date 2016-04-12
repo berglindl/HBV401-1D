@@ -459,6 +459,7 @@ public class TripProperties extends Trip{
 		return Object[] a={animals,insurence,pickUp,accessibility};
 
 		//Með breytingunum þannig að int breyturnar séu núna private int breytur, er þá hægt að útfæra þetta svona?
+		//return Object[] a = {animals, insurence, pickUp, accessibility, review, cardDir, selectLanguage, length, addInfo, price};
 
 
 		//hvernig væri hægt að skila hinum hlutunum yfir? 
