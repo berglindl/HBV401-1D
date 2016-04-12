@@ -199,7 +199,8 @@ public class TripProperties extends Trip{
 	}
 
 
-
+	//Hér geymum við Price :)
+	
 	//Hafa þetta eins sett upp og hitt?
 	//Bara svona general case, má velja það sem manni finnst eiga við við hvaða ferð
 	public int tripPrice(int price){
