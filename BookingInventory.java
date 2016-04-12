@@ -73,3 +73,80 @@ class Cancellation
 	  	// viljum við breyta þessu þannig þú sjáir nöfn þeirra sem voru cancellaðir eða er fjöldi nóg?
 	}
 }
+
+// hvort sem við höfum þetta hér eða í booking þá getum vð notað þennan kóða ef það má velja allar dagsetningar
+// gamli kóðinn er hér að ofan, vildi ekki taka hann út ef þið viljið frekar nota hann
+// fannst þetta samt ágætis leið til að hafa allar dagsetningar inni
+import java.util.Scanner;
+// ég importa allaf java scanner en megið breyta því :)
+class tripDate
+// ykkur er velkomið að breyta class fyrir ofan og public static dæminu hér að neðan 
+{
+  public static void main(String args[])
+  {
+    int month, day, year;
+    String mm, dd, yyyy;
+    Scanner userInput = new Scanner(System.in);
+    System.out.print("Input day using the following format dd: ");
+    dd = userInput.next();
+    day = Integer.parseInt(dd);
+    System.out.print("Input month using the following format mm: ");
+    mm = userInput.next();
+    month = Integer.parseInt(mm);
+    System.out.print("Input day using the following format yyyy: ");
+    yyyy = userInput.next();
+    year = Integer.parseInt(yyyy);
+    //Til að setja restrictions svo að það sé ekki hægt að bóka ferð árið 1827 eða 2200
+    if(year <= 2014){
+      System.out.print(year + " is an invalid year.");
+    }
+    else if(year > 2016){
+      System.out.print(year + " is an invalid year.");
+    }
+    //Ef að árið sem er sett inn er á milli 2015 og 2016
+    else if(year > 2014 || <= 2016){
+      switch (month) 
+      {  
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+          if (day > 31)
+            System.out.print(day + "/" + month + "/" + year + " is an invalid date.");
+          else 
+            System.out.print(" Your trip is booked on " + day + "/" + month + "/" + year);
+        break;
+
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+          if (day > 30)
+            System.out.print(day + "/" + month + "/" + year + " is an invalid date.");
+          else 
+            System.out.print(" Your trip is booked on " + day + "/" + month + "/" + year);
+        break;
+
+        case 2:
+          if (year % 4 == 0)
+            if (day > 29)
+              System.out.print(day + "/" + month + "/" + year + " is an invalid day.");
+            else
+              System.out.print(" Your trip is booked on " + day + "/" + month + "/" + year);
+            else if
+              if (day > 28)
+                System.out.print(day + "/" + month + "/" + year + " is an invalid day.");
+              else
+                System.out.print(" Your trip is booked on " + day + "/" + month + "/" + year);
+        break;
+
+        default:
+          System.out.println("The date: " + day + "/" + month + "/" + year + " has an invalid month");
+      }       
+      userInput.close();
+    }
+  }
+}
