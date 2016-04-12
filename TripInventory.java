@@ -22,13 +22,13 @@ public class TripInventory extends Trip{
 			boolean match == false;
 			boolean fail == false; 
 			
-			if(tripName == NULL || tripName.equals(Inventory[i].getName())) match == true;
+			if(tripName == NULL || tripName.equals((Trip)Inventory[i].getName())) match == true;
 			else fail == true;
 			
-			if(tripType== NULL || tripType.equals(Inventory[i].getType())) match == true;
+			if(tripType== NULL || tripType.equals((Trip)Inventory[i].getType())) match == true;
 			else fail == true;
 			
-			if( propinfo == NULL || Inventory[i].getPropinfo(propinfo) == true ) match == true;
+			if( propinfo == NULL || (Trip)Inventory[i].getPropinfo(propinfo) == true ) match == true;
 			else fail == true;
 			
 			if(match && !fail) searchpositives.add(Inventory[i]);
@@ -36,8 +36,12 @@ public class TripInventory extends Trip{
 			
 		return searchpositives.toArray();
 	}
+	
+	
 
-
+	public static void addToInventory(Trip a){
+		Inventory[count++]=a;
+	}
 
 
 	//Before and after are meant to be empty so nothing to do here
