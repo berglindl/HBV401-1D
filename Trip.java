@@ -34,7 +34,7 @@ public class Trip{
 		return type;
 	}
 	
-	public boolean getPropinfo( Object [] propquest){
+	public boolean getPropInfo( Object [] propquest){
 		
 		//Ef við miðum við það sem ég setti í TripProperties 
 		//þá gætum við sótt allt í fylki og borið saman við fylkið sem var

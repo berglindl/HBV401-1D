@@ -243,24 +243,28 @@ public class TripProperties extends Trip{
 		return priceAmount;
 	}
 
-	public void getInfo(){
+	public void getInfo(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10, trip11, trip12, trip13, trip14){
 		//gefa switch hlutunum gildi hér?
 		//initializeTrip ætti að sækja upplýsingar hér
 		//og search ætti að sækja upplýsingar í initializeTrip
 
 		//Into the Glacier
-		//if(trip1){
-			//this.cardDir = 3;
-			//this.selectLanguage = 1;
-			//this.review = 2;
-			//this.animals = false;
-			//this.insurence = true;
-			//this.pickUp = false;
-			//this.tLength = 2;
-			//this.addInfo = 1;
-			//this.accessibility = false;
-			//this.price = 5;
-		//}
+		if(trip1){
+			this.cardDir = 3;
+			this.selectLanguage = 1;
+			this.review = 2;
+			this.animals = false;
+			this.insurence = true;
+			this.pickUp = false;
+			this.tLength = 2;
+			this.addInfo = 1;
+			this.accessibility = false;
+			this.price = 5;
+		}
+
+		if(trip2){
+			
+		}
 
 		//mögulega hægt að setja þetta upp þannig að við erum með ferðir trip1 - trip14
 		//og síðan sækir initializeTrip þessar upplýsingar og setur það inn í array/lista
