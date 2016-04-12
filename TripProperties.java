@@ -277,6 +277,12 @@ public class TripProperties extends Trip{
 		
 		//hvar geymum við int price?
 
+		//það er einmitt spurningin. public int tripPrice(int price) tekur það inn þarna, og ef við útfærum ferðirnar eins og ég var byrjuð að gera fyrir ofan
+		//þá væri hægt að gefa því gildi þar, þ.a hver ferð hefur mismunandi gildi á hlutum eins og price og addInfo o.s.frv eftir því sem á við
+		//en það er spurning með getPropInfo hvernig við útfærum int gildin fyrir það. 
+		//væri hægt að frumstilla þau sem private breytur, helduru að það myndi virka?
+		//þ.a private static int price;
+
 		//ef þetta er gert þannig að við erum bara með trip1 til trip14 þá ætti að vera hægt að skila þeim gildum
 		//og svo festa þá niður í initializeTrip?
 	}
