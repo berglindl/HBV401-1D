@@ -20,6 +20,21 @@ class Reserve
   	int tickets = userInput.nextInt();
  		if (tickets <= numSeats)
   		{
+        if (tickets >= 5)
+          // Setti þetta inn sem "hóppöntun", má endilega laga og breyta en var ekki viss hvernig öðruvísi þið vilduð gera þetta?
+          // þ.e. var ekki alveg viss þegar þú talar um að taka alla ferðina frá fyrir 1 hóp þegar fjöldi er 5-20 manns
+          // hvort þú vildir bjóða þeim hóp uppá að vera einir þá gegn gjaldi eða bara frítt og hver pælingin væri
+          // En var að pæla hvort við þyrftum ekki að breyta cancel þá líka og hvernig þar sem við höfum tekið út nöfnin með pöntunum 
+          // úr listanum en núna eru t.d. 5 sæti á einni pöntun. Spurning hvort það sé ekki hægt að afpanta eitt sæti úr hópaferð eða hvort ég sé að
+          // ofhugsa þetta?
+        {
+          System.out.println("You have chosen a trip for 5 or more persons, please enter one name for the whole group:");
+          Scanner name = new Scanner(System.in);
+          String names = name.nextLine();       
+          BookingsList.add(names);
+        }
+        else
+        {
    			System.out.println("Enter full name:" );
    			//Hugsaði að það væri gott að hafa fullt nafn til að geta rakið pöntun ef 
    			//einhver cancellar pöntun, yrði vandræðanlegt að cancella vitlausa pöntun
@@ -36,15 +51,29 @@ class Reserve
     			numSeats--;
   			}
   		}
-  		else
-  		{
+    }
+    else
+    {
    			System.out.println("Number of tickets unavailable");
- 		}
-	}
-	// spurning um að setja hér System.out.println("Press 1 to pay now and 2 to pay upon arrival");
-	// eða eitthvað sambærilegt? Var ekki annars pælingin að hafa bara svipað t.d. 1 eða 2
-	// ef 2 þá kemur e-ð eins og System.out.println("Payment will be requested upon arrival eða e-ð"); og ef 1
-	// þá System.out.println("Payment successful"); Hvað finnst ykkur?
+ 		 }
+     // bætti hérna við mjög einföldu borgunarekrfi, má breyta
+    System.out.println("Press 1 to pay now and 2 to pay upon arrival:");
+    Scanner answer = new Scanner(System.in);
+    String response = answer.next();
+    if(response.equals("1"))
+       {
+           System.out.println("Payment successful");
+       }
+       else if(response.equals("2"))
+       {
+           System.out.println("Payment will be requested upon arrival");
+       }
+       else
+       {
+           System.out.println("invalid input");
+    }
+       answer.close();
+ }
 }
 
 import java.util.Scanner;
@@ -57,7 +86,8 @@ class Cancellation
   		System.out.println("Enter number of tickets you would like to cancel:");
   		Scanner userInput = new Scanner(System.in);
   		int tickets = userInput.nextInt();
-  		// spurning hvort við setjum inn skilyrði hér til að passa að þú getir ekki cancellað 10 miðum
+      // Spurning varðandi hóppönun hvort það þurfi ekki að vera hægt að afpanta hlta af henni?
+      // spurning hvort við setjum inn skilyrði hér til að passa að þú getir ekki cancellað 10 miðum
   		// ef það er bara búið að panta 3. Er ekki viss hvort við þurfum það
   		while (tickets > 0)
   		{
