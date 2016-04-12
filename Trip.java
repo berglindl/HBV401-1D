@@ -15,7 +15,7 @@ public class Trip{
 		a.setName(name);
 		a.setType(type);
 		a.maketripproperties(information);
-		addToInventory(a);
+		Inventory.addToInventory(a);
 	}
 	
 	public void setName(String n){
