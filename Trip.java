@@ -43,17 +43,21 @@ public class Trip{
 		//Eruð þið með einhverjar uppástungur???
 
 		Trip trip1 = new Trip({
-			this.cardDir = 3;
-			this.selectLanguage = 1;
-			this.review = 2;
-			this.animals = false;
-			this.insurence = true;
-			this.pickUp = false;
-			this.length = 2;
-			this.addInfo = 1;
-			this.accessibility = false;
-			this.price = 5;
+			this.name = "Into the Glacier",
+			this.type = "Hellaferð",
+			this.cardDir = 3,
+			this.selectLanguage = 1,
+			this.review = 2,
+			this.animals = false,
+			this.insurence = true,
+			this.pickUp = false,
+			this.length = 2,
+			this.addInfo = 1,
+			this.accessibility = false,
+			this.price = 5
 		});
+
+		Inventory.addToInventory(trip1);
 
 		//Trip trip1 = new Trip;
 		//Trip trip1.getInfo = new Trip
