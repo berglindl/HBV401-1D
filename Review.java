@@ -29,7 +29,7 @@ public static void main(String [] args)
         System.out.println("Write 8 for the trip Game of Thrones - Mývatn Mystery Magic,");
         System.out.println("Write 9 for the trip A Trip to Papey Islands,");
         System.out.println("Write 10 for the trip The Caves in Ingólfsfjall,");
-        System.out.println("Write 11 for the trip Á Gönguskíðum við Langanes,");
+        System.out.println("Write 11 for the trip Skiing Through Langanes,");
         System.out.println("Write 12 for the trip Whale Watching in Breiðafjörður,");
         System.out.println("Write 13 for the trip Western Dancing Trip,");
         System.out.println("Write 14 for the trip A Walk Through Viðey.");
@@ -37,7 +37,7 @@ public static void main(String [] args)
         number = selectTrip.nextInt();
         switch(number){
             //Þarf eflaust að breyta þessu þegar tengingin er komin nákvæmlega
-            case 1: Trip[0];
+            case 1: Trip[0]; //eða Trip[trip1]
                     break;
             case 2: Trip[1];
                     break;

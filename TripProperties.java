@@ -226,6 +226,8 @@ public class TripProperties extends Trip{
 		//initializeTrip ætti að sækja upplýsingar hér
 		//og search ætti að sækja upplýsingar í initializeTrip
 
+		/*
+
 		//Into the Glacier
 		if(trip1){
 			this.cardDir = 3;
@@ -428,7 +430,7 @@ public class TripProperties extends Trip{
 			this.accessibility = false;
 			this.price = 1;
 		}
-
+*/
 		//mögulega hægt að setja þetta upp þannig að við erum með ferðir trip1 - trip14
 		//og síðan sækir initializeTrip þessar upplýsingar og setur það inn í array/lista
 		//svo að ef við erum að leita af ferðum með review = 2
