@@ -34,6 +34,35 @@ public class Trip{
 		return type;
 	}
 	
+	public void trip(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10
+					trip11, trip12, trip13, trip14){
+
+		Object[] info = tripProperties.getInfo;
+
+		//Spurning um að þetta gæti virkað svona?
+		//Eruð þið með einhverjar uppástungur???
+
+		Trip trip1 = new Trip({
+			this.cardDir = 3;
+			this.selectLanguage = 1;
+			this.review = 2;
+			this.animals = false;
+			this.insurence = true;
+			this.pickUp = false;
+			this.length = 2;
+			this.addInfo = 1;
+			this.accessibility = false;
+			this.price = 5;
+		});
+
+		//Trip trip1 = new Trip;
+		//Trip trip1.getInfo = new Trip
+		//eða eitthvað á þá leið?
+		//trips from 0 - 14
+		//segja hvaða ferð er hvað?
+		//tengist við tripProperties/getInfo.TripProperties
+	}
+
 	public boolean getPropInfo( Object [] propquest){
 		
 		//Ef við miðum við það sem ég setti í TripProperties 
@@ -68,17 +97,26 @@ public class Trip{
 
 		if(!(propquest[3] == NULL || propquest[3] !^ tripProperties.accessibility() )) return false;
 
-		if(!(propquest[4] == NULL || tripProperties.dangerReview() == (int)(propquest[4]) ) return false;
+		if(!(propquest[4] == NULL || tripProperties.review() == (int)(propquest[4]) ) return false;
 
-		if(!(propquest[5] == NULL || tripProperties.tripLength() == (int)(propquest[5]) ) return false;
+		if(!(propquest[5] == NULL || tripProperties.length() == (int)(propquest[5]) ) return false;
 		
-		if(!(propquest[6] == NULL || tripProperties.tripPrice() == (int)(propquest[6]) ) return false;
+		if(!(propquest[6] == NULL || tripProperties.price() == (int)(propquest[6]) ) return false;
+
+		if(!(propquest[7] == NULL || tripProperties.selectLanguage() == (int)(propquest[7]) ) return false;
+
+		if(!(propquest[8] == NULL || tripProperties.cardDir() == (int)(propquest[8]) ) return false;
+
+		if(!(propquest[9] == NULL || tripProperties.addInfo() == (int)(propquest[9]) ) return false;
+
+		/*
 
 		if(!(propquest[7] == NULL || (tripProperties.language()).equals((String)(propquest[7])))) return false;
 
 		if(!(propquest[8] == NULL || (tripProperties.location()).equals((String)(propquest[8])))) return false;
 
 		if(!(propquest[9] == NULL || (tripProperties.additionalInfo()).equals((String)(propquest[9])))) return false;
+		*/
 				
 
 		if(!(tripProperties.getSearchprop((Object[])(propquest[14])))) return false;
@@ -87,18 +125,10 @@ public class Trip{
 		return true;
 		
 	}
+
 	
-	
-	public void compare(){
+	public void initializeTrip(Object[] trip1, trip2, ){
 		
-	}
-	
-	public void initializeTrip(){
-		//Trip trip1.getInfo = new Trip
-		//eða eitthvað á þá leið?
-		//trips from 0 - 14
-		//segja hvaða ferð er hvað?
-		//tengist við tripProperties/getInfo.TripProperties
 
 
 	}

@@ -438,10 +438,10 @@ public class TripProperties extends Trip{
 		
 		//Dæmi sem gæti virkað sýnist mér fyrir getPropinfo í trip
 		//Þá skilar þetta hreinlega upplýsingum úr hlutnum sem trip getur svo unnið úr 
-		return Object[] a={animals,insurence,pickUp,accessibility};
+		//return Object[] a={animals,insurence,pickUp,accessibility};
 
 		//Með breytingunum þannig að int breyturnar séu núna private int breytur, er þá hægt að útfæra þetta svona?
-		//return Object[] a = {animals, insurence, pickUp, accessibility, review, cardDir, selectLanguage, length, addInfo, price};
+		return Object[] a = {animals, insurence, pickUp, accessibility, review, cardDir, selectLanguage, length, addInfo, price};
 
 
 		//hvernig væri hægt að skila hinum hlutunum yfir? 
