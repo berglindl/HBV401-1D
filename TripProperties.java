@@ -77,24 +77,24 @@ public class TripProperties extends Trip{
 	//The length of the trip - length determines what case is used
 	//while the value of num determines the outcome
 	public int tripLength(){
-		int num = 0;
+		int num;
 		switch(length){
 			//Spurning að setja þetta svona upp?
-			case 1: num = 2 + " hours";
+			case 1: num = 2;
 					break;
-			case 2: num = 4 + " hours";
+			case 2: num = 4;
 					break;
-			case 3: num = 5 + " hours";
+			case 3: num = 5;
 					break;
-			case 4: num = 7 + " hours";
+			case 4: num = 7;
 					break;
-			case 5: num = 8 + " hours";
+			case 5: num = 8;
 					break;
-			case 6: num = 9 + " hours";
+			case 6: num = 9;
 					break;
-			case 7: num = 10 + " hours";
+			case 7: num = 10;
 					break;
-			case 8: num = 12 + " hours";
+			case 8: num = 12;
 					break;
 		}
 		return num;
@@ -102,10 +102,6 @@ public class TripProperties extends Trip{
 
 	//Orðinn aðeins meira fallegri svona
 	//Það er spurning hvort að það sé í raun ekki bara einfaldast að hafa klasann svona settann upp
-	//Og hafa þá bara auka copy í SQL database-inum
-	//Ásamt öllum öðrum upplýsingum
-	//Nema það sé ekkert mál að tengja upplýsingarnar yfir, þá er mögulega betra að gera það þannig
-	//But for now... 
 	public String additionalInfo(){
 		String addInfoString;
 		switch(addInfo){
@@ -188,284 +184,39 @@ public class TripProperties extends Trip{
 		}
 		return addInfoString;
 	}
-
-
-	//Hér geymum við Price :)
 	
 	//Hafa þetta eins sett upp og hitt?
 	//Bara svona general case, má velja það sem manni finnst eiga við við hvaða ferð
 	public int tripPrice(){
 		int priceAmount;
 		switch(price){
-			case 1: priceAmount = 9900 + " ISK";
+			case 1: priceAmount = 9900;
 					break;
-			case 2: priceAmount = 11900 + " ISK";
+			case 2: priceAmount = 11900;
 					break;
-			case 3: priceAmount = 13900 + " ISK";
+			case 3: priceAmount = 13900;
 					break;
-			case 4: priceAmount = 15900 + " ISK";
+			case 4: priceAmount = 15900;
 					break;
-			case 5: priceAmount = 18900 + " ISK";
+			case 5: priceAmount = 18900;
 					break;
-			case 6: priceAmount = 22900 + " ISK";
+			case 6: priceAmount = 22900;
 					break;
-			case 7: priceAmount = 29900 + " ISK";
+			case 7: priceAmount = 29900;
 					break;
-			case 8: priceAmount = 39900 + " ISK";
+			case 8: priceAmount = 39900;
 					break;
-			case 9: priceAmount = 49900 + " ISK";
+			case 9: priceAmount = 49900;
 					break;
-			case 10: priceAmount = 59900 + " ISK";
+			case 10: priceAmount = 59900;
 					break;
 		}
 		return priceAmount;
 	}
 
-	public void getInfo(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10, trip11, trip12, trip13, trip14){
-		//gefa switch hlutunum gildi hér?
-		//initializeTrip ætti að sækja upplýsingar hér
-		//og search ætti að sækja upplýsingar í initializeTrip
-
-		/*
-
-		//Into the Glacier
-		if(trip1){
-			this.cardDir = 3;
-			this.selectLanguage = 1;
-			this.review = 2;
-			this.animals = false;
-			this.insurence = true;
-			this.pickUp = false;
-			this.length = 2;
-			this.addInfo = 1;
-			this.accessibility = false;
-			this.price = 5;
-		}
-		//Setti restina af ferðunum inn, kannski ekki það fallegasta en virkar :)
-
-		// Skíðaferð á Hrútafjallstinda
-		if(trip2){
-			this.cardDir = 2;
-			this.selectLanguage = 5;
-			this.review = 5;
-			this.animals = false;
-			this.insurence = true;
-			this.pickUp = false;
-			this.length = 3;
-			this.addInfo = 2;
-			this.accessibility = false;
-			this.price = 3;
-		}
-		//Whale Watching í Húsavík
-		if(trip3){
-			this.cardDir = 1;
-			this.selectLanguage = 5;
-			this.review = 1;
-			this.animals = false;
-			this.insurence = false;
-			this.pickUp = false;
-			this.length = 7;
-			this.addInfo = 3;
-			this.accessibility = false;
-			this.price = 7;
-		}
-					
-		//Trip Söguferð um Miðbæinn
-		//History Walk Through Downtown
-		if(trip4){
-			this.cardDir = 4;
-			this.selectLanguage = 2;
-			this.review = 1;
-			this.animals = true;
-			this.insurence = false;
-			this.pickUp = true;
-			this.length = 2;
-			this.addInfo = 4;
-			this.accessibility = false;
-			this.price = 1;
-		}
-			
-		//Trip the Golden Circle and Snorkeling
-		if(trip5){
-			this.cardDir = 3;
-			this.selectLanguage = 5;
-			this.review = 2;
-			this.animals = false;
-			this.insurence = false;
-			this.pickUp = true;
-			this.length = 6;
-			this.addInfo = 5;
-			this.accessibility = false;
-			this.price = 9;
-		}
-		
-		//Trip Glacier Walking and Waterfalls
-		if(trip6){
-			this.cardDir = 3;
-			this.selectLanguage = 5;
-			this.review = 1;
-			this.animals = false;
-			this.insurence = false;
-			this.pickUp = true;
-			this.length = 8;
-			this.addInfo = 6;
-			this.accessibility = false;
-			this.price = 3;
-		}
-		
-		//Trip Northern Lights Explorer	
-		if(trip7){
-			this.cardDir = 3;
-			this.selectLanguage = 5;
-			this.review = 1;
-			this.animals = false;
-			this.insurence = false;
-			this.pickUp = true;
-			this.length = 2;
-			this.addInfo = 7;
-			this.accessibility = false;
-			this.price = 1;
-		}
-		
-		//Trip Game of Thrones - Mývatn Mystery Magic
-		if(trip8){
-			this.cardDir = 1;
-			this.selectLanguage = 5;
-			this.review = 1;
-			this.animals = false;
-			this.insurence = false;
-			this.pickUp = true;
-			this.length = 4;
-			this.addInfo = 8;
-			this.accessibility = false;
-			this.price = 4;
-		}
-		    
-		//Trip Papeyjarferðir
-		//A Trip to Papey Islands
-		if(trip9){
-			this.cardDir = 2;
-			this.selectLanguage = 1;
-			this.review = 1;
-			this.animals = true;
-			this.insurence = false;
-			this.pickUp = false;
-			this.length = 2;
-			this.addInfo = 9;
-			this.accessibility = false;
-			this.price = 5;
-		}
-		    
-		//Trip Hellaferð við Ingólfsfjall
-		//The Caves in Ingólfsfjall
-	    if(trip10){
-			this.cardDir = 1;
-			this.selectLanguage = 5;
-			this.review = 2;
-			this.animals = false;
-			this.insurence = true;
-			this.pickUp = true;
-			this.length = 2;
-			this.addInfo = 10;
-			this.accessibility = false;
-			this.price = 2;
-		}
-		    
-		//Trip Á Gönguskíðum við Langanes
-	    //Skiing through Langanes
-	    if(trip11){
-			this.cardDir = 2;
-			this.selectLanguage = 2;
-			this.review = 2;
-			this.animals = true;
-			this.insurence = true;
-			this.pickUp = true;
-			this.length = 4;
-			this.addInfo = 11;
-			this.accessibility = false;
-			this.price = 6;
-		}
-		    
-		//Trip Grásleppur, Hvalir og Kynjaverur
-	    //Whale Watching in Breiðafjörður
-	    if(trip12){
-			this.cardDir = 4;
-			this.selectLanguage = 7;
-			this.review = 3;
-			this.animals = true;
-			this.insurence = true;
-			this.pickUp = false;
-			this.length = 5;
-			this.addInfo = 12;
-			this.accessibility = false;
-			this.price = 8;
-		}
-		
-	    //Trip Vestfirsk dansferð
-	    //Western Dancing Trip
-	    if(trip13){
-			this.cardDir = 4;
-			this.selectLanguage = 5;
-			this.review = 1;
-			this.animals = true;
-			this.insurence = true;
-			this.pickUp = true;
-			this.length = 3;
-			this.addInfo = 13;
-			this.accessibility = false;
-			this.price = 3;
-		}
-		    
-		//Trip Spennuganga um Viðey
-	    //A Walk Through Viðey
-	    if(trip14){
-			this.cardDir = 4;
-			this.selectLanguage = 5;
-			this.review = 1;
-			this.animals = false;
-			this.insurence = true;
-			this.pickUp = false;
-			this.length = 2;
-			this.addInfo = 14;
-			this.accessibility = false;
-			this.price = 1;
-		}
-*/
-		//mögulega hægt að setja þetta upp þannig að við erum með ferðir trip1 - trip14
-		//og síðan sækir initializeTrip þessar upplýsingar og setur það inn í array/lista
-		//svo að ef við erum að leita af ferðum með review = 2
-		//þá tjékkar initializeTrip á þessu og skilar lista af þeim ferðum?
-		//eða myndi það vera í compare?? 
-		//pælingar.. 
-		
+	public void getInfo(){
 		//Dæmi sem gæti virkað sýnist mér fyrir getPropinfo í trip
 		//Þá skilar þetta hreinlega upplýsingum úr hlutnum sem trip getur svo unnið úr 
-		//return Object[] a={animals,insurence,pickUp,accessibility};
-
-		//Með breytingunum þannig að int breyturnar séu núna private int breytur, er þá hægt að útfæra þetta svona?
 		return Object[] a = {animals, insurence, pickUp, accessibility, review, cardDir, selectLanguage, length, addInfo, price};
-
-
-		//hvernig væri hægt að skila hinum hlutunum yfir? 
-		//þ.e þeim hlutum sem eru ekki boolean gildi?
-		
-		
-		//Best væri að fá inn í fylkið prímitiv gildi eins og int boolean, strengi o.s.frv.
-
-		//þannig sem switch virkar er að þetta er í raun þæginlegri leið til að gera fullt af if setningum
-		//t.d switch(price) case 1 case 2 etc etc er það sama og segja if(price == 1) then priceAmount = 9900 + " ISK", if(price == 2) then priceAmount = 11900 + " ISK"
-		//það sem þarf að gera til að fá rétta útkomu er að gefa price gildi sem samræmist case-inu.
-		//þannig að ef price = 2, þá skilum við priceAmount og fáum út 11900 + " ISK"
-		
-		//hvar geymum við int price?
-
-		//það er einmitt spurningin. public int tripPrice(int price) tekur það inn þarna, og ef við útfærum ferðirnar eins og ég var byrjuð að gera fyrir ofan
-		//þá væri hægt að gefa því gildi þar, þ.a hver ferð hefur mismunandi gildi á hlutum eins og price og addInfo o.s.frv eftir því sem á við
-		//en það er spurning með getPropInfo hvernig við útfærum int gildin fyrir það. 
-		//væri hægt að frumstilla þau sem private breytur, helduru að það myndi virka?
-		//þ.a private static int price;
-
-		//ef þetta er gert þannig að við erum bara með trip1 til trip14 þá ætti að vera hægt að skila þeim gildum
-		//og svo festa þá niður í initializeTrip?
 	}
 }

@@ -28,14 +28,14 @@ class Reserve{
 
           // væri ekki hægt að bæta bara við fjölda miða?
           // þ.a BookingsList.add(tickets); ? 
-          int numSeats = 0;
+          this.numSeats = 0;
           }
           else if(input.equals("2")){
             System.out.println("Please enter one name for the whole group");
             Scanner name = new Scanner(System.in);
             String names = name.nextLine();       
             BookingsList.add(names);
-            int numSeats = numSeats - tickets;
+            this.numSeats = numSeats - tickets;
           }
           else{
             System.out.println("invalid input");
@@ -49,7 +49,7 @@ class Reserve{
             Scanner name = new Scanner(System.in);
             String names = name.nextLine();
             BookingsList.add(names);
-            numSeats--;
+            this.numSeats = numSeats - tickets;
           }
         }
       }
@@ -67,7 +67,7 @@ class Reserve{
         System.out.println("Payment will be requested upon arrival");
       }
       else{
-        System.out.println("invalid input");
+        System.out.println("Invalid input, please try again.");
       }
       answer.close();
     }
@@ -105,7 +105,7 @@ import java.util.Scanner;
 // ég importa allaf java scanner en megið breyta því :)
 class TripDate{
 // ykkur er velkomið að breyta class fyrir ofan og public static dæminu hér að neðan 
-  public static void main(String args[]){
+  public int Calendar(){
     int month, day, year;
     String mm, dd, yyyy;
     Scanner userInput = new Scanner(System.in);

@@ -3,10 +3,11 @@ NÝJI TO DO LISTINN 13/4/2016
 General - Taka út athugasemdir sem eru ekki þurfi lengur
 	  Athuga tengingu 
 
-UserInterface - laga sting -> int, athugun null
+UserInterface - laga sting -> int, athugun null -- búin að laga string -> int, en það á eftir að athuga null
 		henda inn bókun og review líka - setja tengingu?
 		henda inn í bókun eftir leit 
-		keyra og sjá villur - snyrta til 
+		keyra og sjá villur
+		snyrta til -- búin að snyrta aðeins til, endilega kíkja á þetta samt
 		mögulega setja inn valmöguleika á að leita af ferðum undir x verði, etc, tengist TripProperties 
 
 TripProperties - setja inn fleiri ferðir
@@ -15,8 +16,8 @@ TripProperties - setja inn fleiri ferðir
 		 athuga tungumálin, þ.e þegar það eru fleiri en eitt tungumál, hvort það kemur upp þegar
 		 aðeins er leitað af einu af því
 		 hafa valmöguleika á að leita af ferðum undir x verði + líka með trip length?
-		 skoða þar sem int hefur + "strengur"
-		 tripLength - ekki núllstilla num
+		 skoða þar sem int hefur + "strengur" -- búið
+		 tripLength - ekki núllstilla num -- búið
 
 		
 TripInventory - test cases (auka dútlerí)
@@ -33,10 +34,10 @@ BookingInventory - laga cancel
 		   útfæra lista
 		   BookingList þarf að innihalda fjóra hluti: Nafn pantarans, ferðina, fjölda miða, og dagsetningu
 		   tengja dagsetningu
-		   mögulega breyta void main yfir í public int/það sem virkar og passar best
+		   mögulega breyta void main yfir í public int/það sem virkar og passar best -- búið fyrir dagsetningar
 		   fyrst velja ferð, svo dagsetningu, svo miða, svo nafn
 		   athuga num seats, þ.e int numSeats = numSeats - tickets ætti að vera this.numSeats, og numSeats--
-		   ætti að vera numSeats - tickets til öryggis 
+		   ætti að vera numSeats - tickets til öryggis -- búið
 		   athuga að búa mögulega til inventory? æronnó
 
 Booking - setja tengingu, mögulega útfæra listadót hér eða eitthvað.
