@@ -42,28 +42,53 @@ public static void Search(){
 public static Object[] TripPropSearch(){
 	Scanner trsc = new Scanner(System.in);
 	System.out.println("Please enter which part of Iceland you wish to go");
-	System.out.println("1:, 2, 3 or 4.");
+	System.out.println("Press 1 for North, 2 for East, 3 for South or 4 for West.");
 	String location = trsc.nextLine();
 	if(location.length<1)location=null;
+
 	System.out.println("Please enter your language");
-	System.out.println("ENG:english,CHI:chinese,ISL:Icelandic");
+	System.out.println("Press 1 for Icelandic, 2 for English or 3 for Chinese."); //ENG:english,CHI:chinese,ISL:Icelandic
 	String language = trsc.nextLine();
 	if(language.length<1)language=null;
-	System.out.println("Please the desired danger level");
-	System.out.println("on a scale 1-5.");
+
+	System.out.println("Please the desired danger level ");
+	System.out.println("on a scale of 1-5.");
 	int danger = trsc.nextInt();
-	System.out.println("Please please tell if you wish animals to be allowed on the trip");
-	System.out.println("Enter True or False.");
+
+	System.out.println("Do you wish to allow pets on the trip?");
+	System.out.println("Please enter True or False.");
 	String anima = trsc.nextLine();
 	boolean animals = new boolean;
 	if(anima.equals("True"))animals==true;
 	if(anima.equals("False"))animals==false;
+
+	System.out.println("Do you wish to have insurence included on the trip?");
+	System.out.println("Please enter True or False");
+	String insurenc = trsc.nextLine();
+	boolean insurence = new boolean;
+	if(insurenc.equals("True")) insurence == true;
+	if(insurenc.equals("False")) insurence == false;
+
+	System.out.println("Do you wish for to be picked up at your hotel or nearby location?");
+	System.out.println("Please enter True or False");
+	String picku = trsc.nextLine();
+	boolean pickUp = new boolean();
+	if(picku.equals("True")) pickUp == true;
+	if(picku.equals("False")) pickUp == false;
+
+	System.out.println("Do you wish for the trip to be accessible for handicapped?");
+	System.out.println("Please enter True or False");
+	String accessibilit = trsc.nextLine();
+	boolean accessibility = new boolean();
+	if(accessibilit.equals("True")) accessibility == true;
+	if(accessibilit.equals("False")) accessibility == false;
 	
 	//Hérna vantar restina á milli eins
 
 	Object[] SearchProp = SearchPropSearch();
 
-	return Object[] a={location,language,danger,animals,...,SearchProp};
+
+	return Object[] a={location,language,danger,animals,insurence, pickUp, accessibility,SearchProp};
 }
 
 public static Object[] SearchPropSearch();{

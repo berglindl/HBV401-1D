@@ -62,6 +62,7 @@ public class TripProperties extends Trip{
 			case 4: selectLanguageString = "ESP";
 					break;
 			//Getum leyst vandann um að velja tvö tungumál svona
+			//Þurfum mögulega að breyta því vegna user interface, sjáum til hvernig þetta kemur út
 			case 5: selectLanguageString = "ISL" + " ENG";
 					break;
 			case 6: selectLanguageString = "ENG" + " CHI";
