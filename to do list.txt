@@ -38,7 +38,7 @@ BookingInventory - laga cancel--BÚIÐ nema ef við viljum breyta BookingList þá þa
 		   mögulega breyta void main yfir í public int/það sem virkar og passar best -- búið fyrir dagsetningar
 		   fyrst velja ferð, svo dagsetningu, ((svo miða, svo nafn)Þessi tenging er nú þegar til staðar)
 		   athuga num seats, þ.e int numSeats = numSeats - tickets ætti að vera this.numSeats, og numSeats--
-		   ætti að vera numSeats - tickets til öryggis -- búið
+		   ætti að vera numSeats - tickets til öryggis -- búið-SKOÐA aftur með tillit til Static falls
 		   athuga að búa mögulega til inventory? æronnó
 
 Booking - setja tengingu, mögulega útfæra listadót hér eða eitthvað.
