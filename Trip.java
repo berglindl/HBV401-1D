@@ -388,8 +388,7 @@ public class Trip{
 	public boolean getPropInfo( Object [] propquest){
 		
 		//Ef við miðum við það sem ég setti í TripProperties 
-		//þá gætum við sótt allt í fylki og borið saman við fylkið sem var
-		//sent inn
+		//þá gætum við sótt allt í fylki og borið saman við fylkið sem var sent inn
 		Object[] properties = tripProperties.getInfo;
 		
 		if(!(propquest[0] == NULL || propquest[0] !^ tripProperties.animals() )) return false;
@@ -411,11 +410,6 @@ public class Trip{
 		if(!(propquest[8] == NULL || tripProperties.cardDir() == (int)(propquest[8]) ) return false;
 
 		if(!(propquest[9] == NULL || tripProperties.addInfo() == (int)(propquest[9]) ) return false;
-
-
-		// Þetta mátti taka út, right?
-		/*if(!(tripProperties.getSearchprop((Object[])(propquest[14])))) return false;*/
-		
 		
 		return true;
 		

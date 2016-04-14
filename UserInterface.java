@@ -8,7 +8,7 @@ public class UserInterface{
 		System.out.println("1. Search for a daytrip");
 		System.out.println("2. Reserve a daytrip");
 		System.out.println("3. Look at reviews");
-		System.out.println("Please press 1, 2 or 3:");
+		System.out.println("Please press 1, 2 or 3: ");
 		int operation = sc.nextInt();
 		if(operation==1)search();
 		if(operation==2)reserve();
@@ -46,7 +46,7 @@ public static void Search(){
 	// Líst vel á það þar sem ég veit ekki sjálf hvað er í boði, er þetta hiking og það eða e-ð annað?
 
 	//Mögulega að gera þetta svona?
-	
+
 	String triptype = ssc.nextLine();
 	if(triptype.length<1)triptype=null;
 
@@ -124,14 +124,16 @@ public static Object[] TripPropSearch(){
 	if(accessibilit.equals("no")) accessibility = false;
 	
 
-	Object[] SearchProp = SearchPropSearch();
+	//Object[] SearchProp = SearchPropSearch();
 
 
-	return Object[] a={location,language,danger,animals,insurence, pickUp, accessibility,SearchProp};
+	return Object[] a={location,language,danger,animals,insurence, pickUp, accessibility};
 }
 
+/*
 public static Object[] SearchPropSearch();{
 
 
 
 }
+*/

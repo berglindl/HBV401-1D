@@ -19,6 +19,8 @@ public class Booking{
 	//Ætlum við að hafa lokagildið að það séu bara 20 sæti?
 
 	private int numSeats = 20;
+
+	private String tripName;
 	//Gætum gert þetta svipað og við gerum í review
 
 	Scanner userInput = new Scanner(System.in);
@@ -43,7 +45,7 @@ public class Booking{
         System.out.println("Press 15 for the trip Landmannalaugar and Hjálparfoss,");
         System.out.println("Press 16 for the trip Meet the Puffins and Hike,");
         System.out.println("Press 17 for the trip Goðafoss, Dimmuborgir and Mývatn Nature Baths,");
-        System.out.println("Press 18 for the trip Jöulsárlón,");
+        System.out.println("Press 18 for the trip Jökulsárlón,");
         System.out.println("Press 19 for the trip Snæfellsnes Peninsula,");
         System.out.println("Press 20 for the trip Inside the Volcano.");
 
@@ -51,47 +53,72 @@ public class Booking{
         switch(tripNum){
             //Þarf eflaust að breyta þessu þegar tengingin er komin nákvæmlega
             case 1: Trip[0]; //eða Trip[trip1]
+            		this.tripName = "Into the Glacier";
                     break;
             case 2: Trip[1];
+            		this.tripName = "Skiing on Hrútafjallstindar";
                     break;
             case 3: Trip[2];
+            		this.tripName = "Whale Watching in Húsavík";
                     break;
             case 4: Trip[3];
+            		this.tripName = "History Walk Through Downtown";
                     break;
             case 5: Trip[4];
+            		this.tripName = "The Golden Circle and Snorkeling";
                     break;
             case 6: Trip[5];
+            		this.tripName = "Glacier Walking and Waterfalls";
                     break;
             case 7: Trip[6];
+            		this.tripName = "Northern Lights Explorer";
                     break;
             case 8: Trip[7];
+            		this.tripName = "Game of Thrones - Mývatn Mystery Magic";
                     break;
             case 9: Trip[8];
+            		this.tripName = "A Trip to Papey Islands";
                     break;
             case 10: Trip[9];
+            		this.tripName = "The Caves in Ingólfsfjall";
                     break;
             case 11: Trip[10];
+            		this.tripName = "Skiing Through Langanes";
                     break;
             case 12: Trip[11];
+            		this.tripName = "Whale Watching in Breiðafjörður";
                     break;
             case 13: Trip[12];
+            		this.tripName = "Western Dancing Trip";
                     break;
             case 14: Trip[13];
+            		this.tripName = "A Walk Through Viðey";
                     break;
             case 15: Trip[14];
+            		this.tripName = "Landmannalaugar and Hjálparfoss";
                     break;
             case 16: Trip[15];
+            		this.tripName = "Meet the Puffins and Hike";
                     break;
             case 17: Trip[16];
+            		this.tripName = "Goðafoss, Dimmuborgir and Mývatn Nature Baths";
                     break;
             case 18: Trip[17];
+            		this.tripName = "Jökulsárlón";
                     break;
             case 19: Trip[18];
+            		this.tripName = "Snæfellsnes Peninsula";
                     break;
             case 20: Trip[19];
+            		this.tripName = "Inside the Volcano";
                     break;
 
             default: System.out.println("Oops! That trip is not listed. Please try again.");
+
+            //Þurfum öruglega að hafa eitthvað hér, t.d streng sem segir nafnið á ferðini, upp á að stinga því inn í bókunina.. 
+            //Mögulega gera þetta svona?
+
+            //Svo kalla á það hinum megin, eins með numSeats
         }
     }
 

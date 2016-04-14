@@ -22,9 +22,9 @@ TripProperties - setja inn fleiri ferðir--BÚIÐ
 		
 TripInventory - test cases (auka dútlerí)
 
-Trip - taka út getSearchProp í getPropInfo
+Trip - taka út getSearchProp í getPropInfo -- búið
 
-SearchProperties - er óþarfi, má taka út
+SearchProperties - er óþarfi, má taka út -- búið
 
 ReviewInventory - hafa "nafn" + ": " + "review" --BÚIÐ 
 			vista í lista-Sjá athugasemd inni kóðanum
