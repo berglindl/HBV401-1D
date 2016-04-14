@@ -7,6 +7,7 @@ class Reserve{
   // Getum gert það í Booking, set athugasemd þar líka
   // Vildi ekki taka út fyrr en það kemur inn í Booking eða hvar við viljum gera það
   public static void main(String [] args){
+    // má ekki vera static ef við ætlum að nota this.numSeats
     System.out.println("Enter number of tickets needed:");
     Scanner userInput = new Scanner(System.in);
     int tickets = userInput.nextInt();
@@ -33,6 +34,7 @@ class Reserve{
 
 
           this.numSeats = 0;
+          //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
           }
           else if(input.equals("2")){
             System.out.println("Please enter one name for the whole group");
@@ -55,6 +57,7 @@ class Reserve{
             String names = name.nextLine();
             BookingsList.add(names);
             this.numSeats = numSeats - tickets;
+            //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
             //gætum þurft að skoða síðustu setninguna hér betur, spurning um að ýta henni úr for lykkjunni?
           }
         }
@@ -88,6 +91,7 @@ class Cancellation{
   // Held það eigi núna að virka að cancella hópferðirnar
  //Aftur þarf tengingu hérna við listanna
   public static void main(String [] args){
+    // má ekki vera static ef við ætlum að nota this.numSeats
    // muna að lesa inn numSeats, tripName og tripDate þegar það er komið hvernig það verður
    System.out.println("Enter number of tickets you would like to cancel:");
    Scanner userInput = new Scanner(System.in);
@@ -104,6 +108,7 @@ class Cancellation{
           BookingsList.remove(names);
           // viljum við hafa þetta BookingList?
           this.numSeats = 20;
+          //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
           }
         else if(input.equals("2")){
           while (tickets > 0){
@@ -115,6 +120,7 @@ class Cancellation{
 
           //spurning hvort að þetta væri betra, ef miðarnir væru fleiri en 1
           this.numSeats = numSeats + tickets;
+          //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
           //numSeats++;
           }
         }
@@ -133,6 +139,7 @@ class Cancellation{
           // skoða hvort það eigi að vera BookingList
           // sama hér?
           this.numSeats = numSeats + tickets;
+          //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
           // numSeats++;
        }
     }
@@ -148,7 +155,9 @@ import java.util.Scanner;
 // ég importa allaf java scanner en megið breyta því :)
 class TripDate{
 // ykkur er velkomið að breyta class fyrir ofan og public static dæminu hér að neðan 
-  public int Calendar(){
+   public static void main(String args[])
+    {
+      // Breytti aftur í static main þar sem public int Calendar(){ gefur upp villu í keyrslu
     int month, day, year;
     String mm, dd, yyyy;
     Scanner userInput = new Scanner(System.in);
@@ -169,7 +178,8 @@ class TripDate{
       System.out.print(year + " is an invalid year.");
     }
     //Ef að árið sem er sett inn er á milli 2015 og 2016
-    else if(year > 2014 || <= 2016){
+    else if(year > 2014 || year <= 2016){
+      // lagaði þar sem það vantaði year
       switch (month){  
         case 1:
         case 3:
@@ -200,12 +210,12 @@ class TripDate{
               System.out.print(day + "/" + month + "/" + year + " is an invalid day.");
             else
               System.out.print(" Your trip is booked on " + day + "/" + month + "/" + year);
-            else if
+            else {
               if (day > 28)
                 System.out.print(day + "/" + month + "/" + year + " is an invalid day.");
               else
                 System.out.print(" Your trip is booked on " + day + "/" + month + "/" + year);
-        break;
+              break;}
 
         default:
           System.out.println("The date: " + day + "/" + month + "/" + year + " has an invalid month");
