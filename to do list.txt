@@ -31,12 +31,12 @@ ReviewInventory - hafa "nafn" + ": " + "review" --BÚIÐ
 
 Review - útfæra lista fyrir reviews
 
-BookingInventory - laga cancel
+BookingInventory - laga cancel--BÚIÐ nema ef við viljum breyta BookingList þá þarf að laga
 		   útfæra lista
 		   BookingList þarf að innihalda fjóra hluti: Nafn pantarans, ferðina, fjölda miða, og dagsetningu
 		   tengja dagsetningu
 		   mögulega breyta void main yfir í public int/það sem virkar og passar best -- búið fyrir dagsetningar
-		   fyrst velja ferð, svo dagsetningu, svo miða, svo nafn
+		   fyrst velja ferð, svo dagsetningu, ((svo miða, svo nafn)Þessi tenging er nú þegar til staðar)
 		   athuga num seats, þ.e int numSeats = numSeats - tickets ætti að vera this.numSeats, og numSeats--
 		   ætti að vera numSeats - tickets til öryggis -- búið
 		   athuga að búa mögulega til inventory? æronnó

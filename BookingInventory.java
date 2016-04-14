@@ -75,27 +75,49 @@ class Reserve{
 
 import java.util.Scanner;
 class Cancellation{
-	//Aftur þarf tengingu hérna við listanna
+  // Held það eigi núna að virka að cancella hópferðirnar
+ //Aftur þarf tengingu hérna við listanna
   public static void main(String [] args){
-  	// muna að lesa inn numSeats, tripName og tripDate þegar það er komið hvernig það verður
-  	System.out.println("Enter number of tickets you would like to cancel:");
-  	Scanner userInput = new Scanner(System.in);
-  	int tickets = userInput.nextInt();
-    // Spurning varðandi hóppönun hvort það þurfi ekki að vera hægt að afpanta hlta af henni?
-    // spurning hvort við setjum inn skilyrði hér til að passa að þú getir ekki cancellað 10 miðum
-  	// ef það er bara búið að panta 3. Er ekki viss hvort við þurfum það
-  	while (tickets > 0){
-  		System.out.println("Enter full name for ticket cancelled:");
-  		Scanner name = new Scanner(System.in);
-   		String names = name.nextLine();
-    	BookingsList.remove(names);
-    	//Skoða þetta vel, er ekki alveg viss um að þetta sé nóg til að þetta virki en hugsaði að
-    	//þetta væri betra en ekki neitt
-   	 	numSeats++;
-   	}
-	  System.out.println(tickets +"tickets have been cancelled");
-	  // viljum við breyta þessu þannig þú sjáir nöfn þeirra sem voru cancellaðir eða er fjöldi nóg?
-	}
+   // muna að lesa inn numSeats, tripName og tripDate þegar það er komið hvernig það verður
+   System.out.println("Enter number of tickets you would like to cancel:");
+   Scanner userInput = new Scanner(System.in);
+   int tickets = userInput.nextInt();
+    if (tickets >= 5){
+        // útaf hóppöntun
+        System.out.println("Press 1 to cancel a private trip and 2 for public:");
+        Scanner ans = new Scanner(System.in);
+        String input = ans.next();
+        if(input.equals("1")){
+          System.out.println("Please enter one name for the whole group");
+          Scanner name = new Scanner(System.in);
+          String names = name.nextLine();       
+          BookingsList.remove(names);
+          // viljum við hafa þetta BookingList?
+          numSeats = 20;
+          }
+        else{
+          while (tickets > 0){
+          System.out.println("Enter full name for ticket cancelled:");
+          Scanner name = new Scanner(System.in);
+          String names = name.nextLine();
+          BookingsList.remove(names);
+          // skoða hvort það eigi að vera BookingLst
+           numSeats++;
+          }
+          }
+    }
+       else{
+        while (tickets > 0){
+          System.out.println("Enter full name for ticket cancelled:");
+          Scanner name = new Scanner(System.in);
+          String names = name.nextLine();
+          BookingsList.remove(names);
+          // skoða hvort það eigi að vera BookingLst
+           numSeats++;
+       }
+    }
+   System.out.println(tickets +"tickets have been cancelled");
+}
 }
 
 // hvort sem við höfum þetta hér eða í booking þá getum vð notað þennan kóða ef það má velja allar dagsetningar
