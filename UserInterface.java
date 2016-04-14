@@ -24,12 +24,29 @@ public static void Search(){
 	System.out.println("If so, please enter the name of the trip. If not, press the ENTER key.");
 	// Væri ekki betra að birta lista yfir ferðirnar einhversstaðar eða er einhversstaðar í forritinu hægt fyrir notenda að hugsa
 	// Hvað ætli sé í boði og leita því eftir allt?
+
+	//Ég held að það væri fínt að hafa valmöguleikann á að sjá allar ferðirnar, mögulega að gera það fyrst, þ.e á undan specific trip
 	String tripname = ssc.nextLine();
 	if(tripname.length<1)tripname=null;
 	System.out.println("Are you searching for a specific type of trips?");
+	System.out.println("If so, please enter the type of trip. If not, press the ENTER key.");
+	System.out.println("Here are the type of trips we have to offer: ");
+	System.out.println("Mountain");
+	System.out.println("Skiing");
+	System.out.println("Whale Watching");
+	System.out.println("Walking");
+	System.out.println("Snorkeling");
+	System.out.println("Northern Lights");
+	System.out.println("Geothermal Pool");
+	System.out.println("Island");
+	System.out.println("Dancing");
+	System.out.println("Hiking");
+	System.out.println("Touring");
 	//Mögulega segja hér hvaða valkostir eru?
 	// Líst vel á það þar sem ég veit ekki sjálf hvað er í boði, er þetta hiking og það eða e-ð annað?
-	System.out.println("If so, please enter the type of trip. If not, press the ENTER key.");
+
+	//Mögulega að gera þetta svona?
+	
 	String triptype = ssc.nextLine();
 	if(triptype.length<1)triptype=null;
 
@@ -51,14 +68,18 @@ public static Object[] TripPropSearch(){
 	if(location.length<1)location=null;
 
 	System.out.println("Please enter your language.");
-	System.out.println("Press 1 for Icelandic, 2 for English, 3 for Chinese, or press the ENTER key to skip this question."); 
+	System.out.println("Press 1 for Icelandic, 2 for English, 3 for Chinese, 4 for Spanish, 5 for French, 6 for Swedish, or press the ENTER key to skip this question."); 
 	//ENG:english,CHI:chinese,ISL:Icelandic
 	//Spurning um að bæta hinum tungumálunum við? Það eru spænska(ESP), Franska(FRE) og Sænska(SWE)??
+
+	//Bætti þeim við :)
 	int language = trsc.nextInt();
 	if(language.length<1)language=null;
 
 	System.out.println("Please enter the desired danger level on a scale of 1 to 5.");
 	//Pæling við erum ekki að nota öll danger level, þannig þarf ekki annaðhvort að laga það eða taka þetta út?
+
+	//Mér sýnist við vera að nota öll, spurning um að bulla smá ef ekki hehe 
 	System.out.println("Press the ENTER key to skip this question.");
 	int danger = trsc.nextInt();
 
@@ -66,6 +87,8 @@ public static Object[] TripPropSearch(){
 	System.out.println("Please enter Yes or No, or press the ENTER key to skip this question.");
 	String anima = trsc.nextLine();
 	boolean animals = new boolean;
+	//Arranged so that both inputs will be valid,
+	//since a lot of people don't capitalize letters, despite being asked to do so
 	if(anima.equals("Yes"))animals = true;
 	if(anima.equals("yes"))animals = true;
 	if(anima.equals("No"))animals = false;
@@ -89,8 +112,9 @@ public static Object[] TripPropSearch(){
 	if(picku.equals("No")) pickUp = false;
 	if(picku.equals("no")) pickUp = false;
 
-	System.out.println("Do you wish for the trip to be accessible to the disabled?");
+	System.out.println("Do you wish for the trip to be accessible for the disabled?");
 	// Fannst handicapped allt í einu hljóma illa, getið breytt aftur
+	//Já ég var pínu sceptical um hvort að það væri rétta orðið, þetta hljómar betur
 	System.out.println("Please enter Yes or No, or press ENTER to skip this question.");
 	String accessibilit = trsc.nextLine();
 	boolean accessibility = new boolean();

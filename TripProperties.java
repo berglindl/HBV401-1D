@@ -36,13 +36,14 @@ public class TripProperties extends Trip{
 	public String location(){
 		String cardDirString;
 		switch(cardDir){
-			case 1: cardDirString = "Norðurland";
+			//öruglega betra að hafa þetta á ensku til að samræmast öllu hinu..
+			case 1: cardDirString = "North";
 					break;
-			case 2: cardDirString = "Austurland";
+			case 2: cardDirString = "East";
 					break;
-			case 3: cardDirString = "Suðurland";
+			case 3: cardDirString = "South";
 					break;
-			case 4: cardDirString = "Vesturland";
+			case 4: cardDirString = "West";
 					break;
 		}
 		return cardDirString;
@@ -65,9 +66,8 @@ public class TripProperties extends Trip{
 					break;
 			case 6: selectLanguageString = "ENG" + " CHI";
 					break;
-			case 7: selectLanguageString = "ENG" + "SWE" + "FRE";
+			case 7: selectLanguageString = "ENG" + " SWE" + " FRE";
 					break;
-			//má bæta við fleiri af vild
 		}
 		return selectLanguageString;
 	}
@@ -77,8 +77,6 @@ public class TripProperties extends Trip{
 	public int tripLength(){
 		int num;
 		switch(length){
-			//Spurning að setja þetta svona upp?
-			// já er það ekki
 			case 1: num = 2;
 					break;
 			case 2: num = 4;
@@ -142,7 +140,7 @@ public class TripProperties extends Trip{
 					break;
 		    //Trip Game of Thrones - Mývatn Mystery Magic
 		    case 8: addInfoString = "Join us on a tour to magical Lake Mývatn and the filming sites of the latest Game of Thrones series, with a pitstop to the Mývatn Nature Baths. "
-		    						+ "Clothing suggestion: Warm outdoor clothing.";
+		    						+ "Clothing suggestion: Warm outdoor clothing, swimsuit and a towel.";
 		    		break;
 		    //Trip A Trip to Papey Islands
 		    case 9: addInfoString = "A day trip from Djúpivogur to Papey. We sail around the area and watch the birds and the seals that reside nearby.
@@ -174,33 +172,35 @@ public class TripProperties extends Trip{
 		    						+ "Clothing suggestion: Warm and waterproof outwear. ";
 		    		break;
 		    //Trip Landmannalaugar and Hjálparfoss
-		    case 15: addInfoString = "Come and join us in this relaxing trip where we will start with a drive to Þjórsárdalur valley and look at Hjálparfoss waterfall. From there we will drive
-		    						drive to Landmannalaugar, take a hike and soak ourselves in a relaxing geothermal pool."  
-		    						+ "Clothing suggestion: Warm clothes, sturdy shoes, swimsuit & towel. ";
+		    case 15: addInfoString = "Come and join us in this relaxing trip where we will start with a drive to Þjórsárdalur valley and look at the Hjálparfoss waterfall. 
+		    						From there we will drive to Landmannalaugar, take a hike and soak ourselves in a relaxing geothermal pool. "  
+		    						+ "Clothing suggestion: Warm clothes, sturdy shoes, swimsuit and a towel. ";
 		    		break;
 		    //Trip Meet the puffins and go fo a hike
-		    case 16: addInfoString = "Come and join us on a hike on Borgarfjörður eystri, on of the best hiking places in Iceland. This trip offers 27 diffrent routes and one of the routes leads
-		    						to a excellend bird watching facility where you can see puffins among other thing. ")  
+		    case 16: addInfoString = "Come and join us on a hike on Borgarfjörður eystri, one of the best hiking places in Iceland. This trip offers 27 diffrent routes and 
+		    						one of the routes leads to an excellent bird watching facility where you can see puffins along with other bird species. "
 		    						+ "Clothing suggestion: Warm clothes and sturdy shoes. ";
 		    		break;
 		    //Trip Goðafoss, Dimmuborgir and Mývatn Nature baths
-		    case 17: addInfoString = "We set out from Akureyri to the twin waterfall Godafoss, and fom there we eill take a walking tour of Dimmuborgir but Dimmuborgir is a lava park with unique 
-		    						rock formations. Then we will head for Myvatn Nature Baths for a relaxing, healing bath but Mývatns Nature Baths are known for their healing abilities. "  
-		    						+ "Clothing suggestion: Warm clothes, sturdy shoes, swimsuit & towel. ";
+		    case 17: addInfoString = "We set out from Akureyri to the twin waterfall Goðafoss, and from there we will take a walking tour of Dimmuborgir. 
+		    						Dimmuborgir is a lava park with unique rock formations. Then we will head for Mývatn Nature Baths for a relaxing, 
+		    						healing bath since Mývatn Nature Baths are known for their healing abilities. "  
+		    						+ "Clothing suggestion: Warm clothes, sturdy shoes, swimsuit and a towel. ";
 		    		break;
 		    //Trip Jöulsárlón
-		    case 18: addInfoString = "Join us for a magical trip to Jökulsárlón, a lagoon with enormous and ancient icebergs breaking off from Vatnajökull. The lagoon appears in scenes 
-		    						from Batman Begins, Tomb Raider and two James Bond movies. ";
+		    case 18: addInfoString = "Join us for a magical trip to Jökulsárlón, a lagoon with enormous and ancient icebergs breaking off from Vatnajökull. 
+		    						This famous lagoon appears in scenes from Batman Begins, Tomb Raider and two James Bond movies. "
 									+ "Clothing suggestion: Warm and waterproof outwear. ";
 					break;
 			//Trip Snæfellsnes peninsula
-		    case 19: addInfoString = "Come and see what Snæfellsnes has to offer. Join us as we visit Sæfellsjökull glacier, white and black sandy beaches, bird cliffs, spectacular mountains and volcanic craters, 
-		    						and unique harbours in charming fishing villages. ";
+		    case 19: addInfoString = "Come and see what Snæfellsnes has to offer. Join us as we visit Sæfellsjökull glacier, white and black sandy beaches, bird cliffs, 
+		    						spectacular mountains, volcanic craters, and unique harbours in charming fishing villages. "
 									+ "Clothing suggestion: Warm and waterproof outwear. ";
 					break;
 			//Trip Inside the volcano
-		    case 20: addInfoString = "Come join us on a hike to Þhríhnúkagígur volcano and enjoy the breathtaking scenery along the way. After walking for approximately 50 minutes we will reach the top of the mountain
-		    						where visitors will be lowered inside the crater so they can look at the magma chamber. Please note that the age limit is 12. ";
+		    case 20: addInfoString = "Come join us on a hike to Þhríhnúkagígur volcano and enjoy the breathtaking scenery along the way. After walking for approximately 50 minutes 
+		    						we will reach the top of the mountain where visitors will be lowered inside the crater so they can look at the magma chamber. 
+		    						Please note that the age limit to this trip is 12 years old. "
 									+ "Clothing suggestion: Warm, waterproof outwear and good shoes. ";
 					break;
 

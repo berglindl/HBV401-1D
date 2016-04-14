@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class Reserve{
   //Smá lagfæringar í gangi
-  private static int numSeats = 20;
+  /*private static int numSeats = 20;*/
   // Þarf að laga þetta með að taka út, þurfum að stilla áður en farið er í reserve að hver dagsetning innihaldi 20 sæti fyrir hverja ferð
   // Getum gert það í Booking, set athugasemd þar líka
   // Vildi ekki taka út fyrr en það kemur inn í Booking eða hvar við viljum gera það
@@ -23,11 +23,14 @@ class Reserve{
           Scanner name = new Scanner(System.in);
           String names = name.nextLine();       
           BookingsList.add(names);
+          BookingsList.add(tickets);
           // eina við booking list er að við erum bara að setja inn nöfn þeirra sem panta en ekki
           // hve mikið það er verið að panta. 
 
           // gætum bætt við BookingsList.add(tickets); eins og einhver sagði
           //á ég að bæta því inn hér og í cancel eða bíða þangað til numSeats hefur verið útfært því það þarf augljóslega að vistast þar líka
+
+
 
           this.numSeats = 0;
           }
@@ -100,35 +103,47 @@ class Cancellation{
           String names = name.nextLine();       
           BookingsList.remove(names);
           // viljum við hafa þetta BookingList?
-          numSeats = 20;
+          this.numSeats = 20;
           }
-        else{
+        else if(input.equals("2")){
           while (tickets > 0){
-          System.out.println("Enter full name for ticket cancelled:");
+          System.out.println("Enter full name for the ticket you wish to cancel:");
           Scanner name = new Scanner(System.in);
           String names = name.nextLine();
           BookingsList.remove(names);
           // skoða hvort það eigi að vera BookingLst
-           numSeats++;
+
+          //spurning hvort að þetta væri betra, ef miðarnir væru fleiri en 1
+          this.numSeats = numSeats + tickets;
+          //numSeats++;
           }
-          }
-          // erum ekki með skipun hvað gerist ef þú ýtir á 3? Gætum lagað??
+        }
+        else{
+          System.out.println("Error, please try again.");
+        }
+        // erum ekki með skipun hvað gerist ef þú ýtir á 3? Gætum lagað??
+        //Gætum gert eitthvað eins og þetta, ekki nema eitthvað sérstakt ætti að gerast í tilfelli 3
     }
        else{
         while (tickets > 0){
-          System.out.println("Enter full name for ticket cancelled:");
+          System.out.println("Enter full name for the ticket you wish to cancel:");
           Scanner name = new Scanner(System.in);
           String names = name.nextLine();
           BookingsList.remove(names);
           // skoða hvort það eigi að vera BookingList
-           numSeats++;
+          // sama hér?
+          this.numSeats = numSeats + tickets;
+          // numSeats++;
        }
     }
    System.out.println(tickets +" tickets have been cancelled");
-}
+  }
 }
 
 // pæling að færa í Booking eða bara að kalla á þennan kóða þar??
+
+// öruglega fínt að færa hann, það er samt hægt að kalla á kóðann hér. 
+
 import java.util.Scanner;
 // ég importa allaf java scanner en megið breyta því :)
 class TripDate{
@@ -194,7 +209,7 @@ class TripDate{
 
         default:
           System.out.println("The date: " + day + "/" + month + "/" + year + " has an invalid month");
-      }       
+      }
       userInput.close();
     }
   }

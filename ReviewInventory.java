@@ -20,6 +20,8 @@ class Update
    // Spurning hvernig við viljum vista reviews. Eins og er er bara verið að prenta allt en spurning hvort þið vljið gera það svona, eða e-ð öðruvísi
    // ReviewList.add(reviews); 
    // Fer eftir því hvernig við viljum geyma þetta, en kóðinn virkar eins og er þannig hann er komin
+
+   //Er það ekki bara fínt að hafa þetta svona? þ.e að vista þetta í lista bara eins og þetta er sett upp?
     
    userInput.close();
    }

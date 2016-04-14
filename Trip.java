@@ -39,7 +39,7 @@ public class Trip{
 
 		Object[] info = tripProperties.getInfo;
 
-		//Spurning um að þetta gæti virkað svona?
+		//Ekki fallegasta fallið.. 
 
 		Trip trip1 = new Trip({
 			this.name = "Into the Glacier",
@@ -162,7 +162,7 @@ public class Trip{
 		
 		Trip trip8 = new Trip({
 			this.name = "Game of Thrones - Mývatn Mystery Magic",
-			this.type = "Misc",
+			this.type = "Geothermal Pool",
 			this.cardDir = 1,
 			this.selectLanguage = 5,
 			this.review = 1,
@@ -247,7 +247,7 @@ public class Trip{
 		    
 		Trip trip13 = new Trip({
 			this.name = "Western Dancing Trip",
-			this.name = "Misc",
+			this.name = "Dancing",
 			this.cardDir = 4,
 			this.selectLanguage = 4,
 			this.review = 1,
@@ -281,7 +281,7 @@ public class Trip{
 		
 	    Trip trip15 = new Trip({
 	    	this.name = "Landmannalaugar and Hjálparfoss",
-	    	this.type = "Geothermal pool",
+	    	this.type = "Geothermal Pool",
 	    	this.cardDir = 3,
 			this.selectLanguage = 6,
 			this.review = 1,
@@ -297,7 +297,7 @@ public class Trip{
 	    Inventory.addToInventory(trip15);
 		
 	    Trip trip16 = new Trip({
-	    	this.name = "Meet he puffins and hike",
+	    	this.name = "Meet the Puffins and Hike",
 	    	this.type = "Hiking",
 	    	this.cardDir = 2,
 			this.selectLanguage = 3,
@@ -314,7 +314,7 @@ public class Trip{
 	    Inventory.addToInventory(trip16);
 		
 	    Trip trip17 = new Trip({
-	    	this.name = "Goðafoss, Dimmuborgir and Mývatns Nature baths",
+	    	this.name = "Goðafoss, Dimmuborgir and Mývatns Nature Baths",
 	    	this.type = "Touring",
 	    	this.cardDir = 1,
 			this.selectLanguage = 3,
@@ -332,8 +332,9 @@ public class Trip{
 		
 	    Trip trip18 = new Trip({
 	    	this.name = "Jökulsárlón",
-	    	this.type = "Glacier",
+	    	this.type = "Touring",
 	    	// Eða kannski mountain, sami eða sitthvor hópurinn?
+	    	// Myndi segja að þetta sé touring
 	    	this.cardDir = 3,
 			this.selectLanguage = 7,
 			this.review = 1,
@@ -349,7 +350,7 @@ public class Trip{
 	    Inventory.addToInventory(trip18);
 		
 	    Trip trip19 = new Trip({
-	    	this.name = "Snæfellsnes peninsula",
+	    	this.name = "Snæfellsnes Peninsula",
 	    	this.type = "Touring",
 	    	this.cardDir = 4,
 			this.selectLanguage = 2,
@@ -366,7 +367,7 @@ public class Trip{
 	    Inventory.addToInventory(trip19);
 		
 	    Trip trip20 = new Trip({
-	    	this.name = "Inside the volcano",
+	    	this.name = "Inside the Volcano",
 	    	this.type = "Mountain",
 	    	this.cardDir = 3,
 			this.selectLanguage = 7,

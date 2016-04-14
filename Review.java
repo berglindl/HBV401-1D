@@ -25,12 +25,12 @@ public static void main(String [] args)
         System.out.println("Press 12 for the trip Whale Watching in Breiðafjörður,");
         System.out.println("Press 13 for the trip Western Dancing Trip,");
         System.out.println("Press 14 for the trip A Walk Through Viðey,");
-        System.out.println("Press 15 for the trip Landmannalaugar and Hjálparfoss,:");
-        System.out.println("Press 16 for the trip Meet the puffins and go for a hike,:");
-        System.out.println("Press 17 for the trip Goðafoss, Dimmuborgir and Mývatn Nature baths,:");
-        System.out.println("Press 18 for the trip Jöulsárlón,:");
-        System.out.println("Press 19 for the trip Snæfellsnes peninsula,:");
-        System.out.println("Press 20 for the trip Inside the volcano,");
+        System.out.println("Press 15 for the trip Landmannalaugar and Hjálparfoss,");
+        System.out.println("Press 16 for the trip Meet the Puffins and Hike,");
+        System.out.println("Press 17 for the trip Goðafoss, Dimmuborgir and Mývatn Nature Baths,");
+        System.out.println("Press 18 for the trip Jöulsárlón,");
+        System.out.println("Press 19 for the trip Snæfellsnes Peninsula,");
+        System.out.println("Press 20 for the trip Inside the Volcano.");
             
 
         number = selectTrip.nextInt();
@@ -77,7 +77,7 @@ public static void main(String [] args)
             case 20: Trip[19];
                     break;
 
-            default: System.out.println("Oops! That trip is not listed. Please try again.")
+            default: System.out.println("Oops! That trip is not listed. Please try again.");
         }
 
         System.out.println("Rate this trip on a scale from 0-5");
