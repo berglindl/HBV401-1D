@@ -1,14 +1,6 @@
 import java.util.Scanner;
 class Review
-// var ekki alveg viss hvernig ég ætti að gera þetta þannig ákvað að henda up smá byrjun
-// Þetta var fyrsta útgáfan þar sem ég fékk ekki villu í keyrslu þannig hélt henni inni en 
-// eins og þið sjáið þá er þetta ekki fallegt
 {
-    // Hér þyrfti að vera einhver tenging við ferðirnar en var ekki viss hvernig við vildum gera þetta
-    // þannig tengdi ekki við tripNames eða neitt svoleiðis ennþá
-
-    //Það er tæknilega séð komin tenging hér, þ.e maður þarf fyrst að velja ferð
-    //En review-in vistast ekkert endilega, þarf öruglega að laga það
 public static void main(String [] args)
     {
     int vote;
@@ -19,20 +11,27 @@ public static void main(String [] args)
     {
         Scanner selectTrip = new Scanner(System.in);
         System.out.println("Select the trip you wish to rate.");
-        System.out.println("Write 1 for the trip Into the Glacier,");
-        System.out.println("Write 2 for the trip Skiing on Hrútafjallstindar,");
-        System.out.println("Write 3 for the trip Whale Watching in Húsavík,");
-        System.out.println("Write 4 for the trip History Walk Through Downtown,");
-        System.out.println("Write 5 for the trip The Golden Circle and Snorkeling,");
-        System.out.println("Write 6 for the trip Glacier Walking and Waterfalls,");
-        System.out.println("Write 7 for the trip Northern Lights Explorer,");
-        System.out.println("Write 8 for the trip Game of Thrones - Mývatn Mystery Magic,");
-        System.out.println("Write 9 for the trip A Trip to Papey Islands,");
-        System.out.println("Write 10 for the trip The Caves in Ingólfsfjall,");
-        System.out.println("Write 11 for the trip Skiing Through Langanes,");
-        System.out.println("Write 12 for the trip Whale Watching in Breiðafjörður,");
-        System.out.println("Write 13 for the trip Western Dancing Trip,");
-        System.out.println("Write 14 for the trip A Walk Through Viðey.");
+        System.out.println("Press 1 for the trip Into the Glacier,");
+        System.out.println("Press 2 for the trip Skiing on Hrútafjallstindar,");
+        System.out.println("Press 3 for the trip Whale Watching in Húsavík,");
+        System.out.println("Press 4 for the trip History Walk Through Downtown,");
+        System.out.println("Press 5 for the trip The Golden Circle and Snorkeling,");
+        System.out.println("Press 6 for the trip Glacier Walking and Waterfalls,");
+        System.out.println("Press 7 for the trip Northern Lights Explorer,");
+        System.out.println("Press 8 for the trip Game of Thrones - Mývatn Mystery Magic,");
+        System.out.println("Press 9 for the trip A Trip to Papey Islands,");
+        System.out.println("Press 10 for the trip The Caves in Ingólfsfjall,");
+        System.out.println("Press 11 for the trip Skiing Through Langanes,");
+        System.out.println("Press 12 for the trip Whale Watching in Breiðafjörður,");
+        System.out.println("Press 13 for the trip Western Dancing Trip,");
+        System.out.println("Press 14 for the trip A Walk Through Viðey,");
+        System.out.println("Press 15 for the trip Landmannalaugar and Hjálparfoss,:");
+        System.out.println("Press 16 for the trip Meet the puffins and go for a hike,:");
+        System.out.println("Press 17 for the trip Goðafoss, Dimmuborgir and Mývatn Nature baths,:");
+        System.out.println("Press 18 for the trip Jöulsárlón,:");
+        System.out.println("Press 19 for the trip Snæfellsnes peninsula,:");
+        System.out.println("Press 20 for the trip Inside the volcano,");
+            
 
         number = selectTrip.nextInt();
         switch(number){
@@ -65,14 +64,26 @@ public static void main(String [] args)
                     break;
             case 14: Trip[13];
                     break;
+            case 15: Trip[14];
+                    break;
+            case 16: Trip[15];
+                    break;
+            case 17: Trip[16];
+                    break;
+            case 18: Trip[17];
+                    break;
+            case 19: Trip[18];
+                    break;
+            case 20: Trip[19];
+                    break;
+
             default: System.out.println("Oops! That trip is not listed. Please try again.")
         }
 
         System.out.println("Rate this trip on a scale from 0-5");
         vote = userInput.nextInt();
         votesCount++;
-        // Setti þetta inn hér því annars var hann ekki að telja 
-        // Endilega lagið þetta ef þið getið
+        
         if (vote < 0)
         {
          vote = 0;
@@ -87,13 +98,14 @@ public static void main(String [] args)
     {
        votesTotal = vote;
        votesTotal = votesTotal + vote;
+       //Skoða þessar 2 línur
     }
-    // Tilgangslaust að telja ef það eru engin atkvæði
     if (votesCount > 0){
         double average = votesTotal / votesCount;
         System.out.println("Average for this trip is:" + average );
     }
     userInput.close();
     // átti eftir að bæta inn svo þetta færi allt í sama lista
+    // Spurning hvort það sé líka í reviewList eins og athugasemdirnar
     }
 }

@@ -19,7 +19,7 @@ class Update
    System.out.println(reviews);
    // Spurning hvernig við viljum vista reviews. Eins og er er bara verið að prenta allt en spurning hvort þið vljið gera það svona, eða e-ð öðruvísi
    // ReviewList.add(reviews); 
-   // Fer eftir því hvernig við viljum geyma þetta, en kóðinn vrkar eins og er þannig hann er komin
+   // Fer eftir því hvernig við viljum geyma þetta, en kóðinn virkar eins og er þannig hann er komin
     
    userInput.close();
    }
