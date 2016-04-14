@@ -35,7 +35,7 @@ public class Trip{
 	}
 	
 	public void initializeTrip(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10
-					trip11, trip12, trip13, trip14){
+					trip11, trip12, trip13, trip14, trip15, trip16, trip17, trip18, trip19, trip20){
 
 		Object[] info = tripProperties.getInfo;
 
@@ -281,7 +281,7 @@ public class Trip{
 		
 	    Trip trip15 = new Trip({
 	    	this.name = "Landmannalaugar and Hjálparfoss",
-	    	this.type = "A visit to a geothermal pool",
+	    	this.type = "Geothermal pool",
 	    	this.cardDir = 3,
 			this.selectLanguage = 6,
 			this.review = 1,
@@ -298,7 +298,7 @@ public class Trip{
 		
 	    Trip trip16 = new Trip({
 	    	this.name = "Meet he puffins and hike",
-	    	this.type = "Hiking with birds",
+	    	this.type = "Hiking",
 	    	this.cardDir = 2,
 			this.selectLanguage = 3,
 			this.review = 1,
@@ -315,7 +315,7 @@ public class Trip{
 		
 	    Trip trip17 = new Trip({
 	    	this.name = "Goðafoss, Dimmuborgir and Mývatns Nature baths",
-	    	this.type = "Tour of Nature",
+	    	this.type = "Touring",
 	    	this.cardDir = 1,
 			this.selectLanguage = 3,
 			this.review = 1,
@@ -333,6 +333,7 @@ public class Trip{
 	    Trip trip18 = new Trip({
 	    	this.name = "Jökulsárlón",
 	    	this.type = "Glacier",
+	    	// Eða kannski mountain, sami eða sitthvor hópurinn?
 	    	this.cardDir = 3,
 			this.selectLanguage = 7,
 			this.review = 1,
@@ -349,7 +350,7 @@ public class Trip{
 		
 	    Trip trip19 = new Trip({
 	    	this.name = "Snæfellsnes peninsula",
-	    	this.type = "A tour through Snæfellsnes",
+	    	this.type = "Touring",
 	    	this.cardDir = 4,
 			this.selectLanguage = 2,
 			this.review = 1,
@@ -366,7 +367,7 @@ public class Trip{
 		
 	    Trip trip20 = new Trip({
 	    	this.name = "Inside the volcano",
-	    	this.type = "A rupturing experience",
+	    	this.type = "Mountain",
 	    	this.cardDir = 3,
 			this.selectLanguage = 7,
 			this.review = 4,
