@@ -8,11 +8,12 @@ public class UserInterface{
 		System.out.println("1. Search for a daytrip");
 		System.out.println("2. Reserve a daytrip");
 		System.out.println("3. Look at reviews");
-		System.out.println("Please enter 1, 2 or 3.");
+		System.out.println("Please press 1, 2 or 3:");
 		int operation = sc.nextInt();
 		if(operation==1)search();
 		if(operation==2)reserve();
 		if(operation==3)reviewlook();
+		// á þetta þá að skila reviewList??
 	}
 }
 
@@ -21,10 +22,13 @@ public static void Search(){
 	System.out.println("Searching for daytrips");
 	System.out.println("Are you searching for a specific trip?");
 	System.out.println("If so, please enter the name of the trip. If not, press the ENTER key.");
+	// Væri ekki betra að birta lista yfir ferðirnar einhversstaðar eða er einhversstaðar í forritinu hægt fyrir notenda að hugsa
+	// Hvað ætli sé í boði og leita því eftir allt?
 	String tripname = ssc.nextLine();
 	if(tripname.length<1)tripname=null;
 	System.out.println("Are you searching for a specific type of trips?");
 	//Mögulega segja hér hvaða valkostir eru?
+	// Líst vel á það þar sem ég veit ekki sjálf hvað er í boði, er þetta hiking og það eða e-ð annað?
 	System.out.println("If so, please enter the type of trip. If not, press the ENTER key.");
 	String triptype = ssc.nextLine();
 	if(triptype.length<1)triptype=null;
@@ -47,11 +51,14 @@ public static Object[] TripPropSearch(){
 	if(location.length<1)location=null;
 
 	System.out.println("Please enter your language.");
-	System.out.println("Press 1 for Icelandic, 2 for English, 3 for Chinese, or press the ENTER key to skip this question."); //ENG:english,CHI:chinese,ISL:Icelandic
+	System.out.println("Press 1 for Icelandic, 2 for English, 3 for Chinese, or press the ENTER key to skip this question."); 
+	//ENG:english,CHI:chinese,ISL:Icelandic
+	//Spurning um að bæta hinum tungumálunum við? Það eru spænska(ESP), Franska(FRE) og Sænska(SWE)??
 	int language = trsc.nextInt();
 	if(language.length<1)language=null;
 
 	System.out.println("Please enter the desired danger level on a scale of 1 to 5.");
+	//Pæling við erum ekki að nota öll danger level, þannig þarf ekki annaðhvort að laga það eða taka þetta út?
 	System.out.println("Press the ENTER key to skip this question.");
 	int danger = trsc.nextInt();
 
@@ -82,7 +89,8 @@ public static Object[] TripPropSearch(){
 	if(picku.equals("No")) pickUp = false;
 	if(picku.equals("no")) pickUp = false;
 
-	System.out.println("Do you wish for the trip to be accessible for the handicapped?");
+	System.out.println("Do you wish for the trip to be accessible to the disabled?");
+	// Fannst handicapped allt í einu hljóma illa, getið breytt aftur
 	System.out.println("Please enter Yes or No, or press ENTER to skip this question.");
 	String accessibilit = trsc.nextLine();
 	boolean accessibility = new boolean();
