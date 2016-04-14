@@ -10,14 +10,14 @@ UserInterface - laga sting -> int, athugun null -- búin að laga string -> int, e
 		snyrta til -- búin að snyrta aðeins til, endilega kíkja á þetta samt
 		mögulega setja inn valmöguleika á að leita af ferðum undir x verði, etc, tengist TripProperties 
 
-TripProperties - setja inn fleiri ferðir
+TripProperties - setja inn fleiri ferðir--BÚIÐ
 		 testa hvort þetta sé ekki allt rétt, þ.e case
-		 taka út cases sem er ekki verið að nota
+		 taka út cases sem er ekki verið að nota--BÚIÐ, öll case í notkun
 		 athuga tungumálin, þ.e þegar það eru fleiri en eitt tungumál, hvort það kemur upp þegar
 		 aðeins er leitað af einu af því
 		 hafa valmöguleika á að leita af ferðum undir x verði + líka með trip length?
-		 skoða þar sem int hefur + "strengur" -- búið
-		 tripLength - ekki núllstilla num -- búið
+		 skoða þar sem int hefur + "strengur" -- BÚIÐ
+		 tripLength - ekki núllstilla num -- BÚIÐ
 
 		
 TripInventory - test cases (auka dútlerí)

@@ -181,6 +181,43 @@ public class TripProperties extends Trip{
 		    						and the hidden people who are said to be the islands former residents. "
 		    						+ "Clothing suggestion: Warm and waterproof outwear. ";
 		    		break;
+		    //Trip Landmannalaugar and Hjálparfoss
+		    //A visit to geothermal pool
+		    case 15: addInfoString = "Come and join us in this relaxing trip where we will start with a drive to Þjórsárdalur valley and look at Hjálparfoss waterfall. From there we will drive
+		    						drive to Landmannalaugar, take a hike and soak ourselves in a relaxing geothermal pool."  
+		    						+ "Clothing suggestion: Warm clothes, sturdy shoes, swimsuit & towel. ";
+		    		break;
+		    //Trip Meet the puffins and hike
+		    //Hiking with birds
+		    case 16: addInfoString = "Come and join us on a hike on Borgarfjörður eystri, on of the best hiking places in Iceland. This trip offers 27 diffrent routes and one of the routes leads
+		    						to a excellend bird watching facility where you can see puffins among ther thing. ")  
+		    						+ "Clothing suggestion: Warm clothes and sturdy shoes. ";
+		    		break;
+		    //Trip Goðafoss, Dimmuborgir and Mývatn Nature baths
+		    //Tour of Nature
+		    case 17: addInfoString = "We set out from Akureyri to the twin waterfall Godafoss, and fom there we eill take a walking tour of Dimmuborgir but Dimmuborgir is a lava park with unique 
+		    						rock formations. Then we will head for Myvatn Nature Baths for a relaxing, healing bath but Mývatns Nature Baths are known for their healing abilities. "  
+		    						+ "Clothing suggestion: Warm clothes, sturdy shoes, swimsuit & towel. ";
+		    		break;
+		    //Trip Jöulsárlón
+		    //Glacier
+		    case 18: addInfoString = "Join us for a magical trip to Jökulsárlón, a lagoon with enormous and ancient icebergs breaking off from Vatnajökull. The lagoon appears in scenes 
+		    						from Batman Begins, Tomb Raider and two James Bond movies. ";
+									+ "Clothing suggestion: Warm and waterproof outwear. ";
+					break;
+			//Trip Snæfellsnes peninsula
+		    //A tour through Snæfellsnes
+		    case 19: addInfoString = "Come and see what Snæfellsnes has to offer. Join us as we visit Sæfellsjökull glacier, white and black sandy beaches, bird cliffs, spectacular mountains and volcanic craters, 
+		    						and unique harbours in charming fishing villages. ";
+									+ "Clothing suggestion: Warm and waterproof outwear. ";
+					break;
+			//Trip Inside the volcano
+		    //A rupturing experience
+		    case 20: addInfoString = "Come join us on a hike to Thrihnukagigur volcano and enjoy the breathtaking scenery. After walking for approximately 50 minutes we will reach the top of the mountain
+		    						where visitors will be lowered inside the crater so they can look at the magma chamber. Please note that the age limit is 12. ";
+									+ "Clothing suggestion: Warm, waterproof outwear and good shoes. ";
+					break;
+
 		}
 		return addInfoString;
 	}
