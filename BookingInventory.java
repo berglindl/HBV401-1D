@@ -3,6 +3,9 @@ import java.util.Scanner;
 class Reserve{
   //Smá lagfæringar í gangi
   private static int numSeats = 20;
+  // Þarf að laga þetta með að taka út, þurfum að stilla áður en farið er í reserve að hver dagsetning innihaldi 20 sæti fyrir hverja ferð
+  // Getum gert það í Booking, set athugasemd þar líka
+  // Vildi ekki taka út fyrr en það kemur inn í Booking eða hvar við viljum gera það
   public static void main(String [] args){
     System.out.println("Enter number of tickets needed:");
     Scanner userInput = new Scanner(System.in);
@@ -10,8 +13,7 @@ class Reserve{
     if (tickets <= numSeats){
       if (tickets >= 5){
         // ef 5 eða fleiri þá er hægt að kaupa sem hópaferð, þá er bara eitt nafn gefið upp en ekki mörg
-        // og þð er hægt að kaupa frekar private ferð þar sem þetta er hópur.
-        // Er það ekki það sem við vorum að tala um að vilja getað gert?
+        // og það er hægt að kaupa frekar private ferð þar sem þetta er hópur og þú vilt kannski bara fara með fólki sem þú þekkir.
      
         System.out.println("You have chosen a trip for 5 or more persons, press 1 for a private trip for your group and 2 for public:");
         Scanner answ = new Scanner(System.in);
@@ -22,12 +24,11 @@ class Reserve{
           String names = name.nextLine();       
           BookingsList.add(names);
           // eina við booking list er að við erum bara að setja inn nöfn þeirra sem panta en ekki
-          // hve mikið það er verið að panta. En þar sem við erum búin að breyta þannig það þarf ekki alltaf
-          // að gefa upp nafn fyrir hvern farþega, hvort viljið þið hafa annan lista með magni ferðaplássa pantað
-          // láta nafn þess sem pantar fyrir 5 koma 5sinnum eða bæði?
+          // hve mikið það er verið að panta. 
 
-          // væri ekki hægt að bæta bara við fjölda miða?
-          // þ.a BookingsList.add(tickets); ? 
+          // gætum bætt við BookingsList.add(tickets); eins og einhver sagði
+          //á ég að bæta því inn hér og í cancel eða bíða þangað til numSeats hefur verið útfært því það þarf augljóslega að vistast þar líka
+
           this.numSeats = 0;
           }
           else if(input.equals("2")){
@@ -38,7 +39,8 @@ class Reserve{
             this.numSeats = numSeats - tickets;
           }
           else{
-            System.out.println("invalid input");
+            System.out.println("invalid input, try again");
+            // erum ekki með skipun sem hendir þér aftur í að velja 1 eða 2 heldur klárar forritið bara. Gætum þurft að laga
           }
           answ.close();
         }
@@ -50,13 +52,17 @@ class Reserve{
             String names = name.nextLine();
             BookingsList.add(names);
             this.numSeats = numSeats - tickets;
+            //gætum þurft að skoða síðustu setninguna hér betur, spurning um að ýta henni úr for lykkjunni?
           }
         }
       }
       else{
         System.out.println("Number of tickets unavailable");
+        // hér heldur klasinn bara áfram yfir í borgun, spurning um að breyta þannig þú getur komist héðan aftur
+        // yfir í að velja dagsetningu eða cancel
+        // t.d. System.out.println("Press 1 to pick another date or 2 to cancel")
+        // og síðan tengin þangað??
       }
-      // bætti hérna við mjög einföldu borgunarekrfi, má breyta
       System.out.println("Press 1 to pay now and 2 to pay upon arrival:");
       Scanner answer = new Scanner(System.in);
       String response = answer.next();
@@ -68,6 +74,7 @@ class Reserve{
       }
       else{
         System.out.println("Invalid input, please try again.");
+        // erum ekki með skipun sem hendir þér aftur í að velja 1 eða 2 heldur klárar forritið bara-laga?
       }
       answer.close();
     }
@@ -88,7 +95,7 @@ class Cancellation{
         Scanner ans = new Scanner(System.in);
         String input = ans.next();
         if(input.equals("1")){
-          System.out.println("Please enter one name for the whole group");
+          System.out.println("Please enter one name to reserve the trip for the whole group");
           Scanner name = new Scanner(System.in);
           String names = name.nextLine();       
           BookingsList.remove(names);
@@ -105,6 +112,7 @@ class Cancellation{
            numSeats++;
           }
           }
+          // erum ekki með skipun hvað gerist ef þú ýtir á 3? Gætum lagað??
     }
        else{
         while (tickets > 0){
@@ -112,17 +120,15 @@ class Cancellation{
           Scanner name = new Scanner(System.in);
           String names = name.nextLine();
           BookingsList.remove(names);
-          // skoða hvort það eigi að vera BookingLst
+          // skoða hvort það eigi að vera BookingList
            numSeats++;
        }
     }
-   System.out.println(tickets +"tickets have been cancelled");
+   System.out.println(tickets +" tickets have been cancelled");
 }
 }
 
-// hvort sem við höfum þetta hér eða í booking þá getum vð notað þennan kóða ef það má velja allar dagsetningar
-// gamli kóðinn er hér að ofan, vildi ekki taka hann út ef þið viljið frekar nota hann
-// fannst þetta samt ágætis leið til að hafa allar dagsetningar inni
+// pæling að færa í Booking eða bara að kalla á þennan kóða þar??
 import java.util.Scanner;
 // ég importa allaf java scanner en megið breyta því :)
 class TripDate{
