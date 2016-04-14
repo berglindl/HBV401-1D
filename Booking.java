@@ -1,4 +1,6 @@
 public class Booking{
+	import java.util.Scanner;
+
 	//...
 	//Spurning að tengja bókun við ferðir hér?
 
@@ -27,7 +29,7 @@ public class Booking{
     {
         Scanner selectTrip = new Scanner(System.in);
         System.out.println("Select the trip you wish to book.");
-        System.out.println("Please note that there are only 20 seats available for each trip.")
+        System.out.println("Please note that there are only 20 seats available for each trip.");
         System.out.println("Press 1 for the trip Into the Glacier,");
         System.out.println("Press 2 for the trip Skiing on Hrútafjallstindar,");
         System.out.println("Press 3 for the trip Whale Watching in Húsavík,");
