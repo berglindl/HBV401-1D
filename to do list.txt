@@ -5,7 +5,7 @@ General - Taka út athugasemdir sem eru ekki þurfi lengur
 
 UserInterface - laga sting -> int, athugun null -- búin að laga string -> int, en það á eftir að athuga null
 		henda inn bókun og review líka - setja tengingu?
-		henda inn í bókun eftir leit 
+		henda inn í bókun eftir leit
 		keyra og sjá villur
 		snyrta til -- búin að snyrta aðeins til, endilega kíkja á þetta samt
 		mögulega setja inn valmöguleika á að leita af ferðum undir x verði, etc, tengist TripProperties 
@@ -34,12 +34,11 @@ Review - útfæra lista fyrir reviews
 BookingInventory - laga cancel--BÚIÐ nema ef við viljum breyta BookingList þá þarf að laga
 		   útfæra lista
 		   BookingList þarf að innihalda fjóra hluti: Nafn pantarans, ferðina, fjölda miða, og dagsetningu
-		   tengja dagsetningu
+		   tengja dagsetningu -- BookingList þarf bara að innihalda nafn, en prenta þarf út nafn, ferð, miða og dagsetningu. 
 		   mögulega breyta void main yfir í public int/það sem virkar og passar best -- búið fyrir dagsetningar
 		   fyrst velja ferð, svo dagsetningu, ((svo miða, svo nafn)Þessi tenging er nú þegar til staðar)
-		   athuga num seats, þ.e int numSeats = numSeats - tickets ætti að vera this.numSeats, og numSeats--
-		   ætti að vera numSeats - tickets til öryggis -- búið-SKOÐA aftur með tillit til Static falls
-		   athuga að búa mögulega til inventory? æronnó
+		   athuga num seats
+		   athuga að búa mögulega til inventory? æronnó - þarf líklega ekki
 
 Booking - setja tengingu, mögulega útfæra listadót hér eða eitthvað.
 

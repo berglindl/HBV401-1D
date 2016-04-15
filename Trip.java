@@ -1,6 +1,6 @@
 public class Trip{
 
-	//private Object[] Inventory;
+	private Object[] Inventory;
 
 	//int count;
 	
@@ -40,12 +40,21 @@ public class Trip{
 		return type;
 	}
 
-	//public static void addToInventory(Trip a){
-		//Inventory[count++] = a;
-	//}
+	public static void addToInventory(Trip a){
+		Inventory[count++] = a;
+	}
 
-	//sends info to the Booking class
-	private Booking sendInfo;
+	//creates a connection to the Recieve class within Booking class
+	private Recieve sendInfo;
+
+	public Trip(Recieve inv){
+		this.sendInfo = inv;
+	}
+
+	//sends Inventory over to the class GetInfo in Recieve in Booking
+	public void SendInfo(Object[] Inventory){
+		sendInfo.GetInfo(Inventory);
+	}
 	
 	public void initializeTrip(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10
 					trip11, trip12, trip13, trip14, trip15, trip16, trip17, trip18, trip19, trip20){
@@ -74,8 +83,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip1);
-		//uses the sendInfo method to send information over into the getBInfo class in Booking
-		sendInfo.getBInfo(trip1);
 
 		Trip trip2 = new Trip({
 			this.name = "Skiing on Hrútafjallstindar",
@@ -93,7 +100,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip2);
-		sendInfo.getBInfo(trip2);
 
 		Trip trip3 = new Trip({
 			this.name = "Whale Watching in Húsavík",
@@ -111,7 +117,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip3);
-		sendInfo.getBInfo(trip3);
 		
 		Trip trip4 = new Trip({
 			this.name = "History Walk Through Downtown",
@@ -129,7 +134,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip4);
-		sendInfo.getBInfo(trip4);
 
 		Trip trip5 = new Trip({
 			this.name = "The Golden Circle and Snorkeling",
@@ -147,7 +151,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip5);
-		sendInfo.getBInfo(trip5);
 			
 		Trip trip6 = new Trip({
 			this.name = "Glacier Walking and Waterfalls",
@@ -165,7 +168,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip6);
-		sendInfo.getBInfo(trip6);
 
 		Trip trip7 = new Trip({
 			this.name = "Northern Lights Explorer",
@@ -183,7 +185,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip7);
-		sendInfo.getBInfo(trip7);
 		
 		Trip trip8 = new Trip({
 			this.name = "Game of Thrones - Mývatn Mystery Magic",
@@ -201,7 +202,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip8);
-		sendInfo.getBInfo(trip8);
 		
 		Trip trip9 = new Trip({
 			this.name = "A Trip to Papey Islands",
@@ -219,7 +219,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip9);
-		sendInfo.getBInfo(trip9);
 		    
 		Trip trip10 = new Trip({
 			this.name = "The Caves in Ingólfsfjall",
@@ -237,7 +236,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip10);
-		sendInfo.getBInfo(trip10);
 		    
 		Trip trip11 = new Trip({
 			this.name = "Skiing Through Langanes",
@@ -255,7 +253,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip11);
-		sendInfo.getBInfo(trip11);
 		    
 		Trip trip12 = new Trip({
 			this.name = "Whale Watching in Breiðafjörður",
@@ -273,7 +270,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip12);
-		sendInfo.getBInfo(trip12);
 		    
 		Trip trip13 = new Trip({
 			this.name = "Western Dancing Trip",
@@ -291,7 +287,6 @@ public class Trip{
 		});
 
 		Inventory.addToInventory(trip13);
-		sendInfo.getBInfo(trip13);
 
 	    Trip trip14 = new Trip({
 	    	this.name = "A Walk Through Viðey",
@@ -309,7 +304,6 @@ public class Trip{
 	    });
 
 	    Inventory.addToInventory(trip14);
-	    sendInfo.getBInfo(trip14);
 		
 	    Trip trip15 = new Trip({
 	    	this.name = "Landmannalaugar and Hjálparfoss",
@@ -327,7 +321,6 @@ public class Trip{
 	    });
 
 	    Inventory.addToInventory(trip15);
-	    sendInfo.getBInfo(trip15);
 		
 	    Trip trip16 = new Trip({
 	    	this.name = "Meet the Puffins and Hike",
@@ -345,7 +338,6 @@ public class Trip{
 	    });
 
 	    Inventory.addToInventory(trip16);
-	    sendInfo.getBInfo(trip16);
 		
 	    Trip trip17 = new Trip({
 	    	this.name = "Goðafoss, Dimmuborgir and Mývatns Nature Baths",
@@ -363,7 +355,6 @@ public class Trip{
 	    });
 
 	    Inventory.addToInventory(trip17);
-	    sendInfo.getBInfo(trip17);
 		
 	    Trip trip18 = new Trip({
 	    	this.name = "Jökulsárlón",
@@ -383,7 +374,6 @@ public class Trip{
 	    });
 
 	    Inventory.addToInventory(trip18);
-	    sendInfo.getBInfo(trip18);
 		
 	    Trip trip19 = new Trip({
 	    	this.name = "Snæfellsnes Peninsula",
@@ -401,7 +391,6 @@ public class Trip{
 	    });
 
 	    Inventory.addToInventory(trip19);
-	    sendInfo.getBInfo(trip19);
 		
 	    Trip trip20 = new Trip({
 	    	this.name = "Inside the Volcano",
@@ -419,7 +408,6 @@ public class Trip{
 	    });
 
 	    Inventory.addToInventory(trip20);
-	    sendInfo.getBInfo(trip20);
 
 	}
 
@@ -427,7 +415,7 @@ public class Trip{
 		
 		//Ef við miðum við það sem ég setti í TripProperties 
 		//þá gætum við sótt allt í fylki og borið saman við fylkið sem var sent inn
-		Object[] properties = tripProperties.getInfo;
+		Object[] properties = TripProperties.getInfo;
 		
 		if(!(propquest[0] == NULL || propquest[0] !^ tripProperties.animals() )) return false;
 
