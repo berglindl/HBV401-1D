@@ -33,18 +33,20 @@ class Reserve{
 
 
 
-          this.numSeats = 0;
+          numSeats = 0;
           //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
+
+          //hm, spurning að prufa hvað gerist ef við tökum út this, spurning hvort að tengingin haldist
           }
           else if(input.equals("2")){
             System.out.println("Please enter one name for the whole group");
             Scanner name = new Scanner(System.in);
             String names = name.nextLine();       
             BookingsList.add(names);
-            this.numSeats = numSeats - tickets;
+            numSeats = numSeats - tickets;
           }
           else{
-            System.out.println("invalid input, try again");
+            System.out.println("Invalid input");
             // erum ekki með skipun sem hendir þér aftur í að velja 1 eða 2 heldur klárar forritið bara. Gætum þurft að laga
           }
           answ.close();
@@ -57,7 +59,6 @@ class Reserve{
             String names = name.nextLine();
             BookingsList.add(names);
             this.numSeats = numSeats - tickets;
-            //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
             //gætum þurft að skoða síðustu setninguna hér betur, spurning um að ýta henni úr for lykkjunni?
           }
         }
@@ -68,6 +69,8 @@ class Reserve{
         // yfir í að velja dagsetningu eða cancel
         // t.d. System.out.println("Press 1 to pick another date or 2 to cancel")
         // og síðan tengin þangað??
+
+        //jebb, það væri sniðugt. 
       }
       System.out.println("Press 1 to pay now and 2 to pay upon arrival:");
       Scanner answer = new Scanner(System.in);
@@ -91,7 +94,6 @@ class Cancellation{
   // Held það eigi núna að virka að cancella hópferðirnar
  //Aftur þarf tengingu hérna við listanna
   public static void main(String [] args){
-    // má ekki vera static ef við ætlum að nota this.numSeats
    // muna að lesa inn numSeats, tripName og tripDate þegar það er komið hvernig það verður
    System.out.println("Enter number of tickets you would like to cancel:");
    Scanner userInput = new Scanner(System.in);
@@ -107,8 +109,7 @@ class Cancellation{
           String names = name.nextLine();       
           BookingsList.remove(names);
           // viljum við hafa þetta BookingList?
-          this.numSeats = 20;
-          //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
+          numSeats = 20;
           }
         else if(input.equals("2")){
           while (tickets > 0){
@@ -118,9 +119,10 @@ class Cancellation{
           BookingsList.remove(names);
           // skoða hvort það eigi að vera BookingLst
 
+          //mögulega þarf þess ekki fyrst að bókunin er tæknilega séð bara fyrir okkur að sjá
+
           //spurning hvort að þetta væri betra, ef miðarnir væru fleiri en 1
-          this.numSeats = numSeats + tickets;
-          //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
+          numSeats = numSeats + tickets;
           //numSeats++;
           }
         }
@@ -128,7 +130,7 @@ class Cancellation{
           System.out.println("Error, please try again.");
         }
         // erum ekki með skipun hvað gerist ef þú ýtir á 3? Gætum lagað??
-        //Gætum gert eitthvað eins og þetta, ekki nema eitthvað sérstakt ætti að gerast í tilfelli 3
+        //þurfum öruglega að reyna að aðlaga þetta þannig að maður fer aftur inn í loop-una
     }
        else{
         while (tickets > 0){
@@ -138,8 +140,7 @@ class Cancellation{
           BookingsList.remove(names);
           // skoða hvort það eigi að vera BookingList
           // sama hér?
-          this.numSeats = numSeats + tickets;
-          //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
+          numSeats = numSeats + tickets;
           // numSeats++;
        }
     }

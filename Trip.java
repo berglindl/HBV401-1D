@@ -1,4 +1,8 @@
 public class Trip{
+
+	//private Object[] Inventory;
+
+	//int count;
 	
 	private String name;
 	private String type;
@@ -33,9 +37,15 @@ public class Trip{
 	public String getType(){
 		return type;
 	}
+
+	//public static void addToInventory(Trip a){
+		//Inventory[count++] = a;
+	//}
 	
 	public void initializeTrip(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10
 					trip11, trip12, trip13, trip14, trip15, trip16, trip17, trip18, trip19, trip20){
+
+		//á þetta ekki að vera TripProperties, ekki tripProperties, og það fyrir ofan? eða er ég að misskilja?
 
 		Object[] info = tripProperties.getInfo;
 

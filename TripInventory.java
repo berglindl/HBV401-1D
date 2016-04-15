@@ -3,6 +3,10 @@ public class TripInventory extends Trip{
 	import org.junit.*;
 	import static org.junit.Assert.*;
 	import java.util.Vector;
+
+	//Spurning að færa það sem er /* */ yfir í Trip fallið?
+
+	/*
 	
 	//Vænanlega geymum við ferðirnar inn í fylki
 	private Object[] Inventory;
@@ -10,6 +14,8 @@ public class TripInventory extends Trip{
 	//gæti verið heppilegt til að vita hve margar ferðir eru í 
 	//fylkinu og í hvaða sæti næsta ferð fer.
 	int count;
+	*/
+	
 	
 	public Object[] search(String tripName, String tripType, Object[] propinfo){
 		//Svona vector er góður þegar við vitum ekki hve mörgum stökum
@@ -36,13 +42,11 @@ public class TripInventory extends Trip{
 			
 		return searchpositives.toArray();
 	}
-	
-	
-
+/*
 	public static void addToInventory(Trip a){
 		Inventory[count++]=a;
 	}
-
+*/
 
 	//Before and after are meant to be empty so nothing to do here
 	
