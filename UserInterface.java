@@ -15,7 +15,7 @@ public class UserInterface{
 		if(operation==3)reviewlook();
 		// á þetta þá að skila reviewList??
 	}
-}
+
 
 public static void Search(){
 	Scanner ssc = new Scanner(System.in);
@@ -61,6 +61,7 @@ public static void Search(){
 }
 
 public static Object[] TripPropSearch(){
+
 	Scanner trsc = new Scanner(System.in);
 	System.out.println("Please enter the cardinal direction you wish to see the trips for.");
 	System.out.println("Press 1 for North, 2 for East, 3 for South, 4 for West, or press the ENTER key to skip this question.");
@@ -86,7 +87,8 @@ public static Object[] TripPropSearch(){
 	System.out.println("Do you wish to allow pets on the trip?");
 	System.out.println("Please enter Yes or No, or press the ENTER key to skip this question.");
 	String anima = trsc.nextLine();
-	boolean animals = new boolean;
+	//boolean animals = new boolean;
+	boolean animals = new Boolean();
 	//Arranged so that both inputs will be valid,
 	//since a lot of people don't capitalize letters, despite being asked to do so
 	if(anima.equals("Yes"))animals = true;
@@ -97,7 +99,8 @@ public static Object[] TripPropSearch(){
 	System.out.println("Do you wish to have insurence included on the trip?");
 	System.out.println("Please enter Yes or No, or press the ENTER key to skip this question.");
 	String insurenc = trsc.nextLine();
-	boolean insurence = new boolean;
+	//boolean insurence = new boolean;
+	boolean insurence = new Boolean();
 	if(insurenc.equals("Yes")) insurence = true;
 	if(insurenc.equals("yes")) insurence = true;
 	if(insurenc.equals("No")) insurence = false;
@@ -106,7 +109,8 @@ public static Object[] TripPropSearch(){
 	System.out.println("Do you wish to be picked up and dropped off at your hotel or a nearby location?");
 	System.out.println("Please enter Yes or No, or press ENTER to skip this question.");
 	String picku = trsc.nextLine();
-	boolean pickUp = new boolean();
+	//boolean pickUp = new boolean();
+	boolean pickUp = new Boolean();
 	if(picku.equals("Yes")) pickUp = true;
 	if(picku.equals("yes")) pickUp = true;
 	if(picku.equals("No")) pickUp = false;
@@ -117,7 +121,8 @@ public static Object[] TripPropSearch(){
 	//Já ég var pínu sceptical um hvort að það væri rétta orðið, þetta hljómar betur
 	System.out.println("Please enter Yes or No, or press ENTER to skip this question.");
 	String accessibilit = trsc.nextLine();
-	boolean accessibility = new boolean();
+	//boolean accessibility = new boolean();
+	boolean accessibility = new Boolean();
 	if(accessibilit.equals("Yes")) accessibility = true;
 	if(accessibilit.equals("yes")) accessibility = true;
 	if(accessibilit.equals("No")) accessibility = false;
@@ -127,7 +132,8 @@ public static Object[] TripPropSearch(){
 	//Object[] SearchProp = SearchPropSearch();
 
 
-	return Object[] a={location,language,danger,animals,insurence, pickUp, accessibility};
+	return Object[] a = {location, language, danger, animals, insurence, pickUp, accessibility};
+}
 }
 
 /*
