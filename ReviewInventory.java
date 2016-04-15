@@ -1,4 +1,6 @@
 public class ReviewInventory extends Review{
+
+import java.util.ArrayList;
 import java.util.Scanner;
 class Update
 {
@@ -6,6 +8,7 @@ class Update
  //Hér þyrfti tengingu við ferðirnar
  public static void main(String[] args) 
  {
+   ArrayList<String> ReviewList = new ArrayList<String>();
    String reviewName;
    String reviewText;
    String reviews;
@@ -17,11 +20,8 @@ class Update
    reviewName = userInput.next();
    reviews = reviewName + " wrote: " + reviewText;
    System.out.println(reviews);
-   // Spurning hvernig við viljum vista reviews. Eins og er er bara verið að prenta allt en spurning hvort þið vljið gera það svona, eða e-ð öðruvísi
-   // ReviewList.add(reviews); 
-   // Fer eftir því hvernig við viljum geyma þetta, en kóðinn virkar eins og er þannig hann er komin
-
-   //Er það ekki bara fínt að hafa þetta svona? þ.e að vista þetta í lista bara eins og þetta er sett upp?
+   ReviewList.add(reviews); 
+   // vistaði þetta bara á sama hátt og Booking, gott að geyma strengi á þennan hátt
     
    userInput.close();
    }

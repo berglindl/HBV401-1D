@@ -27,7 +27,7 @@ Trip - taka út getSearchProp í getPropInfo -- búið
 SearchProperties - er óþarfi, má taka út -- búið
 
 ReviewInventory - hafa "nafn" + ": " + "review" --BÚIÐ 
-			vista í lista-Sjá athugasemd inni kóðanum
+			vista í lista--BÚIÐ
 
 Review - útfæra lista fyrir reviews
 
