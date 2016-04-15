@@ -143,6 +143,7 @@ class UserInterface{
 		else accessibility = null;
 
 		//Þegar ég reyni að keyra forritið kemur upp villa út af þessu
+		// Villan kemur hjá mér líka, ásamt villum tengdum .length á öðru stöðum.
 
 		return Object[] a = {cardDir, selectLanguage, review, animals, insurence, pickUp, accessibility};
 	}
