@@ -1,4 +1,33 @@
-NÝJI TO DO LISTINN 13/4/2016
+TO DO LIST 15/4/2016
+
+General - Taka út athugasemdir sem eru ekki þurfi lengur
+	  Athuga tengingar
+
+UserInterface - athuga null
+		henda inn bókun og review - setja tengingu?
+		henda inn í bókun (og review) eftir leit
+		keyra og sjá villur
+		snyrta til
+		mögulega setja inn valmöguleika á að leita af ferðum undir x verði, etc. tengist TripProperties
+
+TripProperties - testa hvort þetta sé ekki allt rétt, þ.e case
+		 athuga tungumálin, þ.e þegar það eru fleiri en eitt tungumál, hvort það kemur upp þegar
+		 aðeins er leitað af einu af því
+		 hafa valmöguleika á að leita af ferðum undir x verði + líka með trip length?
+
+TripInventory - test cases (auka dútlerí)
+
+Review - útfæra lista fyrir reviews
+         setja tengingu
+
+BookingInventory - útfæra lista
+		   prenta þarf út nafn, ferð, miða og dagsetningu eftir bókun
+		   athuga num seats
+
+Booking - setja tengingu
+	  útfæra lista
+
+TO DO LIST 13/4/2016
 
 General - Taka út athugasemdir sem eru ekki þurfi lengur
 	  Athuga tengingu 
