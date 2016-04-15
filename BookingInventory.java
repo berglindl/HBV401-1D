@@ -1,16 +1,18 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 class Reserve{
   //Smá lagfæringar í gangi
-  /*private static int numSeats = 20;*/
+  // private static int numSeats = 20;
   // Þarf að laga þetta með að taka út, þurfum að stilla áður en farið er í reserve að hver dagsetning innihaldi 20 sæti fyrir hverja ferð
   // Getum gert það í Booking, set athugasemd þar líka
   // Vildi ekki taka út fyrr en það kemur inn í Booking eða hvar við viljum gera það
   public static void main(String [] args){
+   ArrayList<String> BookingsList = new ArrayList<String>();
     // má ekki vera static ef við ætlum að nota this.numSeats
     System.out.println("Enter number of tickets needed:");
     Scanner userInput = new Scanner(System.in);
     int tickets = userInput.nextInt();
+    Scanner name = new Scanner(System.in);
     if (tickets <= numSeats){
       if (tickets >= 5){
         // ef 5 eða fleiri þá er hægt að kaupa sem hópaferð, þá er bara eitt nafn gefið upp en ekki mörg
@@ -21,12 +23,13 @@ class Reserve{
         String input = answ.next();
         if(input.equals("1")){
           System.out.println("Please enter one name for the whole group");
-          Scanner name = new Scanner(System.in);
           String names = name.nextLine();       
           BookingsList.add(names);
-          BookingsList.add(tickets);
+          //BookingsList.add(tickets); verðum að breyta, getum ekki sett innþar sem þetta er int breyta
           // eina við booking list er að við erum bara að setja inn nöfn þeirra sem panta en ekki
           // hve mikið það er verið að panta. 
+
+          //ah, er það þá ekki bara nóg?
 
           // gætum bætt við BookingsList.add(tickets); eins og einhver sagði
           //á ég að bæta því inn hér og í cancel eða bíða þangað til numSeats hefur verið útfært því það þarf augljóslega að vistast þar líka
@@ -40,7 +43,6 @@ class Reserve{
           }
           else if(input.equals("2")){
             System.out.println("Please enter one name for the whole group");
-            Scanner name = new Scanner(System.in);
             String names = name.nextLine();       
             BookingsList.add(names);
             numSeats = numSeats - tickets;
@@ -50,20 +52,22 @@ class Reserve{
             // erum ekki með skipun sem hendir þér aftur í að velja 1 eða 2 heldur klárar forritið bara. Gætum þurft að laga
           }
           answ.close();
+          userInput.close();
         }
         else{
           System.out.println("Enter full name:" );
           for(int i=0; i<tickets; i++){
             System.out.println("Enter full name:");
-            Scanner name = new Scanner(System.in);
             String names = name.nextLine();
             BookingsList.add(names);
-            this.numSeats = numSeats - tickets;
+            numSeats = numSeats - tickets;
+            //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
             //gætum þurft að skoða síðustu setninguna hér betur, spurning um að ýta henni úr for lykkjunni?
           }
         }
       }
-      else{
+    name.close();
+      if (tickets > numSeats){
         System.out.println("Number of tickets unavailable");
         // hér heldur klasinn bara áfram yfir í borgun, spurning um að breyta þannig þú getur komist héðan aftur
         // yfir í að velja dagsetningu eða cancel
@@ -88,6 +92,7 @@ class Reserve{
       answer.close();
     }
 }
+
 
 import java.util.Scanner;
 class Cancellation{
