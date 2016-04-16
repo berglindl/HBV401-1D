@@ -106,7 +106,28 @@ public class Trip{
 
 		Trip[] trips = new Trip[19];
 
-		trips[0] = new Trip("Into the Glacier", "Moutain", 3, 1, 2, false, true, false, 2, 1, false, 5);
+		trips[0] = new Trip("Into the Glacier", "Mountain", 3, 1, 2, false, true, false, 2, 1, false, 5);
+		trips[1] = new Trip("Skiing on Hrútafjallstindar", "Skiing", 2, 5, 5, false, true, false, 3, 2, false, 3);
+		trips[2] = new Trip("Whale Watching in Húsavík", "Whale Watching", 1, 5, 1, false, false, false, 7, 3, false, 7);
+		trips[3] = new Trip("History Walk Through Downtown", "Walking", 4, 2, 1, true, false, true, 1, 4, true, 1);
+		trips[4] = new Trip("The Golden Circle and Snorkeling", "Snorkeling", 3, 5, 4, false, true, true, 6, 5, false, 10);
+		trips[5] = new Trip("Glacier Walking and Waterfalls", "Mountain", 3, 5, 1, false, false, true, 8, 6, false, 3);
+		trips[6] = new Trip("Northern Lights Explorer", "Northern Lights", 3, 5, 1, false, false, true, 2, 7, false, 1);
+		trips[7] = new Trip("Game of Thrones - Mývatn Mystery Magic", "Geothermal Pool", 1, 5, 1, false, false, true, 4, 8, false, 4);
+		trips[8] = new Trip("A Trip to Papey Islands", "Island", 2, 1, 1, true, false, false, 2, 9, false, 5);
+		trips[9] = new Trip("The Caves in Ingólfsfjall", "Mountain", 1, 5, 2, false, true, true, 2, 10, false, 2);
+		trips[10] = new Trip("Skiing Through Langanes", "Skiing", 2, 2, 2, true, true, true, 4, 11, false, 6);
+		trips[11] = new Trip("Whale Watching in Breiðafjörður", "Whale Watching", 4, 7, 3, true, true, false, 5, 12, false, 8);
+		trips[12] = new Trip("Western Dancing Trip", "Dancing", 4, 4, 1, true, true, true, 3, 13, true, 3);
+		trips[13] = new Trip("A Walk Through Viðey", "Walking", 4, 5, 1, false, true, false, 2, 14, false, 1);
+		trips[14] = new Trip("Landmannalaugar and Hjálparfoss", "Geothermal Pool", 3, 6, 1, false, false, true, 4, 15, false, 3);
+		trips[15] = new Trip("Meet the Puffins and Hike", "Hiking", 2, 3, 1, false, false, false, 2, 16, false, 1);
+		trips[16] = new Trip("Jökulsárlón", "Touring", 3, 7, 1, false, true, false, 5, 18, false, 5);
+		trips[17] = new Trip("Goðafoss, Dimmuborgir and Mývatns Nature Baths", "Touring", 1, 3, 1, false, false, true, 6, 17, false, 5);
+		trips[18] = new Trip("Snæfellsnes Penisula", "Touring", 4, 2, 1, true, false, true, 6, 19, false, 4);
+	    trips[19] = new Trip("Inside the Volcano", "Mountain", 3, 7, 4, false, true, false, 3, 20, false, 9);
+
+	    Inventory.addToInventory(trips);
 
 		/*Trip trip1 = new Trip();
 		
@@ -122,6 +143,8 @@ public class Trip{
 		trip1.addInfo = 1;
 		trip1.accessibility = false;
 		trip1.price = 5;
+
+
 
 		Inventory.addToInventory(trip1);
 
@@ -161,6 +184,8 @@ public class Trip{
 
 		Inventory.addToInventory(trip3);
 
+		
+
 		Trip trip4 = new Trip();
 
 		trip4.name = "History Walk Through Downtown";
@@ -178,6 +203,7 @@ public class Trip{
 
 		Inventory.addToInventory(trip4);
 
+
 		Trip trip5 = new Trip();
 
 		trip5.name = "The Golden Circle and Snorkeling";
@@ -194,6 +220,7 @@ public class Trip{
 		trip5.price = 10;
 
 		Inventory.addToInventory(trip5);
+
 			
 		Trip trip6 = new Trip();
 
@@ -212,6 +239,7 @@ public class Trip{
 
 		Inventory.addToInventory(trip6);
 
+		
 		Trip trip7 = new Trip();
 
 		trip7.name = "Northern Lights Explorer";
@@ -229,6 +257,7 @@ public class Trip{
 
 		Inventory.addToInventory(trip7);
 
+		
 		Trip trip8 = new Trio();
 
 		trip8.name = "Game of Thrones - Mývatn Mystery Magic";
@@ -263,6 +292,7 @@ public class Trip{
 		
 		Inventory.addToInventory(trip9);
 
+	
 		Trip trip10 = new Trip();
 
 		trip10.name = "The Caves in Ingólfsfjall";
@@ -299,6 +329,7 @@ public class Trip{
 
 		Trip trip12 = new Trip();
 
+		
 		trip12.name = "Whale Watching in Breiðafjörður";
 		trip12.type = "Whale Watching";
 		trip12.cardDir = 4;
@@ -314,6 +345,7 @@ public class Trip{
 
 		Inventory.addToInventory(trip12);
 
+		
 		Trip trip13 = new Trip();
 
 		trip13.name = "Western Dancing Trip";
@@ -333,6 +365,7 @@ public class Trip{
 
 		Trip trip14 = new Trip();
 
+		
 		trip14.name = "A Walk Through Viðey";
 		trip14.type = "Walking";
 		trip14.cardDir = 4;
@@ -367,6 +400,7 @@ public class Trip{
 
 	    Trip trip16 = new Trip();
 
+	  
 	    trip16.name = "Meet the Puffins and Hike";
 		trip16.type = "Hiking";
 		trip16.cardDir = 2;
@@ -401,6 +435,7 @@ public class Trip{
 
 	    Trip trip18 = new Trip();
 
+	
 	    trip18.name = "Jökulsárlón";
 		trip18.type = "Touring";
 		trip18.cardDir = 3;
@@ -418,6 +453,7 @@ public class Trip{
 
 	    Trip trip19 = new Trip();
 
+	    
 	    trip19.name = "Snæfellsnes Peninsula";
 		trip19.type = "Touring";
 		trip19.cardDir = 4;
@@ -434,6 +470,7 @@ public class Trip{
 	    Inventory.addToInventory(trip19);
 
 	    Trip trip20 = new Trip();
+
 
 	    trip20.name = "Inside the Volcano";
 		trip20.type = "Mountain";
