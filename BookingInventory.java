@@ -23,7 +23,7 @@ class Reserve{
         String input = answ.next();
         if(input.equals("1")){
           System.out.println("Please enter one name for the whole group");
-          String names = name.nextLine();       
+          String names = name.nextLine();  
           BookingsList.add(names);
           //BookingsList.add(tickets); verðum að breyta, getum ekki sett innþar sem þetta er int breyta
           // eina við booking list er að við erum bara að setja inn nöfn þeirra sem panta en ekki
@@ -55,7 +55,6 @@ class Reserve{
           userInput.close();
         }
         else{
-          System.out.println("Enter full name:" );
           for(int i=0; i<tickets; i++){
             System.out.println("Enter full name:");
             String names = name.nextLine();
@@ -66,6 +65,7 @@ class Reserve{
           }
         }
       }
+    // Er pælingin þá að hér birtist dagsetning, ferð, fjöldi miða og nöfn eða eftir bókunina?
     name.close();
       if (tickets > numSeats){
         System.out.println("Number of tickets unavailable");
@@ -92,7 +92,6 @@ class Reserve{
       answer.close();
     }
 }
-
 
 import java.util.Scanner;
 class Cancellation{
