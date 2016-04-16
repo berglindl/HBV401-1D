@@ -1,4 +1,4 @@
-public class TripProperties extends Trip{
+class TripProperties{
 
 	private boolean animals;
 	private boolean insurence;
@@ -195,7 +195,7 @@ public class TripProperties extends Trip{
 		return priceAmount;
 	}
 
-	public void getInfo(){
+	public Object[] getInfo(){
 		//Dæmi sem gæti virkað sýnist mér fyrir getPropinfo í trip
 		//Þá skilar þetta hreinlega upplýsingum úr hlutnum sem trip getur svo unnið úr 
 		Object[] a = {animals, insurence, pickUp, accessibility, review, cardDir, selectLanguage, length, addInfo, price};

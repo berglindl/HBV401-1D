@@ -6,11 +6,40 @@ public class Trip{
 	
 	private String name;
 	private String type;
+	private boolean animals;
+	private boolean insurence;
+	private boolean pickUp;
+	private boolean accessibility;
+
+	private int review;
+	private int cardDir;
+	private int selectLanguage;
+	private int length;
+	private int addInfo;
+	private int price;
 	
 	//Object tripProperties;
 
 	Object tripProperties;
 
+
+
+	public makeTrip(String name, String type, int cardDir, int selectLanguage, int review, boolean animals, boolean insurence, boolean pickUp, int lenght, int addInfo, boolean accessibility, int price){
+			Object[] getInfor = TripProperties.getInfo();
+			this.name = name;
+			this.type = type;
+			this.cardDir = getInfor.cardDir;
+			this.selectLanguage = getInfor.selectLanguage;
+			this.review = getInfor.review;
+			this.animals = getInfor.animals;
+			this.insurence = getInfor.insurence;
+			this.pickUp = getInfor.pickUp;
+			this.length = getInfor.length;
+			this.addInfo = getInfor.addInfo;
+			this.accessibility = getInfor.accessibility;
+			this.price = getInfor.price;
+	}
+/*
 	//Færði þetta úr TripInventory yfir til hingað
 
 	//Til bráðabirgða allavega þá hugsa ég sniðugt að hafa
@@ -23,6 +52,7 @@ public class Trip{
 		//a.maketripproperties(information);
 		Inventory.addToInventory(a);
 	}
+	*/
 	
 	public void setName(String n){
 		name = n;
@@ -62,7 +92,7 @@ public class Trip{
 	//public void initializeTrip(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10
 	//				trip11, trip12, trip13, trip14, trip15, trip16, trip17, trip18, trip19, trip20){
 
-	public void initializeTrip(Object[] Inventory){
+	public void initializeTrip(){
 
 		//á þetta ekki að vera TripProperties, ekki tripProperties, og það fyrir ofan? eða er ég að misskilja?
 
@@ -74,7 +104,11 @@ public class Trip{
 
 		//Gætum þurft að setja einhverja tengingu við Object[] info
 
-		Trip trip1 = new Trip();
+		Trip[] trips = new Trip[19];
+
+		trips[0] = new Trip("Into the Glacier", "Moutain", 3, 1, 2, false, true, false, 2, 1, false, 5);
+
+		/*Trip trip1 = new Trip();
 		
 		trip1.name = "Into the Glacier";
 		trip1.type = "Mountain";

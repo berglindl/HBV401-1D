@@ -1,4 +1,4 @@
-public class TripInventory extends Trip{
+class TripInventory{
 	
 	//import org.junit.*;
 	//import static org.junit.Assert.*;
