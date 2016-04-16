@@ -68,6 +68,7 @@ class Reserve{
     // Er pælingin þá að hér birtist dagsetning, ferð, fjöldi miða og nöfn eða eftir bókunina?
     //Já, ég myndi segja það. 
     //Gætum gert þetta einhvernveginn svona, þá þurfum við að hafa tripName og tripDate einhversstaðar til að ná í það
+      // Líst vel á það, en þurfum a'ð laga names líka
     System.out.println("You have booked " + tickets + "under the name " + names + "for the trip" + tripName + "on the date " + tripDate);
     name.close();
       if (tickets > numSeats){
