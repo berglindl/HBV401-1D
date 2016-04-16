@@ -6,16 +6,6 @@ public class Trip{
 	
 	private String name;
 	private String type;
-	private int location;
-	private int language;
-	private int review;
-	private int length;
-	private int addInfo;
-	private int price;
-	private boolean animals;
-	private boolean pickUp;
-	private boolean insurence;
-	private boolean accessibility;
 	
 	//Object tripProperties;
 
@@ -26,15 +16,10 @@ public class Trip{
 	//Til bráðabirgða allavega þá hugsa ég sniðugt að hafa
 	//svona fall til að búa til Trip hlutina  
 	//spurning hvernig þetta tengist við sql seinna
-	public void makeTrip(String name, String type, Object[] information){
-		Object[] grabInfo = TripProperties.getInfo();
-
+	public void makeTrip(String name, String type, int location, int language, int review, Object[] information){
 		Trip a = new Trip();
 		a.setName(name);
 		a.setType(type);
-		a.setLocation(location);
-		a.setLanguage(language);
-		a.setReview(review);
 		//a.maketripproperties(information);
 		Inventory.addToInventory(a);
 	}
@@ -47,35 +32,12 @@ public class Trip{
 		type = t;
 	}
 
-	public void setLocation(){
-		Object[] getLoc = TripProperties.getInfo();
-		location = TripProperties.location();
-	}
-
-	public void setLanguage(){
-		Object[] getLang = TripProperties.getInfo();
-		language = TripProperties.language();
-	}
-	
-	public void setReview(){
-		Object[] getReview = TripProperties.getInfo();
-		review = TripProperties.dangerReview();
-	}
-
 	public String getName(){
 		return name;
 	}
 	
 	public String getType(){
 		return type;
-	}
-
-	public int getLocation(){
-		return location;
-	}
-
-	public int getLanguage(){
-		return language;
 	}
 
 	public static void addToInventory(Trip a){
@@ -114,18 +76,18 @@ public class Trip{
 
 		Trip trip1 = new Trip();
 		
-		trip1.setName(name) = "Into the Glacier";
-		trip1.setType(type) = "Mountain";
-		trip1.setLocation(location) = 3;
-		trip1.setLanguage(language) = 1;
-		trip1.setReview(review) = 2;
-		//trip1.animals = false;
-		//trip1.insurence = true;
-		//trip1.pickUp = false;
-		//trip1.length = 2;
-		//trip1.addInfo = 1;
-		//trip1.accessibility = false;
-		//trip1.price = 5;
+		trip1.name = "Into the Glacier";
+		trip1.type = "Mountain";
+		trip1.cardDir = 3;
+		trip1.selectLanguage = 1;
+		trip1.review = 2;
+		trip1.animals = false;
+		trip1.insurence = true;
+		trip1.pickUp = false;
+		trip1.length = 2;
+		trip1.addInfo = 1;
+		trip1.accessibility = false;
+		trip1.price = 5;
 
 		Inventory.addToInventory(trip1);
 
@@ -471,17 +433,17 @@ public class Trip{
 
 		if(!(propquest[3] = NULL || propquest[3] !^ tripProperties.accessibility )) return false;
 
-		if(!(propquest[4] = NULL || tripProperties.review = (int)(propquest[4]) ) return false;
+		if(!(propquest[4] = NULL || tripProperties.review = (int)(propquest[4]) )) return false;
 
-		if(!(propquest[5] = NULL || tripProperties.length = (int)(propquest[5]) ) return false;
+		if(!(propquest[5] = NULL || tripProperties.length = (int)(propquest[5]) )) return false;
 		
-		if(!(propquest[6] = NULL || tripProperties.price = (int)(propquest[6]) ) return false;
+		if(!(propquest[6] = NULL || tripProperties.price = (int)(propquest[6]) )) return false;
 
-		if(!(propquest[7] = NULL || tripProperties.selectLanguage = (int)(propquest[7]) ) return false;
+		if(!(propquest[7] = NULL || tripProperties.selectLanguage = (int)(propquest[7]) )) return false;
 
-		if(!(propquest[8] = NULL || tripProperties.cardDir = (int)(propquest[8]) ) return false;
+		if(!(propquest[8] = NULL || tripProperties.cardDir = (int)(propquest[8]) )) return false;
 
-		if(!(propquest[9] = NULL || tripProperties.addInfo = (int)(propquest[9]) ) return false;
+		if(!(propquest[9] = NULL || tripProperties.addInfo = (int)(propquest[9]) )) return false;
 		
 		return true;
 		
