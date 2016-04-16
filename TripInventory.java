@@ -1,7 +1,7 @@
 public class TripInventory extends Trip{
 	
-	import org.junit.*;
-	import static org.junit.Assert.*;
+	//import org.junit.*;
+	//import static org.junit.Assert.*;
 	import java.util.Vector;
 
 	//Spurning að færa það sem er /* */ yfir í Trip fallið?
@@ -25,17 +25,17 @@ public class TripInventory extends Trip{
 		Vector<String> searchpositives = new Vector<String>();
 		
 		for(int i= 0; i!=Inventory.length; i++){
-			boolean match == false;
-			boolean fail == false; 
+			boolean match = false;
+			boolean fail = false; 
 			
-			if(tripName == NULL || tripName.equals((Trip)Inventory[i].getName())) match == true;
-			else fail == true;
+			if(tripName = NULL || tripName.equals((Trip)Inventory[i].getName())) match = true;
+			else fail = true;
 			
-			if(tripType== NULL || tripType.equals((Trip)Inventory[i].getType())) match == true;
-			else fail == true;
+			if(tripType = NULL || tripType.equals((Trip)Inventory[i].getType())) match = true;
+			else fail = true;
 			
-			if( propinfo == NULL || (Trip)Inventory[i].getPropinfo(propinfo) == true ) match == true;
-			else fail == true;
+			if( propinfo = NULL || (Trip)Inventory[i].getPropinfo(propinfo) = true ) match = true;
+			else fail = true;
 			
 			if(match && !fail) searchpositives.add(Inventory[i]);
 		}
@@ -48,6 +48,7 @@ public class TripInventory extends Trip{
 	}
 */
 
+/*
 	//Before and after are meant to be empty so nothing to do here
 	
 	@Before
@@ -109,4 +110,5 @@ public class TripInventory extends Trip{
 		//assertTrue that there's trips available for less than ~20.000kr. 
 		//This has a possibility of failing due to the nature of the price class
 	}
+	*/
 }

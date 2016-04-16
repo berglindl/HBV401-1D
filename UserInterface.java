@@ -46,7 +46,7 @@ class UserInterface{
 		System.out.println("Inside the Volcano");
 
 		String tripName = ssc.nextLine();
-		if(tripName.length<1)tripName=null;
+		//if(tripName.length<1)tripName=null;
 
 		System.out.println("Are you searching for a specific type of trips?");
 		System.out.println("If so, please enter the type of trip. Please be sure to capitalize as instruced. If not, press the ENTER key.");
@@ -64,11 +64,12 @@ class UserInterface{
 		System.out.println("Touring");
 
 		String tripType = ssc.nextLine();
-		if(tripType.length<1)tripType=null;
+		//if(tripType.length<1)tripType=null;
 
 		Object[] propinf = TripPropSearch();
 
-		Object[] results = TripInventory.search(tripName, tripType, propinfo);
+		//Object[] results = TripInventory.search(tripName, tripType, propinfo);
+		Object[] results = TripInventory.search(tripName, tripType);
 
 		if(results.length<1) System.out.println("Sorry! No day trips matched your input.");
 		else System.out.println("The following day trips matched your criteria:");
@@ -82,18 +83,20 @@ class UserInterface{
 		System.out.println("Please enter the cardinal direction you wish to see the trips for.");
 		System.out.println("Press 1 for North, 2 for East, 3 for South, 4 for West, or press the ENTER key to skip this question.");
 		int cardDir = trsc.nextInt();
-		if(cardDir.length<1)cardDir=null;
+		//if(cardDir < 0 || cardDir > 4) cardDir = null;
+		//if(cardDir.length<1)cardDir=null;
 
 		System.out.println("Please enter your language.");
 		System.out.println("Press 1 for Icelandic, 2 for English, 3 for Chinese, 4 for Spanish, 5 for French, 6 for Swedish, or press the ENTER key to skip this question."); 
 
 		int selectLanguage = trsc.nextInt();
-		if(selectLanguage.length<1)selectLanguage=null;
+		//if(selectLanguage < 0 || selectLanguage > 6) selectLanguage = null;
+		//if(selectLanguage.length<1)selectLanguage=null;
 
 		System.out.println("Please enter the desired danger level on a scale of 1 to 5.");
 		System.out.println("Press the ENTER key to skip this question.");
 		int review = trsc.nextInt();
-		if(review < 0 || review > 5) review = null;
+		//if(review < 0 || review > 5) review = null;
 
 		System.out.println("Do you wish to allow pets on the trip?");
 		System.out.println("Please enter Yes or No, or press the ENTER key to skip this question.");
@@ -107,7 +110,7 @@ class UserInterface{
 		if(anima.equals("yes"))animals = true;
 		if(anima.equals("No"))animals = false;
 		if(anima.equals("no"))animals = false;
-		else animals = null;
+		//else animals = null;
 
 		System.out.println("Do you wish to have insurence included on the trip?");
 		System.out.println("Please enter Yes or No, or press the ENTER key to skip this question.");
@@ -118,7 +121,7 @@ class UserInterface{
 		if(insurenc.equals("yes")) insurence = true;
 		if(insurenc.equals("No")) insurence = false;
 		if(insurenc.equals("no")) insurence = false;
-		else insurence = null;
+		//else insurence = null;
 
 		System.out.println("Do you wish to be picked up and dropped off at your hotel or a nearby location?");
 		System.out.println("Please enter Yes or No, or press ENTER to skip this question.");
@@ -129,7 +132,7 @@ class UserInterface{
 		if(picku.equals("yes")) pickUp = true;
 		if(picku.equals("No")) pickUp = false;
 		if(picku.equals("no")) pickUp = false;
-		else pickUp = null;
+		//else pickUp = null;
 
 		System.out.println("Do you wish for the trip to be accessible for the disabled?");
 		System.out.println("Please enter Yes or No, or press ENTER to skip this question.");
@@ -140,11 +143,23 @@ class UserInterface{
 		if(accessibilit.equals("yes")) accessibility = true;
 		if(accessibilit.equals("No")) accessibility = false;
 		if(accessibilit.equals("no")) accessibility = false;
-		else accessibility = null;
+		//else accessibility = null;
 
 		//Þegar ég reyni að keyra forritið kemur upp villa út af þessu
 		// Villan kemur hjá mér líka, ásamt villum tengdum .length á öðru stöðum.
 
-		return Object[] a = {cardDir, selectLanguage, review, animals, insurence, pickUp, accessibility};
+		//return Object[] a = {cardDir, selectLanguage, review, animals, insurence, pickUp, accessibility};
+
+		Object[] a = {cardDir, selectLanguage, review, animals, insurence, pickUp, accessibility};
+
+		return a;
+	}
+
+	public static void Reserve(){
+		//klasinn sem hendir inn í Reserve
+	}
+
+	public static void ReviewLook(){
+		//klasinn sem hendir inn í Review
 	}
 }

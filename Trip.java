@@ -2,14 +2,24 @@ public class Trip{
 
 	private Object[] Inventory;
 
-	//int count;
+	int count;
 	
 	private String name;
 	private String type;
+	private int location;
+	private int language;
+	private int review;
+	private int length;
+	private int addInfo;
+	private int price;
+	private boolean animals;
+	private boolean pickUp;
+	private boolean insurence;
+	private boolean accessibility;
 	
 	//Object tripProperties;
 
-	Object TripProperties;
+	Object tripProperties;
 
 	//Færði þetta úr TripInventory yfir til hingað
 
@@ -17,10 +27,15 @@ public class Trip{
 	//svona fall til að búa til Trip hlutina  
 	//spurning hvernig þetta tengist við sql seinna
 	public void makeTrip(String name, String type, Object[] information){
-		Trip a = new Trip;
+		Object[] grabInfo = TripProperties.getInfo();
+
+		Trip a = new Trip();
 		a.setName(name);
 		a.setType(type);
-		a.maketripproperties(information);
+		a.setLocation(location);
+		a.setLanguage(language);
+		a.setReview(review);
+		//a.maketripproperties(information);
 		Inventory.addToInventory(a);
 	}
 	
@@ -31,7 +46,22 @@ public class Trip{
 	public void setType(String t){
 		type = t;
 	}
+
+	public void setLocation(){
+		Object[] getLoc = TripProperties.getInfo();
+		location = TripProperties.location();
+	}
+
+	public void setLanguage(){
+		Object[] getLang = TripProperties.getInfo();
+		language = TripProperties.language();
+	}
 	
+	public void setReview(){
+		Object[] getReview = TripProperties.getInfo();
+		review = TripProperties.dangerReview();
+	}
+
 	public String getName(){
 		return name;
 	}
@@ -40,10 +70,18 @@ public class Trip{
 		return type;
 	}
 
+	public int getLocation(){
+		return location;
+	}
+
+	public int getLanguage(){
+		return language;
+	}
+
 	public static void addToInventory(Trip a){
 		Inventory[count++] = a;
 	}
-
+/*
 	//creates a connection to the Recieve class within Booking class
 	private Recieve sendInfo;
 
@@ -56,6 +94,7 @@ public class Trip{
 		sendInfo.GetInfo(Inventory);
 	}
 	
+	*/
 	//spurning að hafa þetta sem public void initializeTrip(Object[] Inventory) í staðinn fyrir hitt?
 
 	//public void initializeTrip(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10
@@ -69,349 +108,352 @@ public class Trip{
 
 		Object[] info = TripProperties.getInfo;
 
-		//Ekki fallegasta fallið.. 
+		//This looks god awful, but it does what we need it to do... 
 
-		Trip trip1 = new Trip({
-			this.name = "Into the Glacier",
-			this.type = "Mountain",
-			this.cardDir = 3,
-			this.selectLanguage = 1,
-			this.review = 2,
-			this.animals = false,
-			this.insurence = true,
-			this.pickUp = false,
-			this.length = 2,
-			this.addInfo = 1,
-			this.accessibility = false,
-			this.price = 5
-		});
+		//Gætum þurft að setja einhverja tengingu við Object[] info
+
+		Trip trip1 = new Trip();
+		
+		trip1.setName(name) = "Into the Glacier";
+		trip1.setType(type) = "Mountain";
+		trip1.setLocation(location) = 3;
+		trip1.setLanguage(language) = 1;
+		trip1.setReview(review) = 2;
+		//trip1.animals = false;
+		//trip1.insurence = true;
+		//trip1.pickUp = false;
+		//trip1.length = 2;
+		//trip1.addInfo = 1;
+		//trip1.accessibility = false;
+		//trip1.price = 5;
 
 		Inventory.addToInventory(trip1);
 
-		Trip trip2 = new Trip({
-			this.name = "Skiing on Hrútafjallstindar",
-			this.type = "Skiing",
-			this.cardDir = 2,
-			this.selectLanguage = 5,
-			this.review = 5,
-			this.animals = false,
-			this.insurence = true,
-			this.pickUp = false,
-			this.length = 3,
-			this.addInfo = 2,
-			this.accessibility = false,
-			this.price = 3
-		});
+		/*
+
+		Trip trip2 = new Trip();
+
+		trip2.name = "Skiing on Hrútafjallstindar";
+		trip2.type = "Skiing";
+		trip2.cardDir = 2;
+		trip2.selectLanguage = 5;
+		trip2.review = 5;
+		trip2.animals = false;
+		trip2.insurence = true;
+		trip2.pickUp = false;
+		trip2.length = 3;
+		trip2.addInfo = 2;
+		trip2.accessibility = false;
+		trip2.price = 3;
 
 		Inventory.addToInventory(trip2);
 
-		Trip trip3 = new Trip({
-			this.name = "Whale Watching in Húsavík",
-			this.type = "Whale Watching",
-			this.cardDir = 1,
-			this.selectLanguage = 5,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = false,
-			this.pickUp = false,
-			this.length = 7,
-			this.addInfo = 3,
-			this.accessibility = false,
-			this.price = 7
-		});
+		Trip trip3 = new Trip();
+
+		trip3.name = "Whale Watching in Húsavík";
+		trip3.type = "Whale Watching";
+		trip3.cardDir = 1;
+		trip3.selectLanguage = 5;
+		trip3.review = 1;
+		trip3.animals = false;
+		trip3.insurence = false;
+		trip3.pickUp = false;
+		trip3.length = 7;
+		trip3.addInfo = 3;
+		trip3.accessibility = false;
+		trip3.price = 7;
 
 		Inventory.addToInventory(trip3);
-		
-		Trip trip4 = new Trip({
-			this.name = "History Walk Through Downtown",
-			this.type = "Walking", // ?? ekki viss hvað á að setja hér
-			this.cardDir = 4,
-			this.selectLanguage = 2,
-			this.review = 1,
-			this.animals = true,
-			this.insurence = false,
-			this.pickUp = true,
-			this.length = 1,
-			this.addInfo = 4,
-			this.accessibility = true,
-			this.price = 1
-		});
+
+		Trip trip4 = new Trip();
+
+		trip4.name = "History Walk Through Downtown";
+		trip4.type = "Walking";
+		trip4.cardDir = 4;
+		trip4.selectLanguage = 2;
+		trip4.review = 1;
+		trip4.animals = true;
+		trip4.insurence = false;
+		trip4.pickUp = true;
+		trip4.length = 1;
+		trip4.addInfo = 4;
+		trip4.accessibility = true;
+		trip4.price = 1;
 
 		Inventory.addToInventory(trip4);
 
-		Trip trip5 = new Trip({
-			this.name = "The Golden Circle and Snorkeling",
-			this.type = "Snorkeling", //sama hér og fyrir ofan
-			this.cardDir = 3,
-			this.selectLanguage = 5,
-			this.review = 2,
-			this.animals = false,
-			this.insurence = false,
-			this.pickUp = true,
-			this.length = 6,
-			this.addInfo = 5,
-			this.accessibility = false,
-			this.price = 10
-		});
+		Trip trip5 = new Trip();
+
+		trip5.name = "The Golden Circle and Snorkeling";
+		trip5.type = "Snorkeling";
+		trip5.cardDir = 3;
+		trip5.selectLanguage = 5;
+		trip5.review = 4;
+		trip5.animals = false;
+		trip5.insurence = true;
+		trip5.pickUp = true;
+		trip5.length = 6;
+		trip5.addInfo = 5;
+		trip5.accessibility = false;
+		trip5.price = 10;
 
 		Inventory.addToInventory(trip5);
 			
-		Trip trip6 = new Trip({
-			this.name = "Glacier Walking and Waterfalls",
-			this.type = "Mountain",
-			this.cardDir = 3,
-			this.selectLanguage = 5,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = false,
-			this.pickUp = true,
-			this.length = 8,
-			this.addInfo = 6,
-			this.accessibility = false,
-			this.price = 3
-		});
+		Trip trip6 = new Trip();
+
+		trip6.name = "Glacier Walking and Waterfalls";
+		trip6.type = "Mountain";
+		trip6.cardDir = 3;
+		trip6.selectLanguage = 5;
+		trip6.review = 1;
+		trip6.animals = false;
+		trip6.insurence = false;
+		trip6.pickUp = true;
+		trip6.length = 8;
+		trip6.addInfo = 6;
+		trip6.accessibility = false;
+		trip6.price = 3;
 
 		Inventory.addToInventory(trip6);
 
-		Trip trip7 = new Trip({
-			this.name = "Northern Lights Explorer",
-			this.type = "Northern Lights",
-			this.cardDir = 3,
-			this.selectLanguage = 5,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = false,
-			this.pickUp = true,
-			this.length = 2,
-			this.addInfo = 7,
-			this.accessibility = false,
-			this.price = 1
-		});
+		Trip trip7 = new Trip();
+
+		trip7.name = "Northern Lights Explorer";
+		trip7.type = "Northern Lights";
+		trip7.cardDir = 3;
+		trip7.selectLanguage = 5;
+		trip7.review = 1;
+		trip7.animals = false;
+		trip7.insurence = false;
+		trip7.pickUp = true;
+		trip7.length = 2;
+		trip7.addInfo = 7;
+		trip7.accessibility = false;
+		trip7.price = 1;
 
 		Inventory.addToInventory(trip7);
-		
-		Trip trip8 = new Trip({
-			this.name = "Game of Thrones - Mývatn Mystery Magic",
-			this.type = "Geothermal Pool",
-			this.cardDir = 1,
-			this.selectLanguage = 5,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = false,
-			this.pickUp = true,
-			this.length = 4,
-			this.addInfo = 8,
-			this.accessibility = false,
-			this.price = 4
-		});
+
+		Trip trip8 = new Trio();
+
+		trip8.name = "Game of Thrones - Mývatn Mystery Magic";
+		trip8.type = "Geothermal Pool";
+		trip8.cardDir = 1;
+		trip8.selectLanguage = 5;
+		trip8.review = 1;
+		trip8.animals = false;
+		trip8.insurence = false;
+		trip8.pickUp = true;
+		trip8.length = 4;
+		trip8.addInfo = 8;
+		trip8.accessibility = false;
+		trip8.price = 4;
 
 		Inventory.addToInventory(trip8);
+
+		Trip trip9 = new Trip();
+
+		trip9.name = "A Trip to Papey Islands";
+		trip9.type = "Island";
+		trip9.cardDir = 2;
+		trip9.selectLanguage = 1;
+		trip9.review = 1;
+		trip9.animals = true;
+		trip9.insurence = false;
+		trip9.pickUp = false;
+		trip9.length = 2;
+		trip9.addInfo = 9;
+		trip9.accessibility = false;
+		trip9.price = 5;
 		
-		Trip trip9 = new Trip({
-			this.name = "A Trip to Papey Islands",
-			this.type = "Island",
-			this.cardDir = 2,
-			this.selectLanguage = 1,
-			this.review = 1,
-			this.animals = true,
-			this.insurence = false,
-			this.pickUp = false,
-			this.length = 2,
-			this.addInfo = 9,
-			this.accessibility = false,
-			this.price = 5
-		});
-
 		Inventory.addToInventory(trip9);
-		    
-		Trip trip10 = new Trip({
-			this.name = "The Caves in Ingólfsfjall",
-			this.type = "Mountain",
-			this.cardDir = 1,
-			this.selectLanguage = 5,
-			this.review = 2,
-			this.animals = false,
-			this.insurence = true,
-			this.pickUp = true,
-			this.length = 2,
-			this.addInfo = 10,
-			this.accessibility = false,
-			this.price = 2
-		});
 
+		Trip trip10 = new Trip();
+
+		trip10.name = "The Caves in Ingólfsfjall";
+		trip10.type = "Mountain";
+		trip10.cardDir = 1;
+		trip10.selectLanguage = 5;
+		trip10.review = 2;
+		trip10.animals = false;
+		trip10.insurence = true;
+		trip10.pickUp = true;
+		trip10.length = 2;
+		trip10.addInfo = 10;
+		trip10.accessibility = false;
+		trip10.price = 2;
+		
 		Inventory.addToInventory(trip10);
-		    
-		Trip trip11 = new Trip({
-			this.name = "Skiing Through Langanes",
-			this.type = "Skiing",
-			this.cardDir = 2,
-			this.selectLanguage = 2,
-			this.review = 2,
-			this.animals = true,
-			this.insurence = true,
-			this.pickUp = true,
-			this.length = 4,
-			this.addInfo = 11,
-			this.accessibility = false,
-			this.price = 6
-		});
+		
+		Trip trip11 = new Trip();
+
+		trip11.name = "Skiing Through Langanes";
+		trip11.type = "Skiing";
+		trip11.cardDir = 2;
+		trip11.selectLanguage = 2;
+		trip11.review = 2;
+		trip11.animals = true;
+		trip11.insurence = true;
+		trip11.pickUp = true;
+		trip11.length = 4;
+		trip11.addInfo = 11;
+		trip11.accessibility = false;
+		trip11.price = 6;
 
 		Inventory.addToInventory(trip11);
-		    
-		Trip trip12 = new Trip({
-			this.name = "Whale Watching in Breiðafjörður",
-			this.type = "Whale Watching",
-			this.cardDir = 4,
-			this.selectLanguage = 7,
-			this.review = 3,
-			this.animals = true,
-			this.insurence = true,
-			this.pickUp = false,
-			this.length = 5,
-			this.addInfo = 12,
-			this.accessibility = false,
-			this.price = 8
-		});
+
+		Trip trip12 = new Trip();
+
+		trip12.name = "Whale Watching in Breiðafjörður";
+		trip12.type = "Whale Watching";
+		trip12.cardDir = 4;
+		trip12.selectLanguage = 7;
+		trip12.review = 3;
+		trip12.animals = true;
+		trip12.insurence = true;
+		trip12.pickUp = false;
+		trip12.length = 5;
+		trip12.addInfo = 12;
+		trip12.accessibility = false;
+		trip12.price = 8;
 
 		Inventory.addToInventory(trip12);
-		    
-		Trip trip13 = new Trip({
-			this.name = "Western Dancing Trip",
-			this.name = "Dancing",
-			this.cardDir = 4,
-			this.selectLanguage = 4,
-			this.review = 1,
-			this.animals = true,
-			this.insurence = true,
-			this.pickUp = true,
-			this.length = 3,
-			this.addInfo = 13,
-			this.accessibility = false,
-			this.price = 3
-		});
+
+		Trip trip13 = new Trip();
+
+		trip13.name = "Western Dancing Trip";
+		trip13.type = "Dancing";
+		trip13.cardDir = 4;
+		trip13.selectLanguage = 4;
+		trip13.review = 1;
+		trip13.animals = true;
+		trip13.insurence = true;
+		trip13.pickUp = true;
+		trip13.length = 3;
+		trip13.addInfo = 13;
+		trip13.accessibility = true;
+		trip13.price = 3;
 
 		Inventory.addToInventory(trip13);
 
-	    Trip trip14 = new Trip({
-	    	this.name = "A Walk Through Viðey",
-	    	this.type = "Walking",
-	    	this.cardDir = 4,
-			this.selectLanguage = 5,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = true,
-			this.pickUp = false,
-			this.length = 2,
-			this.addInfo = 14,
-			this.accessibility = false,
-			this.price = 1
-	    });
+		Trip trip14 = new Trip();
+
+		trip14.name = "A Walk Through Viðey";
+		trip14.type = "Walking";
+		trip14.cardDir = 4;
+		trip14.selectLanguage = 5;
+		trip14.review = 1;
+		trip14.animals = false;
+		trip14.insurence = true;
+		trip14.pickUp = false;
+		trip14.length = 2;
+		trip14.addInfo = 14;
+		trip14.accessibility = false;
+		trip14.price = 1;
 
 	    Inventory.addToInventory(trip14);
-		
-	    Trip trip15 = new Trip({
-	    	this.name = "Landmannalaugar and Hjálparfoss",
-	    	this.type = "Geothermal Pool",
-	    	this.cardDir = 3,
-			this.selectLanguage = 6,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = false,
-			this.pickUp = true,
-			this.length = 4,
-			this.addInfo = 15,
-			this.accessibility = false,
-			this.price = 3
-	    });
+
+	    Trip trip15 = new Trip();
+
+	    trip15.name = "Landmannalaugar and Hjálparfoss";
+		trip15.type = "Geothermal Pool";
+		trip15.cardDir = 3;
+		trip15.selectLanguage = 6;
+		trip15.review = 1;
+		trip15.animals = false;
+		trip15.insurence = false;
+		trip15.pickUp = true;
+		trip15.length = 4;
+		trip15.addInfo = 15;
+		trip15.accessibility = false;
+		trip15.price = 3;
 
 	    Inventory.addToInventory(trip15);
-		
-	    Trip trip16 = new Trip({
-	    	this.name = "Meet the Puffins and Hike",
-	    	this.type = "Hiking",
-	    	this.cardDir = 2,
-			this.selectLanguage = 3,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = false,
-			this.pickUp = false,
-			this.length = 2,
-			this.addInfo = 16,
-			this.accessibility = false,
-			this.price = 1
-	    });
+
+	    Trip trip16 = new Trip();
+
+	    trip16.name = "Meet the Puffins and Hike";
+		trip16.type = "Hiking";
+		trip16.cardDir = 2;
+		trip16.selectLanguage = 3;
+		trip16.review = 1;
+		trip16.animals = false;
+		trip16.insurence = false;
+		trip16.pickUp = false;
+		trip16.length = 2;
+		trip16.addInfo = 16;
+		trip16.accessibility = false;
+		trip16.price = 1;
 
 	    Inventory.addToInventory(trip16);
-		
-	    Trip trip17 = new Trip({
-	    	this.name = "Goðafoss, Dimmuborgir and Mývatns Nature Baths",
-	    	this.type = "Touring",
-	    	this.cardDir = 1,
-			this.selectLanguage = 3,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = false,
-			this.pickUp = true,
-			this.length = 6,
-			this.addInfo = 17,
-			this.accessibility = false,
-			this.price = 5
-	    });
+
+	    Trip trip17 = new Trip();
+
+	    trip17.name = "Goðafoss, Dimmuborgir and Mývatns Nature Baths";
+		trip17.type = "Touring";
+		trip17.cardDir = 1;
+		trip17.selectLanguage = 3;
+		trip17.review = 1;
+		trip17.animals = false;
+		trip17.insurence = false;
+		trip17.pickUp = true;
+		trip17.length = 6;
+		trip17.addInfo = 17;
+		trip17.accessibility = false;
+		trip17.price = 5;
 
 	    Inventory.addToInventory(trip17);
-		
-	    Trip trip18 = new Trip({
-	    	this.name = "Jökulsárlón",
-	    	this.type = "Touring",
-	    	// Eða kannski mountain, sami eða sitthvor hópurinn?
-	    	// Myndi segja að þetta sé touring
-	    	this.cardDir = 3,
-			this.selectLanguage = 7,
-			this.review = 1,
-			this.animals = false,
-			this.insurence = true,
-			this.pickUp = false,
-			this.length = 5,
-			this.addInfo = 18,
-			this.accessibility = false,
-			this.price = 5
-	    });
+
+	    Trip trip18 = new Trip();
+
+	    trip18.name = "Jökulsárlón";
+		trip18.type = "Touring";
+		trip18.cardDir = 3;
+		trip18.selectLanguage = 7;
+		trip18.review = 1;
+		trip18.animals = false;
+		trip18.insurence = true;
+		trip18.pickUp = false;
+		trip18.length = 5;
+		trip18.addInfo = 18;
+		trip18.accessibility = false;
+		trip18.price = 5;
 
 	    Inventory.addToInventory(trip18);
-		
-	    Trip trip19 = new Trip({
-	    	this.name = "Snæfellsnes Peninsula",
-	    	this.type = "Touring",
-	    	this.cardDir = 4,
-			this.selectLanguage = 2,
-			this.review = 1,
-			this.animals = true,
-			this.insurence = false,
-			this.pickUp = true,
-			this.length = 6,
-			this.addInfo = 19,
-			this.accessibility = false,
-			this.price = 4
-	    });
+
+	    Trip trip19 = new Trip();
+
+	    trip19.name = "Snæfellsnes Peninsula";
+		trip19.type = "Touring";
+		trip19.cardDir = 4;
+		trip19.selectLanguage = 2;
+		trip19.review = 1;
+		trip19.animals = true;
+		trip19.insurence = false;
+		trip19.pickUp = true;
+		trip19.length = 6;
+		trip19.addInfo = 19;
+		trip19.accessibility = false;
+		trip19.price = 4;
 
 	    Inventory.addToInventory(trip19);
-		
-	    Trip trip20 = new Trip({
-	    	this.name = "Inside the Volcano",
-	    	this.type = "Mountain",
-	    	this.cardDir = 3,
-			this.selectLanguage = 7,
-			this.review = 4,
-			this.animals = false,
-			this.insurence = true,
-			this.pickUp = false,
-			this.length = 3,
-			this.addInfo = 20,
-			this.accessibility = false,
-			this.price = 9
-	    });
+
+	    Trip trip20 = new Trip();
+
+	    trip20.name = "Inside the Volcano";
+		trip20.type = "Mountain";
+		trip20.cardDir = 3;
+		trip20.selectLanguage = 7;
+		trip20.review = 4;
+		trip20.animals = false;
+		trip20.insurence = true;
+		trip20.pickUp = false;
+		trip20.length = 3;
+		trip20.addInfo = 20;
+		trip20.accessibility = false;
+		trip20.price = 9;
 
 	    Inventory.addToInventory(trip20);
+	    */
 
 	}
 
@@ -421,25 +463,25 @@ public class Trip{
 		//þá gætum við sótt allt í fylki og borið saman við fylkið sem var sent inn
 		Object[] properties = TripProperties.getInfo;
 		
-		if(!(propquest[0] == NULL || propquest[0] !^ tripProperties.animals() )) return false;
+		if(!(propquest[0] = NULL || propquest[0] !^ tripProperties.animals )) return false;
 
-		if(!(propquest[1] == NULL || propquest[1] !^ tripProperties.insurence() )) return false;
+		if(!(propquest[1] = NULL || propquest[1] !^ tripProperties.insurence )) return false;
 		
-		if(!(propquest[2] == NULL || propquest[2] !^ tripProperties.pickUp() )) return false;
+		if(!(propquest[2] = NULL || propquest[2] !^ tripProperties.pickUp )) return false;
 
-		if(!(propquest[3] == NULL || propquest[3] !^ tripProperties.accessibility() )) return false;
+		if(!(propquest[3] = NULL || propquest[3] !^ tripProperties.accessibility )) return false;
 
-		if(!(propquest[4] == NULL || tripProperties.review() == (int)(propquest[4]) ) return false;
+		if(!(propquest[4] = NULL || tripProperties.review = (int)(propquest[4]) ) return false;
 
-		if(!(propquest[5] == NULL || tripProperties.length() == (int)(propquest[5]) ) return false;
+		if(!(propquest[5] = NULL || tripProperties.length = (int)(propquest[5]) ) return false;
 		
-		if(!(propquest[6] == NULL || tripProperties.price() == (int)(propquest[6]) ) return false;
+		if(!(propquest[6] = NULL || tripProperties.price = (int)(propquest[6]) ) return false;
 
-		if(!(propquest[7] == NULL || tripProperties.selectLanguage() == (int)(propquest[7]) ) return false;
+		if(!(propquest[7] = NULL || tripProperties.selectLanguage = (int)(propquest[7]) ) return false;
 
-		if(!(propquest[8] == NULL || tripProperties.cardDir() == (int)(propquest[8]) ) return false;
+		if(!(propquest[8] = NULL || tripProperties.cardDir = (int)(propquest[8]) ) return false;
 
-		if(!(propquest[9] == NULL || tripProperties.addInfo() == (int)(propquest[9]) ) return false;
+		if(!(propquest[9] = NULL || tripProperties.addInfo = (int)(propquest[9]) ) return false;
 		
 		return true;
 		
