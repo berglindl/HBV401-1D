@@ -66,6 +66,9 @@ class Reserve{
         }
       }
     // Er pælingin þá að hér birtist dagsetning, ferð, fjöldi miða og nöfn eða eftir bókunina?
+    //Já, ég myndi segja það. 
+    //Gætum gert þetta einhvernveginn svona, þá þurfum við að hafa tripName og tripDate einhversstaðar til að ná í það
+    System.out.println("You have booked " + tickets + "under the name " + names + "for the trip" + tripName + "on the date " + tripDate);
     name.close();
       if (tickets > numSeats){
         System.out.println("Number of tickets unavailable");
@@ -86,7 +89,7 @@ class Reserve{
         System.out.println("Payment will be requested upon arrival");
       }
       else{
-        System.out.println("Invalid input, please try again.");
+        System.out.println("Invalid input.");
         // erum ekki með skipun sem hendir þér aftur í að velja 1 eða 2 heldur klárar forritið bara-laga?
       }
       answer.close();

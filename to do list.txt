@@ -3,10 +3,10 @@ TO DO LIST 15/4/2016
 General - Taka út athugasemdir sem eru ekki þurfi lengur
 	  Athuga tengingar
 
-UserInterface - athuga null
+UserInterface - athuga null -- búið
 		henda inn bókun og review - setja tengingu?
 		henda inn í bókun (og review) eftir leit
-		keyra og sjá villur
+		keyra og sjá villur -- ATHUGA UPPFÆRSLU
 		snyrta til
 		mögulega setja inn valmöguleika á að leita af ferðum undir x verði, etc. tengist TripProperties
 
@@ -21,7 +21,7 @@ Review - útfæra lista fyrir reviews
          setja tengingu
 
 BookingInventory - útfæra lista
-		   prenta þarf út nafn, ferð, miða og dagsetningu eftir bókun
+		   prenta þarf út nafn, ferð, miða og dagsetningu eftir bókun -- byrjun á þessu, þarf nokkur gildi inn
 		   athuga num seats
 
 Booking - setja tengingu
