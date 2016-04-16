@@ -56,8 +56,12 @@ public class Trip{
 		sendInfo.GetInfo(Inventory);
 	}
 	
-	public void initializeTrip(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10
-					trip11, trip12, trip13, trip14, trip15, trip16, trip17, trip18, trip19, trip20){
+	//spurning að hafa þetta sem public void initializeTrip(Object[] Inventory) í staðinn fyrir hitt?
+
+	//public void initializeTrip(Object[] trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10
+	//				trip11, trip12, trip13, trip14, trip15, trip16, trip17, trip18, trip19, trip20){
+
+	public void initializeTrip(Object[] Inventory){
 
 		//á þetta ekki að vera TripProperties, ekki tripProperties, og það fyrir ofan? eða er ég að misskilja?
 

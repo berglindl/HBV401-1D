@@ -26,7 +26,7 @@ public class Booking{
 	//The class Recieve grabs the Inventory object from Trip
 	class Recieve{
 		public void GetInfo(Object[] Inventory){
-			//myndum öruglega búa til nýjar breytur hér sem tengjast trip1 - trip20
+			//myndum öruglega búa til nýjar breytur hér sem tengja trip1 - trip20 við gildin í Inventory
 			//og kalla á þetta sem GetInfo info = new GetInfo eða eitthvað álíka
 			//í static void main fyrir neðan 
 
