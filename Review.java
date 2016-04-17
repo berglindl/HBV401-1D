@@ -5,6 +5,7 @@ public static void main(String [] args)
     {
     int vote;
     int votesCount = 0;
+    int number;
     // Núlstillti bara til að byrja með þar sem það er enging tenging við neitt komin
     // breytum þessu á endanum
     Scanner userInput = new Scanner(System.in);
@@ -34,6 +35,8 @@ public static void main(String [] args)
             
 
         number = selectTrip.nextInt();
+        selectTrip.close();
+        
         switch(number){
             //Þarf eflaust að breyta þessu þegar tengingin er komin nákvæmlega
             case 1: Trip[0]; //eða Trip[trip1]
@@ -78,6 +81,7 @@ public static void main(String [] args)
                     break;
 
             default: System.out.println("Oops! That trip is not listed. Please try again.");
+            // hef ekki prufukeyrt með switch setningunni þar sem það er engin tenging komin en restin virðist virka
         }
 
         System.out.println("Rate this trip on a scale from 0-5");
@@ -96,16 +100,25 @@ public static void main(String [] args)
     }
     int votesTotal;
     {
+      if (votesCount > 1){
        votesTotal = vote;
        votesTotal = votesTotal + vote;
        //Skoða þessar 2 línur
+       
+      }
+      else{
+        votesTotal = vote;
+        // er ekki alveg viss um að þessar if og else séu nóg til að þetta virki en 
+        // skal laga það ef þetta virkar ekki þegar tengingin er komin :)
     }
     if (votesCount > 0){
         double average = votesTotal / votesCount;
-        System.out.println("Average for this trip is:" + average );
+        System.out.println("Average for trip number " + number + " is: " + average );
     }
     userInput.close();
-    // átti eftir að bæta inn svo þetta færi allt í sama lista
-    // Spurning hvort það sé líka í reviewList eins og athugasemdirnar
+    // spurning hvernig við viljum vista þetta? Ef það er í lista þa´þurfum við að breyta
+    // í int í hvert skipti sem e-ð er sótt í hann þannig held það væri betra að geyma þetta ´fylki
+    // hvað finnst ykkur?
     }
+}
 }
