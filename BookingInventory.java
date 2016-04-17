@@ -1,11 +1,13 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-class Reserve{
-  //Smá lagfæringar í gangi
-  // private static int numSeats = 20;
+import java.util.Iterator;
+class Review {
+  
+
+  private static int numSeats = 20;
   // Þarf að laga þetta með að taka út, þurfum að stilla áður en farið er í reserve að hver dagsetning innihaldi 20 sæti fyrir hverja ferð
   // Getum gert það í Booking, set athugasemd þar líka
-  // Vildi ekki taka út fyrr en það kemur inn í Booking eða hvar við viljum gera það
+
   public static void main(String [] args){
    ArrayList<String> BookingsList = new ArrayList<String>();
     // má ekki vera static ef við ætlum að nota this.numSeats
@@ -13,7 +15,23 @@ class Reserve{
     Scanner userInput = new Scanner(System.in);
     int tickets = userInput.nextInt();
     Scanner name = new Scanner(System.in);
-    if (tickets <= numSeats){
+    {
+    if (tickets > numSeats){
+        System.out.println("Number of tickets unavailable");
+        //Varð að færa þetta hingað því annars kom alltaf upp number of tickets unavailable ef maður valdi 
+        // private trip fyrir hópa þar sem numseats varð alltaf 0
+        
+        
+        // hér heldur klasinn bara áfram yfir í borgun, spurning um að breyta þannig þú getur komist héðan aftur
+        // yfir í að velja dagsetningu eða cancel
+        // t.d. System.out.println("Press 1 to pick another date or 2 to cancel")
+        // og síðan tengin þangað??
+
+        //jebb, það væri sniðugt. 
+        
+    }
+    else if (tickets <= numSeats){
+      
       if (tickets >= 5){
         // ef 5 eða fleiri þá er hægt að kaupa sem hópaferð, þá er bara eitt nafn gefið upp en ekki mörg
         // og það er hægt að kaupa frekar private ferð þar sem þetta er hópur og þú vilt kannski bara fara með fólki sem þú þekkir.
@@ -69,16 +87,23 @@ class Reserve{
     //Já, ég myndi segja það. 
     //Gætum gert þetta einhvernveginn svona, þá þurfum við að hafa tripName og tripDate einhversstaðar til að ná í það
       // Líst vel á það, en þurfum a'ð laga names líka
-    System.out.println("You have booked " + tickets + "under the name " + names + "for the trip" + tripName + "on the date " + tripDate);
-    name.close();
-      if (tickets > numSeats){
-        System.out.println("Number of tickets unavailable");
-        // hér heldur klasinn bara áfram yfir í borgun, spurning um að breyta þannig þú getur komist héðan aftur
-        // yfir í að velja dagsetningu eða cancel
-        // t.d. System.out.println("Press 1 to pick another date or 2 to cancel")
-        // og síðan tengin þangað??
+    System.out.println("You have booked " + tickets + " tickets under the name/s ");
+    Iterator<String> itr = BookingsList.iterator();{
+      while(itr.hasNext()){
+   System.out.println(itr.next());
+   // Eins og er birtist þetta t.d. svona=
 
-        //jebb, það væri sniðugt. 
+   // You have booked 3 tickets under the name/s
+   // Hildur
+   // Berglind
+   // Pétur
+
+   //Gat ekki látið nöfnin birtast öðruvísi, en vandamálið þarna er ef að við vistum fleiri nöfn, t.d. fyrir 2 aðskildar pantanir þá birtast öll nöfnin
+   //Megið endilega breyta ef þið getið :) eða taka út ef þið viljið frekar
+      }
+    }
+    name.close();
+      
       }
       System.out.println("Press 1 to pay now and 2 to pay upon arrival:");
       Scanner answer = new Scanner(System.in);
@@ -96,6 +121,7 @@ class Reserve{
       answer.close();
     }
 }
+
 
 import java.util.Scanner;
 class Cancellation{
