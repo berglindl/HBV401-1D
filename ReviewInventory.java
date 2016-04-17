@@ -18,6 +18,8 @@ class Update
    // Því er pælng að hafa að ef þú vilt sjá lista yfir review að þú sjáir bara allar ferðirnar og review saman
    // og skrollir bara í gegnum það. Veit það er ekki jafn flott en það er mun auðveldara og við höfum ekki 
    // allan tíma í heiminum
+
+   //Já, ég held að það væri best að útfæra þetta eins og þú ert að pæla
    Scanner userInput = new Scanner(System.in);
    System.out.println("Type in your review");
    reviewText = userInput.nextLine();
@@ -28,12 +30,12 @@ class Update
    ReviewList.add(reviews); 
    // vistaði þetta bara á sama hátt og Booking, gott að geyma strengi á þennan hátt
    Iterator<String> itr = ReviewList.iterator();{
- while(itr.hasNext()){
-   System.out.println(itr.next());
+      while(itr.hasNext()){
+      System.out.println(itr.next());
    // Þetta er til að birta ReviewList, þ.e. frá Iterator til itr.next()); Setti þetta hér til að prufukeyra
    // en síðan þegar tengingin á milli klasanna kemur þá fer þetta yfir í Userface? svo fólk geti séð öll review 
- }
-}
+      }
+   }
     
    userInput.close();
    }

@@ -119,6 +119,8 @@ public static void main(String [] args)
     // spurning hvernig við viljum vista þetta? Ef það er í lista þa´þurfum við að breyta
     // í int í hvert skipti sem e-ð er sótt í hann þannig held það væri betra að geyma þetta ´fylki
     // hvað finnst ykkur?
+
+    //Það er öruglega bara fínt að geyma þetta inn í fylki :)
     }
 }
 }
