@@ -3,8 +3,8 @@ import java.util.Scanner;
 class UserInterface{
 
 	public static void main( String[] args){
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Please choose the desired operation");
+		//Scanner sc = new Scanner(System.in);
+		/*System.out.println("Please choose the desired operation");
 		System.out.println("1. Search for a daytrip");
 		System.out.println("2. Reserve a daytrip");
 		System.out.println("3. Look at reviews");
@@ -12,12 +12,20 @@ class UserInterface{
 		int operation = sc.nextInt();
 		if(operation==1)Search();
 		if(operation==2)Reserve();
-		if(operation==3)ReviewLook();
+		if(operation==3)ReviewLook(); */
 		// á þetta þá að skila reviewList??
+		
+		//Þetta á í raun ekki að skila neinu bara kalla á önnur föll sem skila prenta út eitthvað, og sum kalla á föll í öðrum klösum sem skila þá gögnum (inntakinu) í gagnasöfnin okkar
+		Search();
 	}
 
 
 	public static void Search(){
+		//Search tekur inn af aðalinntaki þau gögn sem notandi vill leita eftir
+		//kallar á TripPropSearch til að fylla inn fylki af enn frekari gögnum sem notandi kann að vilja leita eftir
+		//Sendir fyrrnenfnd gögn til TripInventory.search(); og tekur við niðurstöðum þess sem fylki.
+		//Notandi getur þá valið að panta eða skoða umsagnir um ferðir.
+		
 		Scanner ssc = new Scanner(System.in);
 
 		System.out.println("Searching for daytrips");
@@ -49,7 +57,7 @@ class UserInterface{
 		//if(tripName.length<1)tripName=null;
 
 		System.out.println("Are you searching for a specific type of trips?");
-		System.out.println("If so, please enter the type of trip. Please be sure to capitalize as instruced. If not, press the ENTER key.");
+		System.out.println("If so, please enter the type of trip. Please be sure to capitalize as instructed. If not, press the ENTER key.");
 		System.out.println("Here are the type of trips we have to offer: ");
 		System.out.println("Mountain");
 		System.out.println("Skiing");
@@ -68,16 +76,28 @@ class UserInterface{
 
 		Object[] propinf = TripPropSearch();
 
-		//Object[] results = TripInventory.search(tripName, tripType, propinfo);
-		Object[] results = TripInventory.search(tripName, tripType);
+		Object[] results = TripInventory.search(tripName, tripType, propinf);
 
-		if(results.length<1) System.out.println("Sorry! No day trips matched your input.");
+		if(results.length<1) {System.out.println("Sorry! No day trips matched your input.");return;}
 		else System.out.println("The following day trips matched your criteria:");
-		for(int i = 0;i!=results.length;i++)System.out.println(results[i].getName());
+		for(int i = 0;i!=results.length;i++)System.out.println("Trip no "+i+" "results[i].getName());
+		System.out.println("Do you wish to reserve  any of these trips?");
+		System.out.println("Please enter Trip no");
+		int tripno = sc.nextInt();
+		System.out.println("Do you wish to look at its review first?");
+		System.out.println("Please enter yes or no.");
+		String revw = ssc.nextLine();
+		if(revw.equals("Yes"))ReviewLook();
+		if(revw.equals("yes"))ReviewLook();
+		if(tripno==null)return;
+		Reserve(results[tripno])		
+		
 
 	}
 
 	public static Object[] TripPropSearch(){
+		//TripPropSearch safnar saman upplýsingum sem geymdar eru í TripProperties sem leitandi vill leita eftir og skilar til baka fylki með 
+		//leitarupplýsingum.
 
 		Scanner trsc = new Scanner(System.in);
 		System.out.println("Please enter the cardinal direction you wish to see the trips for.");
@@ -112,16 +132,15 @@ class UserInterface{
 		if(anima.equals("no"))animals = false;
 		//else animals = null;
 
-		System.out.println("Do you wish to have insurence included on the trip?");
+		System.out.println("Do you wish to have insurance included on the trip?");
 		System.out.println("Please enter Yes or No, or press the ENTER key to skip this question.");
 		String insurenc = trsc.nextLine();
-		//boolean insurence = new boolean;
 		boolean insurence = new Boolean();
 		if(insurenc.equals("Yes")) insurence = true;
 		if(insurenc.equals("yes")) insurence = true;
 		if(insurenc.equals("No")) insurence = false;
 		if(insurenc.equals("no")) insurence = false;
-		//else insurence = null;
+		else insurence = null;
 
 		System.out.println("Do you wish to be picked up and dropped off at your hotel or a nearby location?");
 		System.out.println("Please enter Yes or No, or press ENTER to skip this question.");
@@ -155,11 +174,19 @@ class UserInterface{
 		return a;
 	}
 
-	public static void Reserve(){
+	public static void Reserve(Trip rtrip){
 		//klasinn sem hendir inn í Reserve
+		//Núna þarf aðferð í BookingInventory sem býr til nýtt Booking með öllum þeim upplýsingum sem þurfa að koma fram.
+		//Í þessari aðferð höfum við t.d. aðgang að "Hlutnum Ferðinni" sem ætlunin er að panta sæti í.
+		
+		
+		
+		
 	}
 
 	public static void ReviewLook(){
 		//klasinn sem hendir inn í Review
+		
+		
 	}
 }
