@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.io.*;
 
 class UserInterface{
 
@@ -54,7 +55,7 @@ class UserInterface{
 		System.out.println("Inside the Volcano");
 
 		String tripName = ssc.nextLine();
-		//if(tripName.length<1)tripName=null;
+		if(tripName.length()<1)tripName=null;
 
 		System.out.println("Are you searching for a specific type of trips?");
 		System.out.println("If so, please enter the type of trip. Please be sure to capitalize as instructed. If not, press the ENTER key.");
@@ -72,7 +73,7 @@ class UserInterface{
 		System.out.println("Touring");
 
 		String tripType = ssc.nextLine();
-		//if(tripType.length<1)tripType=null;
+		if(tripType.length()<1)tripType=null;
 
 		Object[] propinf = TripPropSearch();
 
@@ -103,20 +104,20 @@ class UserInterface{
 		System.out.println("Please enter the cardinal direction you wish to see the trips for.");
 		System.out.println("Press 1 for North, 2 for East, 3 for South, 4 for West, or press the ENTER key to skip this question.");
 		int cardDir = trsc.nextInt();
-		//if(cardDir < 0 || cardDir > 4) cardDir = null;
-		//if(cardDir.length<1)cardDir=null;
+		if(cardDir < 0 || cardDir > 4) cardDir = null;
+		if(cardDir.length()<1)cardDir=null;
 
 		System.out.println("Please enter your language.");
 		System.out.println("Press 1 for Icelandic, 2 for English, 3 for Chinese, 4 for Spanish, 5 for French, 6 for Swedish, or press the ENTER key to skip this question."); 
 
 		int selectLanguage = trsc.nextInt();
-		//if(selectLanguage < 0 || selectLanguage > 6) selectLanguage = null;
-		//if(selectLanguage.length<1)selectLanguage=null;
+		if(selectLanguage < 0 || selectLanguage > 6) selectLanguage = null;
+		if(selectLanguage.length()<1)selectLanguage=null;
 
 		System.out.println("Please enter the desired danger level on a scale of 1 to 5.");
-		System.out.println("Press the ENTER key to skip this question.");
+		System.out.println("Press the 0 key and ENTER to skip this question.");
 		int review = trsc.nextInt();
-		//if(review < 0 || review > 5) review = null;
+		if(review < 1 || review > 5) review = null;
 
 		System.out.println("Do you wish to allow pets on the trip?");
 		System.out.println("Please enter Yes or No, or press the ENTER key to skip this question.");
