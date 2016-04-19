@@ -4,29 +4,14 @@ import java.io.*;
 class UserInterface{
 
 	public static void main( String[] args){
-		//Scanner sc = new Scanner(System.in);
-		/*System.out.println("Please choose the desired operation");
-		System.out.println("1. Search for a daytrip");
-		System.out.println("2. Reserve a daytrip");
-		System.out.println("3. Look at reviews");
-		System.out.println("Please press 1, 2 or 3: ");
-		int operation = sc.nextInt();
-		if(operation==1)Search();
-		if(operation==2)Reserve();
-		if(operation==3)ReviewLook(); */
-		// á þetta þá að skila reviewList??
 		
-		//Þetta á í raun ekki að skila neinu bara kalla á önnur föll sem skila prenta út eitthvað, og sum kalla á föll í öðrum klösum sem skila þá gögnum (inntakinu) í gagnasöfnin okkar
 		Search();
 	}
 
-
+	//Search accepts  inputs from the user (search criteria) and then calls the search method in the tripInventory class 
+	//and receives an array of size 0 or more which contains the trips which fit with the criteria. These results are printed
+	//and the user is asked to decide whether to reserve or look at reviews for any of the displayed trips.
 	public static void Search(){
-		//Search tekur inn af aðalinntaki þau gögn sem notandi vill leita eftir
-		//kallar á TripPropSearch til að fylla inn fylki af enn frekari gögnum sem notandi kann að vilja leita eftir
-		//Sendir fyrrnenfnd gögn til TripInventory.search(); og tekur við niðurstöðum þess sem fylki.
-		//Notandi getur þá valið að panta eða skoða umsagnir um ferðir.
-		
 		Scanner ssc = new Scanner(System.in);
 
 		System.out.println("Searching for daytrips");
@@ -95,10 +80,9 @@ class UserInterface{
 		
 
 	}
-
+	//This method is for assembling search criteria for tripProperties into an Object[] and return to the caller.
 	public static Object[] TripPropSearch(){
-		//TripPropSearch safnar saman upplýsingum sem geymdar eru í TripProperties sem leitandi vill leita eftir og skilar til baka fylki með 
-		//leitarupplýsingum.
+		
 
 		Scanner trsc = new Scanner(System.in);
 		System.out.println("Please enter the cardinal direction you wish to see the trips for.");
@@ -175,16 +159,22 @@ class UserInterface{
 		return a;
 	}
 
+
+	//Reserve method used with the trip object to be reserved as an argument. It calls an appropriate method in the 
+	//BookingInventory.
 	public static void Reserve(Trip rtrip){
 		//klasinn sem hendir inn í Reserve
 		//Núna þarf aðferð í BookingInventory sem býr til nýtt Booking með öllum þeim upplýsingum sem þurfa að koma fram.
 		//Í þessari aðferð höfum við t.d. aðgang að "Hlutnum Ferðinni" sem ætlunin er að panta sæti í.
 		
+
 		
 		
 		
 	}
-
+	
+	
+	//ReviewLook method 
 	public static void ReviewLook(){
 		//klasinn sem hendir inn í Review
 		
