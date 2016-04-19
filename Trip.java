@@ -494,27 +494,28 @@ public class Trip{
 		
 		//Ef við miðum við það sem ég setti í TripProperties 
 		//þá gætum við sótt allt í fylki og borið saman við fylkið sem var sent inn
+		//Object[] properties = {animals, insurence, pickUp, accessibility, review, cardDir, selectLanguage, length, addInfo, price};
 		Object[] properties = TripProperties.getInfo;
 		
-		if(!(propquest[0] = NULL || propquest[0] !^ tripProperties.animals )) return false;
+		if(!(propquest[0] = NULL || propquest[0] !^ properties[0] )) return false;
 
-		if(!(propquest[1] = NULL || propquest[1] !^ tripProperties.insurence )) return false;
+		if(!(propquest[1] = NULL || propquest[1] !^ properties[1] )) return false;
 		
-		if(!(propquest[2] = NULL || propquest[2] !^ tripProperties.pickUp )) return false;
+		if(!(propquest[2] = NULL || propquest[2] !^ properties[2] )) return false;
 
-		if(!(propquest[3] = NULL || propquest[3] !^ tripProperties.accessibility )) return false;
+		if(!(propquest[3] = NULL || propquest[3] !^ properties[3] )) return false;
 
-		if(!(propquest[4] = NULL || tripProperties.review = (int)(propquest[4]) )) return false;
+		if(!(propquest[4] = NULL || properties[4] = (int)(propquest[4]) )) return false;
 
-		if(!(propquest[5] = NULL || tripProperties.length = (int)(propquest[5]) )) return false;
+		if(!(propquest[5] = NULL || properties[7] = (int)(propquest[5]) )) return false;
 		
-		if(!(propquest[6] = NULL || tripProperties.price = (int)(propquest[6]) )) return false;
+		if(!(propquest[6] = NULL || properties[9] = (int)(propquest[6]) )) return false;
 
-		if(!(propquest[7] = NULL || tripProperties.selectLanguage = (int)(propquest[7]) )) return false;
+		if(!(propquest[7] = NULL || properties[6] = (int)(propquest[7]) )) return false;
 
-		if(!(propquest[8] = NULL || tripProperties.cardDir = (int)(propquest[8]) )) return false;
+		if(!(propquest[8] = NULL || properties[5] = (int)(propquest[8]) )) return false;
 
-		if(!(propquest[9] = NULL || tripProperties.addInfo = (int)(propquest[9]) )) return false;
+		if(!(propquest[9] = NULL || properties[8] = (int)(propquest[9]) )) return false;
 		
 		return true;
 		
