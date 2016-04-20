@@ -1,16 +1,15 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Iterator;
-class Review {
+class Reserve {
   
 
   private static int numSeats = 20;
-  // Þarf að laga þetta með að taka út, þurfum að stilla áður en farið er í reserve að hver dagsetning innihaldi 20 sæti fyrir hverja ferð
-  // Getum gert það í Booking, set athugasemd þar líka
+  // This should be changed in bokking so it will always be 20 seats for every trip
 
   public static void main(String [] args){
    ArrayList<String> BookingsList = new ArrayList<String>();
-    // má ekki vera static ef við ætlum að nota this.numSeats
+  
     System.out.println("Enter number of tickets needed:");
     Scanner userInput = new Scanner(System.in);
     int tickets = userInput.nextInt();
@@ -18,23 +17,19 @@ class Review {
     {
     if (tickets > numSeats){
         System.out.println("Number of tickets unavailable");
-        //Varð að færa þetta hingað því annars kom alltaf upp number of tickets unavailable ef maður valdi 
-        // private trip fyrir hópa þar sem numseats varð alltaf 0
+             
         
-        
-        // hér heldur klasinn bara áfram yfir í borgun, spurning um að breyta þannig þú getur komist héðan aftur
-        // yfir í að velja dagsetningu eða cancel
-        // t.d. System.out.println("Press 1 to pick another date or 2 to cancel")
-        // og síðan tengin þangað??
+        // Here we go straight to paying, we should change it so you can try fo a diffrent date instead or cancel
+        // ex. System.out.println("Press 1 to pick another date or 2 to cancel")
+        // then a new connection between classes
 
-        //jebb, það væri sniðugt. 
-        
+       
     }
     else if (tickets <= numSeats){
       
       if (tickets >= 5){
-        // ef 5 eða fleiri þá er hægt að kaupa sem hópaferð, þá er bara eitt nafn gefið upp en ekki mörg
-        // og það er hægt að kaupa frekar private ferð þar sem þetta er hópur og þú vilt kannski bara fara með fólki sem þú þekkir.
+        // if booking for 5 or more people you only need to give up one name for the trip        
+        // oand you can choose a private trip so if you´re liike 17 you can go as one group instead of taking 3 random people along.
      
         System.out.println("You have chosen a trip for 5 or more persons, press 1 for a private trip for your group and 2 for public:");
         Scanner answ = new Scanner(System.in);
@@ -43,21 +38,11 @@ class Review {
           System.out.println("Please enter one name for the whole group");
           String names = name.nextLine();  
           BookingsList.add(names);
-          //BookingsList.add(tickets); verðum að breyta, getum ekki sett innþar sem þetta er int breyta
-          // eina við booking list er að við erum bara að setja inn nöfn þeirra sem panta en ekki
-          // hve mikið það er verið að panta. 
-
-          //ah, er það þá ekki bara nóg?
-
-          // gætum bætt við BookingsList.add(tickets); eins og einhver sagði
-          //á ég að bæta því inn hér og í cancel eða bíða þangað til numSeats hefur verið útfært því það þarf augljóslega að vistast þar líka
-
+          // BookingList only stores names for us to see if people call to change a name for a group or something else
 
 
           numSeats = 0;
-          //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
-
-          //hm, spurning að prufa hvað gerist ef við tökum út this, spurning hvort að tengingin haldist
+          // need to store information above in database 
           }
           else if(input.equals("2")){
             System.out.println("Please enter one name for the whole group");
@@ -67,7 +52,7 @@ class Review {
           }
           else{
             System.out.println("Invalid input");
-            // erum ekki með skipun sem hendir þér aftur í að velja 1 eða 2 heldur klárar forritið bara. Gætum þurft að laga
+            // cant chose 1 or 2 without dooing everything again, fix
           }
           answ.close();
           userInput.close();
@@ -78,28 +63,23 @@ class Review {
             String names = name.nextLine();
             BookingsList.add(names);
             numSeats = numSeats - tickets;
-            //verður annaðhvort að breyta Static fallinu í e-ð annað eða taka this.numSeats út og setja numSeats inn í staðinn
-            //gætum þurft að skoða síðustu setninguna hér betur, spurning um að ýta henni úr for lykkjunni?
+            //needs a closer look
           }
         }
       }
-    // Er pælingin þá að hér birtist dagsetning, ferð, fjöldi miða og nöfn eða eftir bókunina?
-    //Já, ég myndi segja það. 
-    //Gætum gert þetta einhvernveginn svona, þá þurfum við að hafa tripName og tripDate einhversstaðar til að ná í það
-      // Líst vel á það, en þurfum a'ð laga names líka
+   
     System.out.println("You have booked " + tickets + " tickets under the name/s ");
     Iterator<String> itr = BookingsList.iterator();{
       while(itr.hasNext()){
    System.out.println(itr.next());
-   // Eins og er birtist þetta t.d. svona=
+   // Like it appears now
 
    // You have booked 3 tickets under the name/s
    // Hildur
    // Berglind
    // Pétur
 
-   //Gat ekki látið nöfnin birtast öðruvísi, en vandamálið þarna er ef að við vistum fleiri nöfn, t.d. fyrir 2 aðskildar pantanir þá birtast öll nöfnin
-   //Megið endilega breyta ef þið getið :) eða taka út ef þið viljið frekar
+   //Will change when we fix the program so it stores info, don´t take out until that happens so we won´t forget
       }
     }
     name.close();
@@ -116,7 +96,7 @@ class Review {
       }
       else{
         System.out.println("Invalid input.");
-        // erum ekki með skipun sem hendir þér aftur í að velja 1 eða 2 heldur klárar forritið bara-laga?
+        // again, nothing that lets you chose 1 or 2 again if you press 3, fix
       }
       answer.close();
     }
@@ -125,15 +105,14 @@ class Review {
 
 import java.util.Scanner;
 class Cancellation{
-  // Held það eigi núna að virka að cancella hópferðirnar
- //Aftur þarf tengingu hérna við listanna
+  // needs connection to stored information
   public static void main(String [] args){
-   // muna að lesa inn numSeats, tripName og tripDate þegar það er komið hvernig það verður
+   // remember no connection to numSeats, tripName and tripDate yet
    System.out.println("Enter number of tickets you would like to cancel:");
    Scanner userInput = new Scanner(System.in);
    int tickets = userInput.nextInt();
     if (tickets >= 5){
-        // útaf hóppöntun
+        // for group booking
         System.out.println("Press 1 to cancel a private trip and 2 for public:");
         Scanner ans = new Scanner(System.in);
         String input = ans.next();
@@ -142,7 +121,7 @@ class Cancellation{
           Scanner name = new Scanner(System.in);
           String names = name.nextLine();       
           BookingsList.remove(names);
-          // viljum við hafa þetta BookingList?
+          // look into if we need booking list for names or if it will be easier to use the database
           numSeats = 20;
           }
         else if(input.equals("2")){
@@ -151,11 +130,7 @@ class Cancellation{
           Scanner name = new Scanner(System.in);
           String names = name.nextLine();
           BookingsList.remove(names);
-          // skoða hvort það eigi að vera BookingLst
-
-          //mögulega þarf þess ekki fyrst að bókunin er tæknilega séð bara fyrir okkur að sjá
-
-          //spurning hvort að þetta væri betra, ef miðarnir væru fleiri en 1
+          
           numSeats = numSeats + tickets;
           //numSeats++;
           }
@@ -163,8 +138,7 @@ class Cancellation{
         else{
           System.out.println("Error, please try again.");
         }
-        // erum ekki með skipun hvað gerist ef þú ýtir á 3? Gætum lagað??
-        //þurfum öruglega að reyna að aðlaga þetta þannig að maður fer aftur inn í loop-una
+        // fix so you go back to loop
     }
        else{
         while (tickets > 0){
@@ -172,8 +146,7 @@ class Cancellation{
           Scanner name = new Scanner(System.in);
           String names = name.nextLine();
           BookingsList.remove(names);
-          // skoða hvort það eigi að vera BookingList
-          // sama hér?
+          
           numSeats = numSeats + tickets;
           // numSeats++;
        }
@@ -182,17 +155,14 @@ class Cancellation{
   }
 }
 
-// pæling að færa í Booking eða bara að kalla á þennan kóða þar??
-
-// öruglega fínt að færa hann, það er samt hægt að kalla á kóðann hér. 
+// move to booking or if we should just call this function from there?
 
 import java.util.Scanner;
-// ég importa allaf java scanner en megið breyta því :)
+// always using this so i can test codes induvidually, we can change once the connections come in
 class TripDate{
-// ykkur er velkomið að breyta class fyrir ofan og public static dæminu hér að neðan 
+// also everything is a main function, we can change later 
    public static void main(String args[])
     {
-      // Breytti aftur í static main þar sem public int Calendar(){ gefur upp villu í keyrslu
     int month, day, year;
     String mm, dd, yyyy;
     Scanner userInput = new Scanner(System.in);
@@ -205,17 +175,17 @@ class TripDate{
     System.out.print("Input day using the following format yyyy: ");
     yyyy = userInput.next();
     year = Integer.parseInt(yyyy);
-    //Til að setja restrictions svo að það sé ekki hægt að bóka ferð árið 1827 eða 2200
+    //restrictions so you can only book 2 years
     if(year <= 2014){
       System.out.print(year + " is an invalid year.");
     }
     else if(year > 2016){
       System.out.print(year + " is an invalid year.");
     }
-    //Ef að árið sem er sett inn er á milli 2015 og 2016
+    //if its the year 2015 or 2016
     else if(year > 2014 || year <= 2016){
-      // lagaði þar sem það vantaði year
       switch (month){  
+        // making sure that the months have correct number of days
         case 1:
         case 3:
         case 5:
@@ -241,6 +211,8 @@ class TripDate{
 
         case 2:
           if (year % 4 == 0)
+            // check for leap year since 2016 is one
+            // fix if you see something i forgot to account for with the dates
             if (day > 29)
               System.out.print(day + "/" + month + "/" + year + " is an invalid day.");
             else

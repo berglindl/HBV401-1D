@@ -1,37 +1,28 @@
 public class Booking{
 	import java.util.Scanner;
 
-	//Hér þarf að tengja bókunina við ferðirnar
-	//Það þarf öruglega að gerast í gegn um Inventory
+	/* Here we need a connection to the trips
+	It would be best if a list of the trips would appear that you could choose from
+	Then you would chose a date
 
-	//Held við þurfum að setja hérna inn ýmisslegt
-	/* Byrja á að birta lista yfir ferðir
-	Síðan velja ferð, þ.e. eftir að búið er að kalla á listann yfir ferðir
-	Hér er kallað á dagsetningaklasann og dagsetning sleginn inn
+	NEEDS A CODE THAT MAKES SURE THAT EVERY TRIP OFFERS 20 SEATS PER TRIP
 
-	Og það þarf einhvern kóða hér til að segja að sæti séu sjálfkrafa 20 hér
-	og það þarf að vera tengt við ferðir og dagsetningu myndi ég halda
+	Then we have to call reserve from booking.inventory 
 
-	Síðan kemur reserve klasinn í BookingInventory hér(kallað á hann);
-
-	Hvað finnst ykkur, myndi það ekki virka ágætlega þannig og síðan myndi þetta bara vistast yfir í BookingList???
 	*/
 
 	private int numSeats = 20;
+	// change to a code gor every trip and date
 
 	private String tripName;
-
-	//Gætum gert þetta svipað og við gerum í review
 
 	//The class Recieve grabs the Inventory object from Trip
 	class Recieve{
 		public void GetInfo(Object[] Inventory){
-			//myndum öruglega búa til nýjar breytur hér sem tengja trip1 - trip20 við gildin í Inventory
-			//og kalla á þetta sem GetInfo info = new GetInfo eða eitthvað álíka
-			//í static void main fyrir neðan 
+			// we should problably make new variables that connect trip1-20 to the values in Inventory then 
+			//call it as a GetInfo info = new GetInfo or something like that
+			// here below
 
-			//er ekki alveg viss hvernig ætti að hafa tenginuna en er mjög viss um að það tengist Inventory
-			//fyrst að þar eiga ferðirnar að vera vistaðar inn í. 
 		}
 	}
 
@@ -71,7 +62,8 @@ public class Booking{
 	        //Myndum setja hér case 1 case 2 etc. fyrir ferðirnar
 	        }
 	    }
-	
+	// move date from booking inventory over here to make a connection between classes
 	}
+
 
 }

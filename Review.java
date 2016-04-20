@@ -6,8 +6,7 @@ public static void main(String [] args)
     int vote;
     int votesCount = 0;
     int number;
-    // Núlstillti bara til að byrja með þar sem það er enging tenging við neitt komin
-    // breytum þessu á endanum
+    // look a votescount, decided to begin with 0 due to lack of connections
     Scanner userInput = new Scanner(System.in);
     {
         Scanner selectTrip = new Scanner(System.in);
@@ -38,7 +37,7 @@ public static void main(String [] args)
         selectTrip.close();
         
         switch(number){
-            //Þarf eflaust að breyta þessu þegar tengingin er komin nákvæmlega
+            //problably have to change when we have a connection
             case 1: Trip[0]; //eða Trip[trip1]
                     break;
             case 2: Trip[1];
@@ -81,7 +80,7 @@ public static void main(String [] args)
                     break;
 
             default: System.out.println("Oops! That trip is not listed. Please try again.");
-            // hef ekki prufukeyrt með switch setningunni þar sem það er engin tenging komin en restin virðist virka
+            // can´t test this part without a connection
         }
 
         System.out.println("Rate this trip on a scale from 0-5");
@@ -96,31 +95,26 @@ public static void main(String [] args)
         {
          vote = 5;
         }
-        // Megið fegra þetta ef þið getið
+        
     }
     int votesTotal;
     {
       if (votesCount > 1){
        votesTotal = vote;
        votesTotal = votesTotal + vote;
-       //Skoða þessar 2 línur
+       //Needs a closer look
        
       }
       else{
         votesTotal = vote;
-        // er ekki alveg viss um að þessar if og else séu nóg til að þetta virki en 
-        // skal laga það ef þetta virkar ekki þegar tengingin er komin :)
+        // wasn´t sure about his, but lets fix it when we have a connection and we can see it in action
     }
     if (votesCount > 0){
         double average = votesTotal / votesCount;
         System.out.println("Average for trip number " + number + " is: " + average );
     }
     userInput.close();
-    // spurning hvernig við viljum vista þetta? Ef það er í lista þa´þurfum við að breyta
-    // í int í hvert skipti sem e-ð er sótt í hann þannig held það væri betra að geyma þetta ´fylki
-    // hvað finnst ykkur?
-
-    //Það er öruglega bara fínt að geyma þetta inn í fylki :)
+    // need to store in an array or someplace else with a connection to database
     }
 }
 }
